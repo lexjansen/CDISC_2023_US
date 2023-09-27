@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
+<!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-27T17:29:41-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+  <Study OID="STDY.www.cdisc.org.CDISC01_1">
+    <GlobalVariables>
+      <StudyName>CDISC01</StudyName>
+      <StudyDescription>CDISC Test Study</StudyDescription>
+      <ProtocolName>CDISC01</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.5">
+      <def:Standards>
+        <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2014-06-27" Status="Final"/>
+        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2022-12-16" Status="Final"/>
+      </def:Standards>
+      <ItemGroupDef OID="IG.RS" Name="RS" Repeating="Yes" IsReferenceData="No" SASDatasetName="RS" Domain="RS" Purpose="Tabulation" def:Structure="One record per response assessment or clinical classification assessment per time point per visit per subject per assessor per medical evaluator" def:ArchiveLocationID="LF.RS">
+        <Description>
+          <TranslatedText xml:lang="en">Disease Response and Clin Classification</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.RS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="3" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSGRPID" Mandatory="No" OrderNumber="5" KeySequence="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSLNKID" Mandatory="No" OrderNumber="8" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSLNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="5" Role="Topic"/>
+        <ItemRef ItemOID="IT.RS.RSTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSCAT" Mandatory="No" OrderNumber="12" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSCAT" Mandatory="No" OrderNumber="12" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSCAT" Mandatory="No" OrderNumber="13" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSORRES" Mandatory="No" OrderNumber="14" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSORRESU" Mandatory="No" OrderNumber="15" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC" Mandatory="No" OrderNumber="16" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESN" Mandatory="No" OrderNumber="17" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESU" Mandatory="No" OrderNumber="18" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTAT" Mandatory="No" OrderNumber="19" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSREASND" Mandatory="No" OrderNumber="20" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSNAM" Mandatory="No" OrderNumber="21" KeySequence="6" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSLOBXFL" Mandatory="No" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSBLFL" Mandatory="No" OrderNumber="23" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSDRVFL" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSEVAL" Mandatory="No" OrderNumber="25" KeySequence="7" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSEVALID" Mandatory="No" OrderNumber="26" KeySequence="8" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSACPTFL" Mandatory="No" OrderNumber="27" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.VISITNUM" Mandatory="No" OrderNumber="28" KeySequence="10" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.VISIT" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.VISITDY" Mandatory="No" OrderNumber="30" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.TAETORD" Mandatory="No" OrderNumber="31" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.EPOCH" Mandatory="No" OrderNumber="32" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSDTC" Mandatory="No" OrderNumber="33" KeySequence="2" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSDY" Mandatory="No" OrderNumber="34" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPT" Mandatory="No" OrderNumber="35" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPTNUM" Mandatory="No" OrderNumber="36" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSELTM" Mandatory="No" OrderNumber="37" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPTREF" Mandatory="No" OrderNumber="38" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSRFTDTC" Mandatory="No" OrderNumber="39" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSEVLINT" Mandatory="No" OrderNumber="40" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSEVINTX" Mandatory="No" OrderNumber="41" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSSTRTPT" Mandatory="No" OrderNumber="42" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSSTTPT" Mandatory="No" OrderNumber="43" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSENRTPT" Mandatory="No" OrderNumber="44" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSENTPT" Mandatory="No" OrderNumber="45" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.RS" xlink:href="rs.xpt">
+          <def:title>rs.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.TR" Name="TR" Repeating="Yes" IsReferenceData="No" SASDatasetName="TR" Domain="TR" Purpose="Tabulation" def:Structure="One record per tumor measurement/assessment per visit per subject per assessor" def:ArchiveLocationID="LF.TR">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Results</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.TR.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRGRPID" Mandatory="No" OrderNumber="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRLNKID" Mandatory="No" OrderNumber="8" KeySequence="11" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRLNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="6" Role="Topic"/>
+        <ItemRef ItemOID="IT.TR.TRTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRORRES" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRORRESU" Mandatory="No" OrderNumber="13" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC" Mandatory="No" OrderNumber="14" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESN" Mandatory="No" OrderNumber="15" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESU" Mandatory="No" OrderNumber="16" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTAT" Mandatory="No" OrderNumber="17" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRREASND" Mandatory="No" OrderNumber="18" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRNAM" Mandatory="No" OrderNumber="19" KeySequence="8" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRMETHOD" Mandatory="No" OrderNumber="20" KeySequence="7" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRLOBXFL" Mandatory="No" OrderNumber="21" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRBLFL" Mandatory="No" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TREVAL" Mandatory="No" OrderNumber="23" KeySequence="9" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TREVALID" Mandatory="No" OrderNumber="24" KeySequence="10" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRACPTFL" Mandatory="No" OrderNumber="25" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.VISITNUM" Mandatory="No" OrderNumber="26" KeySequence="2" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.VISIT" Mandatory="No" OrderNumber="27" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.VISITDY" Mandatory="No" OrderNumber="28" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TAETORD" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.EPOCH" Mandatory="No" OrderNumber="30" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TRDTC" Mandatory="No" OrderNumber="31" KeySequence="3" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TRDY" Mandatory="No" OrderNumber="32" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.TR" xlink:href="tr.xpt">
+          <def:title>tr.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.TU" Name="TU" Repeating="Yes" IsReferenceData="No" SASDatasetName="TU" Domain="TU" Purpose="Tabulation" def:Structure="One record per identified tumor per subject per assessor" def:ArchiveLocationID="LF.TU">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.TU.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUGRPID" Mandatory="No" OrderNumber="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TULNKID" Mandatory="No" OrderNumber="8" KeySequence="3" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TULNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="8" Role="Topic"/>
+        <ItemRef ItemOID="IT.TU.TUTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUORRES" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC" Mandatory="No" OrderNumber="13" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUNAM" Mandatory="No" OrderNumber="14" KeySequence="12" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULOC" Mandatory="No" OrderNumber="15" KeySequence="9" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULAT" Mandatory="No" OrderNumber="16" KeySequence="10" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUDIR" Mandatory="No" OrderNumber="17" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUPORTOT" Mandatory="No" OrderNumber="18" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUMETHOD" Mandatory="No" OrderNumber="19" KeySequence="11" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULOBXFL" Mandatory="No" OrderNumber="20" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUBLFL" Mandatory="No" OrderNumber="21" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUEVAL" Mandatory="No" OrderNumber="22" KeySequence="13" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUEVALID" Mandatory="No" OrderNumber="23" KeySequence="2" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUACPTFL" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.VISITNUM" Mandatory="No" OrderNumber="25" KeySequence="4" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.VISIT" Mandatory="No" OrderNumber="26" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.VISITDY" Mandatory="No" OrderNumber="27" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TAETORD" Mandatory="No" OrderNumber="28" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.EPOCH" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TUDTC" Mandatory="No" OrderNumber="30" KeySequence="5" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TUDY" Mandatory="No" OrderNumber="31" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.TU" xlink:href="tu.xpt">
+          <def:title>tu.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemDef OID="IT.RS.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSACPTFL" Name="RSACPTFL" DataType="text" Length="1" SASFieldName="RSACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSBLFL" Name="RSBLFL" DataType="" SASFieldName="RSBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSCAT" Name="RSCAT" DataType="text" Length="200" SASFieldName="RSCAT">
+        <Description>
+          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
+          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSCAT" Name="RSCAT" DataType="text" Length="200" SASFieldName="RSCAT">
+        <Description>
+          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
+          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDRVFL" Name="RSDRVFL" DataType="" SASFieldName="RSDRVFL">
+        <Description>
+          <TranslatedText xml:lang="en">Derived Flag</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDTC" Name="RSDTC" DataType="datetime" SASFieldName="RSDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDY" Name="RSDY" DataType="integer" Length="8" SASFieldName="RSDY" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSELTM" Name="RSELTM" DataType="" SASFieldName="RSELTM">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Elapsed Time from Time Point Ref</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSENRTPT" Name="RSENRTPT" DataType="text" Length="200" SASFieldName="RSENRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSENTPT" Name="RSENTPT" DataType="text" Length="200" SASFieldName="RSENTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVAL" Name="RSEVAL" DataType="text" Length="200" SASFieldName="RSEVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVALID" Name="RSEVALID" DataType="text" Length="200" SASFieldName="RSEVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVINTX" Name="RSEVINTX" DataType="" SASFieldName="RSEVINTX">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluation Interval Text</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVLINT" Name="RSEVLINT" DataType="" SASFieldName="RSEVLINT">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluation Interval</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSGRPID" Name="RSGRPID" DataType="text" Length="200" SASFieldName="RSGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLNKGRP" Name="RSLNKGRP" DataType="text" Length="200" SASFieldName="RSLNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLNKID" Name="RSLNKID" DataType="text" Length="20" SASFieldName="RSLNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLOBXFL" Name="RSLOBXFL" DataType="" SASFieldName="RSLOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSNAM" Name="RSNAM" DataType="text" Length="200" SASFieldName="RSNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRESU" Name="RSORRESU" DataType="" SASFieldName="RSORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSREASND" Name="RSREASND" DataType="text" Length="200" SASFieldName="RSREASND">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSREFID" Name="RSREFID" DataType="text" Length="200" SASFieldName="RSREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="" SASFieldName="RSRFTDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Reference Time Point</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSCAT" Name="RSSCAT" DataType="text" Length="200" SASFieldName="RSSCAT">
+        <Description>
+          <TranslatedText xml:lang="en">Subcategory</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSEQ" Name="RSSEQ" DataType="integer" Length="8" SASFieldName="RSSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSPID" Name="RSSPID" DataType="" SASFieldName="RSSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTAT" Name="RSSTAT" DataType="text" Length="8" SASFieldName="RSSTAT">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESN" Name="RSSTRESN" DataType="" SASFieldName="RSSTRESN">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESU" Name="RSSTRESU" DataType="" SASFieldName="RSSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRTPT" Name="RSSTRTPT" DataType="text" Length="200" SASFieldName="RSSTRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Start Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTTPT" Name="RSSTTPT" DataType="text" Length="200" SASFieldName="RSSTTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Start Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTEST" Name="RSTEST" DataType="text" Length="40" SASFieldName="RSTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Assessment Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTESTCD" Name="RSTESTCD" DataType="text" Length="8" SASFieldName="RSTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Assessment Short Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPT" Name="RSTPT" DataType="" SASFieldName="RSTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Time Point Name</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPTNUM" Name="RSTPTNUM" DataType="" SASFieldName="RSTPTNUM">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Time Point Number</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPTREF" Name="RSTPTREF" DataType="" SASFieldName="RSTPTREF">
+        <Description>
+          <TranslatedText xml:lang="en">Time Point Reference</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.TAETORD" Name="TAETORD" DataType="" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISITDY" Name="VISITDY" DataType="" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TAETORD" Name="TAETORD" DataType="" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRACPTFL" Name="TRACPTFL" DataType="text" Length="1" SASFieldName="TRACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRBLFL" Name="TRBLFL" DataType="" SASFieldName="TRBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRDTC" Name="TRDTC" DataType="datetime" SASFieldName="TRDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Tumor/Lesion Measurement</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRDY" Name="TRDY" DataType="integer" Length="8" SASFieldName="TRDY" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Tumor/Lesion Measurement</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TREVAL" Name="TREVAL" DataType="text" Length="200" SASFieldName="TREVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TREVALID" Name="TREVALID" DataType="text" Length="200" SASFieldName="TREVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRGRPID" Name="TRGRPID" DataType="text" Length="200" SASFieldName="TRGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLNKGRP" Name="TRLNKGRP" DataType="text" Length="200" SASFieldName="TRLNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLNKID" Name="TRLNKID" DataType="text" Length="20" SASFieldName="TRLNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLOBXFL" Name="TRLOBXFL" DataType="" SASFieldName="TRLOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRMETHOD" Name="TRMETHOD" DataType="text" Length="200" SASFieldName="TRMETHOD">
+        <Description>
+          <TranslatedText xml:lang="en">Method Used to Identify the Tumor/Lesion</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRNAM" Name="TRNAM" DataType="text" Length="200" SASFieldName="TRNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Laboratory/Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRESU" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRREASND" Name="TRREASND" DataType="text" Length="200" SASFieldName="TRREASND">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRREFID" Name="TRREFID" DataType="text" Length="200" SASFieldName="TRREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSEQ" Name="TRSEQ" DataType="integer" Length="8" SASFieldName="TRSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSPID" Name="TRSPID" DataType="" SASFieldName="TRSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTAT" Name="TRSTAT" DataType="text" Length="8" SASFieldName="TRSTAT">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESN" Name="TRSTRESN" DataType="float" Length="22" SignificantDigits="7" SASFieldName="TRSTRESN" def:DisplayFormat="24.7">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESU" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRTEST" Name="TRTEST" DataType="text" Length="40" SASFieldName="TRTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Assessment Test Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRTESTCD" Name="TRTESTCD" DataType="text" Length="8" SASFieldName="TRTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Assessment Short Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISITDY" Name="VISITDY" DataType="" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TAETORD" Name="TAETORD" DataType="text" Length="200" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUACPTFL" Name="TUACPTFL" DataType="text" Length="1" SASFieldName="TUACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUBLFL" Name="TUBLFL" DataType="text" Length="1" SASFieldName="TUBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDIR" Name="TUDIR" DataType="text" Length="200" SASFieldName="TUDIR">
+        <Description>
+          <TranslatedText xml:lang="en">Directionality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDTC" Name="TUDTC" DataType="datetime" SASFieldName="TUDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDY" Name="TUDY" DataType="integer" Length="8" SASFieldName="TUDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUEVAL" Name="TUEVAL" DataType="text" Length="200" SASFieldName="TUEVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUEVALID" Name="TUEVALID" DataType="text" Length="200" SASFieldName="TUEVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUGRPID" Name="TUGRPID" DataType="text" Length="200" SASFieldName="TUGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULAT" Name="TULAT" DataType="text" Length="200" SASFieldName="TULAT">
+        <Description>
+          <TranslatedText xml:lang="en">Laterality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULNKGRP" Name="TULNKGRP" DataType="text" Length="200" SASFieldName="TULNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULNKID" Name="TULNKID" DataType="text" Length="20" SASFieldName="TULNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULOBXFL" Name="TULOBXFL" DataType="text" Length="1" SASFieldName="TULOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULOC" Name="TULOC" DataType="text" Length="200" SASFieldName="TULOC">
+        <Description>
+          <TranslatedText xml:lang="en">Location of the Tumor/Lesion</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUMETHOD" Name="TUMETHOD" DataType="text" Length="200" SASFieldName="TUMETHOD">
+        <Description>
+          <TranslatedText xml:lang="en">Method of Identification</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUNAM" Name="TUNAM" DataType="text" Length="200" SASFieldName="TUNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Laboratory/Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES" Name="TUORRES" DataType="text" Length="200" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Result</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUPORTOT" Name="TUPORTOT" DataType="text" Length="200" SASFieldName="TUPORTOT">
+        <Description>
+          <TranslatedText xml:lang="en">Portion or Totality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUREFID" Name="TUREFID" DataType="text" Length="200" SASFieldName="TUREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSEQ" Name="TUSEQ" DataType="integer" Length="8" SASFieldName="TUSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSPID" Name="TUSPID" DataType="text" Length="200" SASFieldName="TUSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC" Name="TUSTRESC" DataType="text" Length="200" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Result Std. Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUTEST" Name="TUTEST" DataType="text" Length="40" SASFieldName="TUTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Test Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUTESTCD" Name="TUTESTCD" DataType="text" Length="8" SASFieldName="TUTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Short Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+    </MetaDataVersion>
+  </Study>
+</ODM>
