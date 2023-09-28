@@ -227,6 +227,8 @@ run;
     standardversion="&_cstTrgStandardVersion";
     if origintype="CRF" then origintype="Collected";
     originsource = put(origintype, $origsrc.);
+    
+    if column="RSCAT" and codelist_ccode = "C124298" then delete; /* HARD UPDATE */
   run;  
 
   libname clib clear;
@@ -236,3 +238,8 @@ run;
 %add_domain(rs, 1);
 %add_domain(tr, 2);
 %add_domain(tu, 3);
+
+proc print data=meta.source_columns;
+  var table column xmlcodelist_ codelist_ccode;
+  where ((missing(xmlcodelist_) or missing(codelist_ccode)) and not (missing(xmlcodelist_) and missing(codelist_ccode)));
+run;  

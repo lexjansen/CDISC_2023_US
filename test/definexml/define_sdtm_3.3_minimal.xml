@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-27T17:29:41-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-27T21:35:00-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -29,7 +29,6 @@
         <ItemRef ItemOID="IT.RS.RSLNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
         <ItemRef ItemOID="IT.RS.RSTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="5" Role="Topic"/>
         <ItemRef ItemOID="IT.RS.RSTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
-        <ItemRef ItemOID="IT.RS.RSCAT" Mandatory="No" OrderNumber="12" Role="Grouping Qualifier"/>
         <ItemRef ItemOID="IT.RS.RSCAT" Mandatory="No" OrderNumber="12" Role="Grouping Qualifier"/>
         <ItemRef ItemOID="IT.RS.RSSCAT" Mandatory="No" OrderNumber="13" Role="Grouping Qualifier"/>
         <ItemRef ItemOID="IT.RS.RSORRES" Mandatory="No" OrderNumber="14" Role="Result Qualifier"/>
@@ -168,31 +167,23 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSBLFL" Name="RSBLFL" DataType="" SASFieldName="RSBLFL">
+      <ItemDef OID="IT.RS.RSBLFL" Name="RSBLFL" DataType="text" Length="1" SASFieldName="RSBLFL">
         <Description>
           <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
         </Description>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSCAT" Name="RSCAT" DataType="text" Length="200" SASFieldName="RSCAT">
-        <Description>
-          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
-          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
-        </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSCAT" Name="RSCAT" DataType="text" Length="200" SASFieldName="RSCAT">
         <Description>
           <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
-          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
-        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSDRVFL" Name="RSDRVFL" DataType="" SASFieldName="RSDRVFL">
+      <ItemDef OID="IT.RS.RSDRVFL" Name="RSDRVFL" DataType="text" Length="1" SASFieldName="RSDRVFL">
         <Description>
           <TranslatedText xml:lang="en">Derived Flag</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSDTC" Name="RSDTC" DataType="datetime" SASFieldName="RSDTC">
         <Description>
@@ -206,10 +197,11 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSELTM" Name="RSELTM" DataType="" SASFieldName="RSELTM">
+      <ItemDef OID="IT.RS.RSELTM" Name="RSELTM" DataType="text" Length="200" SASFieldName="RSELTM">
         <Description>
           <TranslatedText xml:lang="en">Planned Elapsed Time from Time Point Ref</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSENRTPT" Name="RSENRTPT" DataType="text" Length="200" SASFieldName="RSENRTPT">
         <Description>
@@ -235,15 +227,17 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSEVINTX" Name="RSEVINTX" DataType="" SASFieldName="RSEVINTX">
+      <ItemDef OID="IT.RS.RSEVINTX" Name="RSEVINTX" DataType="text" Length="200" SASFieldName="RSEVINTX">
         <Description>
           <TranslatedText xml:lang="en">Evaluation Interval Text</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSEVLINT" Name="RSEVLINT" DataType="" SASFieldName="RSEVLINT">
+      <ItemDef OID="IT.RS.RSEVLINT" Name="RSEVLINT" DataType="text" Length="200" SASFieldName="RSEVLINT">
         <Description>
           <TranslatedText xml:lang="en">Evaluation Interval</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSGRPID" Name="RSGRPID" DataType="text" Length="200" SASFieldName="RSGRPID">
         <Description>
@@ -263,10 +257,11 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSLOBXFL" Name="RSLOBXFL" DataType="" SASFieldName="RSLOBXFL">
+      <ItemDef OID="IT.RS.RSLOBXFL" Name="RSLOBXFL" DataType="text" Length="1" SASFieldName="RSLOBXFL">
         <Description>
           <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSNAM" Name="RSNAM" DataType="text" Length="200" SASFieldName="RSNAM">
         <Description>
@@ -280,10 +275,11 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRESU" Name="RSORRESU" DataType="" SASFieldName="RSORRESU">
+      <ItemDef OID="IT.RS.RSORRESU" Name="RSORRESU" DataType="text" Length="200" SASFieldName="RSORRESU">
         <Description>
           <TranslatedText xml:lang="en">Original Units</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSREASND" Name="RSREASND" DataType="text" Length="200" SASFieldName="RSREASND">
         <Description>
@@ -297,10 +293,11 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="" SASFieldName="RSRFTDTC">
+      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="text" SASFieldName="RSRFTDTC">
         <Description>
           <TranslatedText xml:lang="en">Date/Time of Reference Time Point</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSSCAT" Name="RSSCAT" DataType="text" Length="200" SASFieldName="RSSCAT">
         <Description>
@@ -314,10 +311,11 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSPID" Name="RSSPID" DataType="" SASFieldName="RSSPID">
+      <ItemDef OID="IT.RS.RSSPID" Name="RSSPID" DataType="text" Length="200" SASFieldName="RSSPID">
         <Description>
           <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
         </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSSTAT" Name="RSSTAT" DataType="text" Length="8" SASFieldName="RSSTAT">
         <Description>
@@ -331,15 +329,17 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESN" Name="RSSTRESN" DataType="" SASFieldName="RSSTRESN">
+      <ItemDef OID="IT.RS.RSSTRESN" Name="RSSTRESN" DataType="float" Length="8" SASFieldName="RSSTRESN">
         <Description>
           <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESU" Name="RSSTRESU" DataType="" SASFieldName="RSSTRESU">
+      <ItemDef OID="IT.RS.RSSTRESU" Name="RSSTRESU" DataType="text" Length="200" SASFieldName="RSSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Standard Units</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSSTRTPT" Name="RSSTRTPT" DataType="text" Length="200" SASFieldName="RSSTRTPT">
         <Description>
@@ -365,20 +365,23 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSTPT" Name="RSTPT" DataType="" SASFieldName="RSTPT">
+      <ItemDef OID="IT.RS.RSTPT" Name="RSTPT" DataType="text" Length="200" SASFieldName="RSTPT">
         <Description>
           <TranslatedText xml:lang="en">Planned Time Point Name</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSTPTNUM" Name="RSTPTNUM" DataType="" SASFieldName="RSTPTNUM">
+      <ItemDef OID="IT.RS.RSTPTNUM" Name="RSTPTNUM" DataType="integer" Length="8" SASFieldName="RSTPTNUM">
         <Description>
           <TranslatedText xml:lang="en">Planned Time Point Number</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSTPTREF" Name="RSTPTREF" DataType="" SASFieldName="RSTPTREF">
+      <ItemDef OID="IT.RS.RSTPTREF" Name="RSTPTREF" DataType="text" Length="200" SASFieldName="RSTPTREF">
         <Description>
           <TranslatedText xml:lang="en">Time Point Reference</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
         <Description>
@@ -386,10 +389,11 @@
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.TAETORD" Name="TAETORD" DataType="" SASFieldName="TAETORD">
+      <ItemDef OID="IT.RS.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
         <Description>
           <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
         </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.RS.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
         <Description>
@@ -403,10 +407,11 @@
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.VISITDY" Name="VISITDY" DataType="" SASFieldName="VISITDY">
+      <ItemDef OID="IT.RS.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
         <Description>
           <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
         <Description>
@@ -432,10 +437,11 @@
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TAETORD" Name="TAETORD" DataType="" SASFieldName="TAETORD">
+      <ItemDef OID="IT.TR.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
         <Description>
           <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
         </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRACPTFL" Name="TRACPTFL" DataType="text" Length="1" SASFieldName="TRACPTFL">
         <Description>
@@ -443,10 +449,11 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRBLFL" Name="TRBLFL" DataType="" SASFieldName="TRBLFL">
+      <ItemDef OID="IT.TR.TRBLFL" Name="TRBLFL" DataType="text" Length="1" SASFieldName="TRBLFL">
         <Description>
           <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRDTC" Name="TRDTC" DataType="datetime" SASFieldName="TRDTC">
         <Description>
@@ -490,10 +497,11 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRLOBXFL" Name="TRLOBXFL" DataType="" SASFieldName="TRLOBXFL">
+      <ItemDef OID="IT.TR.TRLOBXFL" Name="TRLOBXFL" DataType="text" Length="1" SASFieldName="TRLOBXFL">
         <Description>
           <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRMETHOD" Name="TRMETHOD" DataType="text" Length="200" SASFieldName="TRMETHOD">
         <Description>
@@ -537,10 +545,11 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSPID" Name="TRSPID" DataType="" SASFieldName="TRSPID">
+      <ItemDef OID="IT.TR.TRSPID" Name="TRSPID" DataType="text" Length="200" SASFieldName="TRSPID">
         <Description>
           <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
         </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRSTAT" Name="TRSTAT" DataType="text" Length="8" SASFieldName="TRSTAT">
         <Description>
@@ -590,10 +599,11 @@
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.VISITDY" Name="VISITDY" DataType="" SASFieldName="VISITDY">
+      <ItemDef OID="IT.TR.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
         <Description>
           <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
         </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TR.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
         <Description>
@@ -619,11 +629,11 @@
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TAETORD" Name="TAETORD" DataType="text" Length="200" SASFieldName="TAETORD">
+      <ItemDef OID="IT.TU.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
         <Description>
           <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TUACPTFL" Name="TUACPTFL" DataType="text" Length="1" SASFieldName="TUACPTFL">
         <Description>

@@ -1,0 +1,8 @@
+.vscode/
+.hypothesis/
+__pycache__/
+*.log
+*.lst
+*.html
+*.cfg
+*.sas7bdat
