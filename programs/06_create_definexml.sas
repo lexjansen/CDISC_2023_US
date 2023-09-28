@@ -1,5 +1,5 @@
 %global project_folder;
-%let project_folder=/_github/lexjansen/sas-papers/pharmasug-2023;
+%let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
@@ -131,16 +131,18 @@ run;
 data work.source_columns;
   set sampdata.source_columns;
   select(column);
-    when("LBTEST") xmlcodelist  = "LBTEST";
-    when("LBTESTCD") xmlcodelist  = "LBTESTCD";
-    when("LBMETHOD") xmlcodelist  = "METHOD";
-    when("LBSPEC") xmlcodelist  = "SPECTYPE";
-    when("LBFAST") xmlcodelist  = "NY";
-    when("VSTEST") xmlcodelist  = "VSTEST";
-    when("VSTESTCD") xmlcodelist  = "VSTESTCD";
-    when("VSLOC") xmlcodelist  = "LOC";
-    when("VSLAT") xmlcodelist  = "LAT";
-    when("VSPOS") xmlcodelist  = "POSITION";
+    when("RSTEST") xmlcodelist  = "ONCRTS";
+    when("RSTESTCD") xmlcodelist  = "ONCRTSCD";
+    when("TRTEST") xmlcodelist  = "TRTEST";
+    when("TRTESTCD") xmlcodelist  = "TRTESTCD";
+    when("TUTEST") xmlcodelist  = "TUTEST";
+    when("TUTESTCD") xmlcodelist  = "TUTESTCD";
+    when("TUEVAL") xmlcodelist  = "EVAL";
+    when("TULOC") xmlcodelist  = "LOC";
+    when("TULAT") xmlcodelist  = "LAT";
+    when("TUDIR") xmlcodelist  = "DIR";
+    when("TUMETHOD") xmlcodelist  = "METHOD";
+    when("EPOCH") xmlcodelist  = "EPOCH";
     otherwise;
   end;
 run;
@@ -155,7 +157,7 @@ run;
 
 data work.source_study;
   set sampdata.source_study;
-  comment="This Define-XML document is based on basic LB and VS dataset and column metadata. 
+  comment="This Define-XML document is based on basic RS, TR and TU dataset and column metadata. 
 Value level metadata (VLM) and codelists were programmatically created by 
 extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.";
 run;

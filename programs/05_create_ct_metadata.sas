@@ -1,5 +1,5 @@
 %global project_folder;
-%let project_folder=c:/_github/lexjansen/sas-papers/pharmasug-2023;
+%let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
@@ -36,14 +36,24 @@ data sdtm_specializations_ct;
   /* Assign codelists */
 
   xmlcodelist = codelist_submission_value;
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and name in ("VSORRESU" "LBORRESU")
-    then xmlcodelist = cats(codelist_submission_value, "_ORU_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and name in ("VSSTRESU" "LBSTRESU")
-    then xmlcodelist = cats(codelist_submission_value, "_STU_", datasetSpecializationId);
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "ORRES")
+    then xmlcodelist = cats(codelist_submission_value, "_OR_", datasetSpecializationId);
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "ORRES")
+    then xmlcodelist = cats(codelist_submission_value, "_OR_", datasetSpecializationId);
 
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and name in ("VSORRESU" "LBORRESU")
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "ORRESU")
     then xmlcodelist = cats(codelist_submission_value, "_ORU_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and name in ("VSSTRESU" "LBSTRESU")
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "ORRESU")
+    then xmlcodelist = cats(codelist_submission_value, "_ORU_", datasetSpecializationId);
+
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "STRESC")
+    then xmlcodelist = cats(codelist_submission_value, "_STC_", datasetSpecializationId);
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "STRESC")
+    then xmlcodelist = cats(codelist_submission_value, "_STC_", datasetSpecializationId);
+
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "STRESU")
+    then xmlcodelist = cats(codelist_submission_value, "_STU_", datasetSpecializationId);
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "STRESU")
     then xmlcodelist = cats(codelist_submission_value, "_STU_", datasetSpecializationId);
 
   if (not missing(value_list)) and (not missing(subsetcodelist)) then do;
@@ -110,16 +120,19 @@ proc sql noprint;
  from metadata.source_study;
 quit;
 
-data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname subsetcodelist term__ );
+data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname subsetcodelist code_synonym term__ );
   set work.source_codelist_template work.source_codelists_sdtm(drop=codelist rename=(xmlcodelist__=codelist));
   sasref="SRCDATA";
   studyversion="&_cstStudyVersion";
   standard="&_cstStandard";
   standardversion="&_cstStandardVersion";
   codelistdatatype="text";
-  if index(codelist, '_ORU_') or column="VSORRESU" then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Original");
-  if index(codelist, '_STU_') or column="VSSTRESU" then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized");
+  if index(codelist, '_ORU_') or index(column, "ORRESU") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Original");
+  if index(codelist, '_STU_') or index(column, "STRESU") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized");
   
+  if index(codelist, '_OR_') or (index(column, "ORRES") and index(column, "ORRESU")=0 )then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Original (Res)");
+  if index(codelist, '_STC_') or index(column, "STRESC") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized (Char Res)");
+
   if index(codelist, "TESTCD") or index(codelist, "NY")
      then do;
     if not missing(code_synonym) then decodetext = code_synonym;
@@ -128,7 +141,7 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
   else decodetext="";
 run;
 
-proc sort data=work.source_codelists_sdtm out=data.source_codelists_sdtm NODUPRECS;
+proc sort data=work.source_codelists_sdtm out=data.source_codelists_sdtm(label="Source Codelist Metadata") NODUPRECS;
   by _ALL_;
 run;  
 

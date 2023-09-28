@@ -3,7 +3,7 @@
   filename jsonfile "%sysfunc(pathname(work))/dataspecializations_&package..json";
 
   %get_api_response(
-    baseurl=&base_url,
+    baseurl=&base_url_cosmos,
     endpoint=/mdr/specializations/sdtm/packages/&package/datasetspecializations,
     response_fileref=jsonfile
   );
@@ -27,13 +27,15 @@
 /*************************************************************************************************/
 
 %global project_folder;
-%let project_folder=/_github/lexjansen/sas-papers/pharmasug-2023;
+%let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
+%let subfolder=json;
+
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-filename jsonf "&project_folder/json/datasetspecializations_packages.json";
+filename jsonf "&project_folder/&subfolder/datasetspecialization_packages.json";
 %get_api_response(
-    baseurl=&base_url,
+    baseurl=&base_url_cosmos,
     endpoint=/mdr/specializations/sdtm/packages,
     response_fileref=jsonf
   );
@@ -70,7 +72,7 @@ run;
 data _null_;
   set work.latest_sdtm;
   length code $4096 response_file $1024;
-  baseurl="&base_url";
+  baseurl="&base_url_cosmos";
   response_file=cats("&project_folder/json/sdtm/", datasetSpecializationId, ".json");
   response_file=lowcase(response_file);
   code=cats('%get_api_response(baseurl=', baseurl, ', endpoint=', href, ', response_file=', response_file, ');');
@@ -135,6 +137,7 @@ data work.sdtm_specializations;
     putlog 'WAR' 'NING: ' datasetSpecializationId= name= comparator= vlmTarget=;
   end;
   
+/*
   if datasetSpecializationId = "CARBXHGB" and name = "LBSTRESU" and missing(assigned_value) then assigned_value="g/dL";
   if datasetSpecializationId = "BMI" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "kg/m2";
   if datasetSpecializationId = "HEIGHT" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "cm";
@@ -150,6 +153,7 @@ data work.sdtm_specializations;
   
   if codelist_submission_value="VSTESTCD" then codelist="C66741";
   if codelist_submission_value="VSTEST" then codelist="C67153";
+*/
 run;
 /*********************************************************************************************************************/
 /*********************************************************************************************************************/

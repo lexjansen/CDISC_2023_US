@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-27T21:35:00-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-28T11:31:05-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -11,7 +11,7 @@
     <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.5">
       <def:Standards>
         <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
-        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2014-06-27" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2023-06-30" Status="Final"/>
         <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2022-12-16" Status="Final"/>
       </def:Standards>
       <ItemGroupDef OID="IG.RS" Name="RS" Repeating="Yes" IsReferenceData="No" SASDatasetName="RS" Domain="RS" Purpose="Tabulation" def:Structure="One record per response assessment or clinical classification assessment per time point per visit per subject per assessor per medical evaluator" def:ArchiveLocationID="LF.RS">

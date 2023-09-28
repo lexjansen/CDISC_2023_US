@@ -1,9 +1,9 @@
 %global project_folder;
-%let project_folder=/_github/lexjansen/sas-papers/pharmasug-2023;
+%let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-%let domains="VS" "LB";
+%let domains="RS" "TR" "TU";
 
 proc sql noprint;
   select max(wc) into :max_whereclauses separated by ' ' 
@@ -40,11 +40,15 @@ data whereclause(keep=datasetSpecializationId domain _whereclause:);
   end;  
 run; 
 
+proc sort data=whereclause;
+  by domain datasetSpecializationId;
+run;  
+
 ods listing close;
 ods html5 file="&project_folder/programs/04_create_vlm_from_sdtm_specializations.html";
 
   proc print data=whereclause;
-    var datasetSpecializationId domain _whereclause:;
+    var domain datasetSpecializationId _whereclause:;
   run;  
   
 ods html5 close;
@@ -79,6 +83,7 @@ proc sql;
   create table source_values as
   select 
     sdtm.*,
+    col.xmldatatype as parent_xmldatatype,
     wc._whereclause1,
     wc._whereclause2,
     wc._whereclause3,
@@ -86,48 +91,79 @@ proc sql;
   from sdtm_specializations sdtm
     left join whereclause wc
   on (sdtm.table = wc.domain and sdtm.datasetSpecializationId = wc.datasetSpecializationId)
+    left join metadata.source_columns col
+  on (sdtm.table = col.table and sdtm.column = col.column)
   order by table, column, datasetSpecializationId
   ;
 quit;      
 
-data source_values(drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause:);
+data source_values(/* drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause: */);
   set source_values;
   whereclause = cats("(", _whereclause1, ")");
   name = datasetSpecializationId;
-  if table="LB" then do;
-    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('LBMETHOD' 'LBSPEC')) then do;
+  
+  if table="RS" then do;
+    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('RSCAT')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('LBMETHOD' 'LBSPEC')) then do;
+    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('RSEVAL')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
+      name = "";
+    end;
+    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
+      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
   end;
-  if table="VS" then do;
-    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('VSPOS' 'VSLOC' 'VSLAT')) then do;
+  if table="TR" then do;
+    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('TRMETHOD')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('VSPOS' 'VSLOC' 'VSLAT')) then do;
+    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('TREVAL')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
       name = "";
     end;
-    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('VSPOS' 'VSLOC' 'VSLAT')) then do;
+    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
+      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
+      name = "";
+    end;
+  end;  
+  if table="TU" then do;
+    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('TUEVAL' 'TUMETHOD')) then do;
+      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
+      name = "";
+    end;
+    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('TUEVAL' 'EPOCH')) then do;
+      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
+      name = "";
+    end;
+    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
   end;
 
   /* Assign codelists */
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and column in ("VSORRESU" "LBORRESU")
-    then xmlcodelist = cats(xmlcodelist, "_ORU_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and column in ("VSSTRESU" "LBSTRESU")
-    then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "ORRES")
+    then xmlcodelist = cats(xmlcodelist, "_OR_", datasetSpecializationId);
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "ORRES")
+    then xmlcodelist = cats(xmlcodelist, "_OR_", datasetSpecializationId);
 
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and column in ("VSORRESU" "LBORRESU")
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "ORRESU")
     then xmlcodelist = cats(xmlcodelist, "_ORU_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and column in ("VSSTRESU" "LBSTRESU")
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "ORRESU")
+    then xmlcodelist = cats(xmlcodelist, "_ORU_", datasetSpecializationId);
+
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "STRESC")
+    then xmlcodelist = cats(xmlcodelist, "_STC_", datasetSpecializationId);
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "STRESC")
+    then xmlcodelist = cats(xmlcodelist, "_STC_", datasetSpecializationId);
+
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "STRESU")
+    then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "STRESU")
     then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
 
   if (not missing(value_list)) and (not missing(subsetcodelist)) then xmlcodelist = subsetcodelist;
@@ -147,7 +183,7 @@ proc sql noprint;
  from metadata.source_study;
 quit;
 
-data data.source_values_sdtm;
+data data.source_values_sdtm(drop=parent_xmldatatype label="Source Value Metadata");
   set source_values;
   by table column notsorted;
   order = _n_;
@@ -155,8 +191,7 @@ data data.source_values_sdtm;
   studyversion="&_cstStudyVersion";
   standard="&_cstStandard";
   standardversion="&_cstStandardVersion";
-  if missing(xmldatatype) and column in ("LBORRES" "LBSTRESC" "LBORRESU" "LBSTRESU" "VSORRESU" "VSSTRESU") then xmldatatype="text";
-  if missing(xmldatatype) and column in ("LBSTRESN") then xmldatatype="float";
+  if missing(xmldatatype) then xmldatatype=parent_xmldatatype;
 run;  
 
 ods listing close;

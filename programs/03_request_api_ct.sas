@@ -1,5 +1,5 @@
 %global project_folder;
-%let project_folder=c:/_github/lexjansen/sas-papers/pharmasug-2023;
+%let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
