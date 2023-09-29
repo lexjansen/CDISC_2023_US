@@ -215,7 +215,7 @@ run;
     standard="&_cstTrgStandard";
     standardversion="&_cstTrgStandardVersion";
     cdiscstandard = "SDTMIG";
-    cdiscstandardversion="3.2";
+    cdiscstandardversion="&_cstTrgStandardVersion";
     if intable then order=&order;
   run;  
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-28T16:47:30-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-28T21:53:57-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -900,7 +900,7 @@
           <CheckValue>TREATMENT</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <ItemGroupDef OID="IG.RS" Name="RS" Repeating="Yes" IsReferenceData="No" SASDatasetName="RS" Domain="RS" Purpose="Tabulation" def:Structure="One record per response assessment or clinical classification assessment per time point per visit per subject per assessor per medical evaluator" def:ArchiveLocationID="LF.RS">
+      <ItemGroupDef OID="IG.RS" Name="RS" Repeating="Yes" IsReferenceData="No" SASDatasetName="RS" Domain="RS" Purpose="Tabulation" def:Structure="One record per response assessment or clinical classification assessment per time point per visit per subject per assessor per medical evaluator" def:ArchiveLocationID="LF.RS" def:StandardOID="STD.1">
         <Description>
           <TranslatedText xml:lang="en">Disease Response and Clin Classification</TranslatedText>
         </Description>
@@ -954,7 +954,7 @@
           <def:title>rs.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TR" Name="TR" Repeating="Yes" IsReferenceData="No" SASDatasetName="TR" Domain="TR" Purpose="Tabulation" def:Structure="One record per tumor measurement/assessment per visit per subject per assessor" def:ArchiveLocationID="LF.TR">
+      <ItemGroupDef OID="IG.TR" Name="TR" Repeating="Yes" IsReferenceData="No" SASDatasetName="TR" Domain="TR" Purpose="Tabulation" def:Structure="One record per tumor measurement/assessment per visit per subject per assessor" def:ArchiveLocationID="LF.TR" def:StandardOID="STD.1">
         <Description>
           <TranslatedText xml:lang="en">Tumor/Lesion Results</TranslatedText>
         </Description>
@@ -995,7 +995,7 @@
           <def:title>tr.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
-      <ItemGroupDef OID="IG.TU" Name="TU" Repeating="Yes" IsReferenceData="No" SASDatasetName="TU" Domain="TU" Purpose="Tabulation" def:Structure="One record per identified tumor per subject per assessor" def:ArchiveLocationID="LF.TU">
+      <ItemGroupDef OID="IG.TU" Name="TU" Repeating="Yes" IsReferenceData="No" SASDatasetName="TU" Domain="TU" Purpose="Tabulation" def:Structure="One record per identified tumor per subject per assessor" def:ArchiveLocationID="LF.TU" def:StandardOID="STD.1">
         <Description>
           <TranslatedText xml:lang="en">Tumor/Lesion Identification</TranslatedText>
         </Description>
@@ -1363,6 +1363,7 @@
         <Description>
           <TranslatedText xml:lang="en">Evaluator</TranslatedText>
         </Description>
+        <CodeListRef CodeListOID="CL.EVAL"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TREVALID" Name="TREVALID" DataType="text" Length="200" SASFieldName="TREVALID">
@@ -1399,6 +1400,7 @@
         <Description>
           <TranslatedText xml:lang="en">Method Used to Identify the Tumor/Lesion</TranslatedText>
         </Description>
+        <CodeListRef CodeListOID="CL.METHOD"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRNAM" Name="TRNAM" DataType="text" Length="200" SASFieldName="TRNAM">
@@ -1551,7 +1553,6 @@
         <Description>
           <TranslatedText xml:lang="en">Directionality</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.DIR"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TUDTC" Name="TUDTC" DataType="datetime" SASFieldName="TUDTC">
@@ -1589,7 +1590,6 @@
         <Description>
           <TranslatedText xml:lang="en">Laterality</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.LAT"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TULNKGRP" Name="TULNKGRP" DataType="text" Length="200" SASFieldName="TULNKGRP">
@@ -1614,7 +1614,6 @@
         <Description>
           <TranslatedText xml:lang="en">Location of the Tumor/Lesion</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.LOC"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TUMETHOD" Name="TUMETHOD" DataType="text" Length="200" SASFieldName="TUMETHOD">
@@ -1792,14 +1791,14 @@
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT_OR_LDIAM_ORU_LDIAM"/>
+        <CodeListRef CodeListOID="CL.UNIT_ORU_LDIAM"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00014" Name="TRORRESU" DataType="text" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT_OR_LPERP_ORU_LPERP"/>
+        <CodeListRef CodeListOID="CL.UNIT_ORU_LPERP"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00015" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
@@ -1934,9 +1933,6 @@
         <Alias Context="nci:ExtCodeID" Name="C99079"/>
       </CodeList>
       <CodeList OID="CL.EVAL" Name="Evaluator" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="ADJUDICATION COMMITTEE">
-          <Alias Context="nci:ExtCodeID" Name="C78726"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="ADJUDICATOR">
           <Alias Context="nci:ExtCodeID" Name="C96561"/>
         </EnumeratedItem>
@@ -1946,76 +1942,7 @@
         <EnumeratedItem CodedValue="INVESTIGATOR">
           <Alias Context="nci:ExtCodeID" Name="C25936"/>
         </EnumeratedItem>
-        <EnumeratedItem CodedValue="VENDOR">
-          <Alias Context="nci:ExtCodeID" Name="C68608"/>
-        </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C78735"/>
-      </CodeList>
-      <CodeList OID="CL.LAT" Name="Laterality" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="LEFT">
-          <Alias Context="nci:ExtCodeID" Name="C25229"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RIGHT">
-          <Alias Context="nci:ExtCodeID" Name="C25228"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C99073"/>
-      </CodeList>
-      <CodeList OID="CL.LOC" Name="Anatomical Location" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="ALVEOLUS">
-          <Alias Context="nci:ExtCodeID" Name="C12986"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="AXILLA">
-          <Alias Context="nci:ExtCodeID" Name="C12674"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BRACHIAL ARTERY">
-          <Alias Context="nci:ExtCodeID" Name="C12681"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAROTID ARTERY">
-          <Alias Context="nci:ExtCodeID" Name="C12687"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CHEST">
-          <Alias Context="nci:ExtCodeID" Name="C25389"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DORSALIS PEDIS ARTERY">
-          <Alias Context="nci:ExtCodeID" Name="C32478"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EAR">
-          <Alias Context="nci:ExtCodeID" Name="C12394"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EARLOBE">
-          <Alias Context="nci:ExtCodeID" Name="C32999"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FEMORAL ARTERY">
-          <Alias Context="nci:ExtCodeID" Name="C12715"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FINGER">
-          <Alias Context="nci:ExtCodeID" Name="C32608"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FOREHEAD">
-          <Alias Context="nci:ExtCodeID" Name="C89803"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NASOPHARYNX">
-          <Alias Context="nci:ExtCodeID" Name="C12423"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ORAL CAVITY">
-          <Alias Context="nci:ExtCodeID" Name="C12421"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="OROPHARYNX">
-          <Alias Context="nci:ExtCodeID" Name="C12762"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RADIAL ARTERY">
-          <Alias Context="nci:ExtCodeID" Name="C12838"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RECTUM">
-          <Alias Context="nci:ExtCodeID" Name="C12390"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="UPPER RESPIRATORY SYSTEM">
-          <Alias Context="nci:ExtCodeID" Name="C33839"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="WAIST">
-          <Alias Context="nci:ExtCodeID" Name="C64192"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C74456"/>
       </CodeList>
       <CodeList OID="CL.METHOD" Name="Method" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CALIPER MEASUREMENT METHOD">
@@ -2024,14 +1951,8 @@
         <EnumeratedItem CodedValue="CT SCAN">
           <Alias Context="nci:ExtCodeID" Name="C17204"/>
         </EnumeratedItem>
-        <EnumeratedItem CodedValue="DIPSTICK MEASUREMENT METHOD">
-          <Alias Context="nci:ExtCodeID" Name="C178142"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="ENDOSCOPY">
           <Alias Context="nci:ExtCodeID" Name="C16546"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IMMUNOASSAY">
-          <Alias Context="nci:ExtCodeID" Name="C16714"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="LYMPHANGIOGRAPHY">
           <Alias Context="nci:ExtCodeID" Name="C38069"/>
@@ -2056,12 +1977,6 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="PHOTOGRAPHY">
           <Alias Context="nci:ExtCodeID" Name="C94527"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PULSE OXIMETRY">
-          <Alias Context="nci:ExtCodeID" Name="C38085"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION">
-          <Alias Context="nci:ExtCodeID" Name="C28408"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="SCINTIGRAPHY">
           <Alias Context="nci:ExtCodeID" Name="C62667"/>
@@ -2511,6 +2426,18 @@
           <Alias Context="nci:ExtCodeID" Name="C96642"/>
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96784"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_ORU_LDIAM" Name="Unit, subset for Longest Diameter - Original" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_ORU_LPERP" Name="Unit, subset for Longest Perpendicular - Original" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
       </CodeList>
       <CodeList OID="CL.UNIT_STU_LDIAM" Name="Unit, subset for Longest Diameter - Standardized" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="mm">

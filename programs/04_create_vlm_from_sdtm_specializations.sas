@@ -5,6 +5,10 @@
 
 %let domains="RS" "TR" "TU";
 
+*******************************************************************************;
+* Create VLM metadata                                                         *;
+*******************************************************************************;
+
 proc sql noprint;
   select max(wc) into :max_whereclauses separated by ' ' 
   	from (select sum(not missing(comparator)) as wc
@@ -146,24 +150,24 @@ data source_values(/* drop = datasetSpecializationId codelist subsetcodelist val
   end;
 
   /* Assign codelists */
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "ORRES")
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*ORRES$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_OR_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "ORRES")
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and prxmatch('/.*ORRES$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_OR_", datasetSpecializationId);
 
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "ORRESU")
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*ORRESU$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_ORU_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "ORRESU")
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and prxmatch('/.*ORRESU$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_ORU_", datasetSpecializationId);
 
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "STRESC")
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*STRESC$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_STC_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "STRESC")
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and prxmatch('/.*STRESC$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_STC_", datasetSpecializationId);
 
-  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and index(column, "STRESU")
+  if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*STRESU$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and index(column, "STRESU")
+  if (not missing(xmlcodelist)) and (not missing(value_list)) and prxmatch('/.*STRESU$/i',strip(column))
     then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
 
   if (not missing(value_list)) and (not missing(subsetcodelist)) then xmlcodelist = subsetcodelist;

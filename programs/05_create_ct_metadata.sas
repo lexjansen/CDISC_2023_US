@@ -3,6 +3,8 @@
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
+%let domains="RS" "TR" "TU";
+
 *******************************************************************************;
 * Create CT metadata                                                          *;
 *******************************************************************************;
@@ -11,7 +13,7 @@ data sdtm_specializations_ct(drop=i countwords);
   length term $100;
   set data.sdtm_specializations(
     keep=datasetSpecializationId shortname vlmTarget domain name codelist codelist_submission_value subsetcodelist value_list assigned_term assigned_value
-    where=(not missing(codelist))
+    where=((domain in (&domains)) and (not missing(codelist)))
     );
   if not missing(value_list) then do;
     countwords=countw(value_list, ";");
@@ -36,24 +38,24 @@ data sdtm_specializations_ct;
   /* Assign codelists */
 
   xmlcodelist = codelist_submission_value;
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "ORRES")
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and prxmatch('/.*ORRES$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_OR_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "ORRES")
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and prxmatch('/.*ORRES$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_OR_", datasetSpecializationId);
 
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "ORRESU")
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and prxmatch('/.*ORRESU$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_ORU_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "ORRESU")
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and prxmatch('/.*ORRESU$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_ORU_", datasetSpecializationId);
 
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "STRESC")
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and prxmatch('/.*STRESC$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_STC_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "STRESC")
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and prxmatch('/.*STRESC$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_STC_", datasetSpecializationId);
 
-  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and index(name, "STRESU")
+  if (not missing(codelist_submission_value)) and (not missing(assigned_value)) and prxmatch('/.*STRESU$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_STU_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and index(name, "STRESU")
+  if (not missing(codelist_submission_value)) and (not missing(value_list)) and prxmatch('/.*STRESU$/i',strip(name))
     then xmlcodelist = cats(codelist_submission_value, "_STU_", datasetSpecializationId);
 
   if (not missing(value_list)) and (not missing(subsetcodelist)) then do;
