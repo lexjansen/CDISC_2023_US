@@ -10,9 +10,9 @@
 *******************************************************************************;
 
 proc sql noprint;
-  select max(wc) into :max_whereclauses separated by ' ' 
+  select max(wc) into :max_whereclauses separated by ' '
   	from (select sum(not missing(comparator)) as wc
-            from data.sdtm_specializations 
+            from data.sdtm_specializations
             group by datasetSpecializationId
           );
 quit;
@@ -22,70 +22,70 @@ quit;
 data whereclause(keep=datasetSpecializationId domain _whereclause:);
   array whereclause{&max_whereclauses} $ 1024 _whereclause1 - _whereclause&max_whereclauses;
   retain _whereclause: j max;
-  set data.sdtm_specializations(where=(domain in (&domains))) end=end;
+  set data.sdtm_specializations(where=(domain in (&domains) /* and isNonStandard ne 1 */)) end=end;
   by datasetSpecializationId notsorted;
   if first.datasetSpecializationId then do;
     do i=1 to dim(whereclause); whereclause(i) = ""; end;
-    j = 1;  
-  end;    
+    j = 1;
+  end;
   if comparator = "EQ" then do;
     whereclause(j) = catx(" ", name, comparator, cats('"', assigned_value, '"'));
     j = j + 1;
-  end;                          
+  end;
   if comparator = "IN" then do;
     whereclause(j) = catx(" ", name, comparator, cats('("', tranwrd(value_list, ";", '","'), '")'));
     j = j + 1;
-  end;   
+  end;
   if last.datasetSpecializationId then do;
     if j > max then max = j;
     put datasetSpecializationId @30 @;
     do i=1 to dim(whereclause); if (not missing(whereclause(i))) then put @20 whereclause(i)=; end;
-    output;
-  end;  
-run; 
+    output whereclause;
+  end;
+run;
 
 proc sort data=whereclause;
   by domain datasetSpecializationId;
-run;  
+run;
 
 ods listing close;
 ods html5 file="&project_folder/programs/04_create_vlm_from_sdtm_specializations.html";
 
   proc print data=whereclause;
     var domain datasetSpecializationId _whereclause:;
-  run;  
-  
+  run;
+
 ods html5 close;
 ods listing;
 
 
 
 data sdtm_specializations(drop = vlmTarget);
-    retain datasetSpecializationId domain name shortName;
+  retain datasetSpecializationId domain name shortName;
   set data.sdtm_specializations(
     where = ((vlmTarget = 1) and domain in (&domains))
-    keep = datasetSpecializationId domain shortName name codelist codelist_submission_value subsetcodelist 
-           value_list assigned_term assigned_value role datatype length format significantdigits 
+    keep = datasetSpecializationId domain shortName name codelist codelist_submission_value subsetcodelist
+           value_list assigned_term assigned_value role datatype length format significantdigits
            origintype originsource vlmTarget
-           
+
     );
     rename domain=table name=column shortName=label format=displayformat datatype=xmldatatype codelist_submission_value=xmlcodelist;
-  run;
-  
-  
+run;
+
+
 %cst_setStandardProperties(_cstStandard=CST-FRAMEWORK,_cstSubType=initialize);
 %cst_createdsfromtemplate(
   _cstStandard=CDISC-DEFINE-XML,_cstStandardVersion=2.1,
   _cstType=studymetadata,_cstSubType=value,_cstOutputDS=work.source_values_template
   );
-  
+
  data sdtm_specializations;
    set work.source_values_template sdtm_specializations;
  run;
-   
+
 proc sql;
   create table source_values as
-  select 
+  select
     sdtm.*,
     col.xmldatatype as parent_xmldatatype,
     wc._whereclause1,
@@ -99,13 +99,14 @@ proc sql;
   on (sdtm.table = col.table and sdtm.column = col.column)
   order by table, column, datasetSpecializationId
   ;
-quit;      
+quit;
 
-data source_values(/* drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause: */);
+data source_values(drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause:);
   set source_values;
-  whereclause = cats("(", _whereclause1, ")");
-  name = datasetSpecializationId;
-  
+
+   whereclause = cats("(", _whereclause1, ")");
+   name = datasetSpecializationId;  
+
   if table="RS" then do;
     if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('RSCAT')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
@@ -133,7 +134,7 @@ data source_values(/* drop = datasetSpecializationId codelist subsetcodelist val
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
-  end;  
+  end;
   if table="TU" then do;
     if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('TUEVAL' 'TUMETHOD')) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
@@ -177,8 +178,8 @@ data source_values(/* drop = datasetSpecializationId codelist subsetcodelist val
   if (not missing(xmlcodelist)) and (not missing(value_list)) and name in ("VSSTRESC" "LBSTRESC")
     then xmlcodelist = cats(xmlcodelist, "_ST_", datasetSpecializationId);
 */
-run;  
-   
+run;
+
 %let _cstStudyVersion=;
 %let _cstStandard=;
 %let _cstStandardVersion=;
@@ -196,17 +197,17 @@ data data.source_values_sdtm(drop=parent_xmldatatype label="Source Value Metadat
   standard="&_cstStandard";
   standardversion="&_cstStandardVersion";
   if missing(xmldatatype) then xmldatatype=parent_xmldatatype;
-run;  
+run;
 
 ods listing close;
 ods html5 file="&project_folder/data/source_values_sdtm.html";
 ods excel file="&project_folder/data/source_values_sdtm.xlsx" options(sheet_name="VLM" flow="tables" autofilter = 'all');
 
   proc print data=data.source_values_sdtm;
-  run;  
-  
+  run;
+
 ods excel close;
 ods html5 close;
 ods listing;
 
-  
+

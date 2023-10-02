@@ -1,0 +1,2541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
+<!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-09-29T13:31:08-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+  <Study OID="STDY.www.cdisc.org.CDISC01_1">
+    <GlobalVariables>
+      <StudyName>CDISC01</StudyName>
+      <StudyDescription>CDISC Test Study</StudyDescription>
+      <ProtocolName>CDISC01</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.5" def:CommentOID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
+      <def:Standards>
+        <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2023-06-30" Status="Final"/>
+        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2022-12-16" Status="Final"/>
+      </def:Standards>
+      <def:ValueListDef OID="VL.RS.RSORRES">
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00001" OrderNumber="1" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00001"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00002" OrderNumber="2" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00002"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00003" OrderNumber="3" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00003"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00004" OrderNumber="4" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00004"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.RS.RSSTRESC">
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00005" OrderNumber="5" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00005"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" OrderNumber="6" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00006"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" OrderNumber="7" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00007"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" OrderNumber="8" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00008"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TR.TRORRES">
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00009" OrderNumber="9" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00009"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00010" OrderNumber="10" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00010"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00011" OrderNumber="11" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00011"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00012" OrderNumber="12" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00012"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TR.TRORRESU">
+        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00013" OrderNumber="13" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00013"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00014" OrderNumber="14" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00014"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TR.TRSTRESC">
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00015" OrderNumber="15" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00015"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00016" OrderNumber="16" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00016"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" OrderNumber="17" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00017"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" OrderNumber="18" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00018"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TR.TRSTRESN">
+        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00019" OrderNumber="19" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00019"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00020" OrderNumber="20" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00020"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TR.TRSTRESU">
+        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00021" OrderNumber="21" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00021"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00022" OrderNumber="22" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00022"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TU.TUORRES">
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00023" OrderNumber="23" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00023"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00024" OrderNumber="24" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00024"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00025" OrderNumber="25" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00025"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00026" OrderNumber="26" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00026"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00027" OrderNumber="27" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00027"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:ValueListDef OID="VL.TU.TUSTRESC">
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00028" OrderNumber="28" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00028"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00029" OrderNumber="29" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00029"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00030" OrderNumber="30" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00030"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00031" OrderNumber="31" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00031"/>
+        </ItemRef>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00032" OrderNumber="32" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00032"/>
+        </ItemRef>
+      </def:ValueListDef>
+      <def:WhereClauseDef OID="WC.RS.RSORRES.00001">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>NEWLPROG</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSORRES.00002">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>NTRGRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSORRES.00003">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>OVRLRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSORRES.00004">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>TRGRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00005">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>NEWLPROG</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00006">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>NTRGRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00007">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>OVRLRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00008">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
+          <CheckValue>TRGRESP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
+          <CheckValue>RECIST 1.1</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00009">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LDIAM</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00010">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LNSTATE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00011">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LPERP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00012">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>TUMSTATE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRESU.00013">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LDIAM</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRORRESU.00014">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LPERP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00015">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LDIAM</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00016">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LNSTATE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00017">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LPERP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00018">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>TUMSTATE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00019">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LDIAM</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00020">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LPERP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00021">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LDIAM</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00022">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TR.TRTESTCD">
+          <CheckValue>LPERP</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TRMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00023">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>NTIND</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00024">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TIND</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00025">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUMERGE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00026">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUMIDENT</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00027">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUSPLIT</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00028">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>NTIND</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00029">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TIND</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00030">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUMERGE</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00031">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUMIDENT</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>SCREENING</CheckValue>
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00032">
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUTESTCD">
+          <CheckValue>TUSPLIT</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUMETHOD">
+          <CheckValue>CALIPER MEASUREMENT METHOD</CheckValue>
+          <CheckValue>CT SCAN</CheckValue>
+          <CheckValue>ENDOSCOPY</CheckValue>
+          <CheckValue>LYMPHANGIOGRAPHY</CheckValue>
+          <CheckValue>MAMMOGRAPHY</CheckValue>
+          <CheckValue>MRI</CheckValue>
+          <CheckValue>NUCLEAR RADIOLOGY</CheckValue>
+          <CheckValue>PET SCAN</CheckValue>
+          <CheckValue>PET/CT SCAN</CheckValue>
+          <CheckValue>PET/MRI SCAN</CheckValue>
+          <CheckValue>PHOTOGRAPHY</CheckValue>
+          <CheckValue>SCINTIGRAPHY</CheckValue>
+          <CheckValue>TOTAL BODY RADIOGRAPHY</CheckValue>
+          <CheckValue>ULTRASOUND</CheckValue>
+          <CheckValue>X-RAY</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
+          <CheckValue>ADJUDICATOR</CheckValue>
+          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+          <CheckValue>INVESTIGATOR</CheckValue>
+        </RangeCheck>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.EPOCH">
+          <CheckValue>TREATMENT</CheckValue>
+        </RangeCheck>
+      </def:WhereClauseDef>
+      <ItemGroupDef OID="IG.RS" Name="RS" Repeating="Yes" IsReferenceData="No" SASDatasetName="RS" Domain="RS" Purpose="Tabulation" def:Structure="One record per response assessment or clinical classification assessment per time point per visit per subject per assessor per medical evaluator" def:ArchiveLocationID="LF.RS" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Disease Response and Clin Classification</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.RS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="3" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSGRPID" Mandatory="No" OrderNumber="5" KeySequence="8" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSLNKID" Mandatory="No" OrderNumber="8" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSLNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.RS.RSTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="4" Role="Topic"/>
+        <ItemRef ItemOID="IT.RS.RSTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSCAT" Mandatory="No" OrderNumber="12" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSCAT" Mandatory="No" OrderNumber="13" Role="Grouping Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSORRES" Mandatory="No" OrderNumber="14" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSORRESU" Mandatory="No" OrderNumber="15" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC" Mandatory="No" OrderNumber="16" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESN" Mandatory="No" OrderNumber="17" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESU" Mandatory="No" OrderNumber="18" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSSTAT" Mandatory="No" OrderNumber="19" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSREASND" Mandatory="No" OrderNumber="20" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSNAM" Mandatory="No" OrderNumber="21" KeySequence="5" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSLOBXFL" Mandatory="No" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSBLFL" Mandatory="No" OrderNumber="23" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSDRVFL" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSEVAL" Mandatory="No" OrderNumber="25" KeySequence="6" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSEVALID" Mandatory="No" OrderNumber="26" KeySequence="7" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.RS.RSACPTFL" Mandatory="No" OrderNumber="27" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.RS.VISITNUM" Mandatory="No" OrderNumber="28" KeySequence="9" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.VISIT" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.VISITDY" Mandatory="No" OrderNumber="30" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.TAETORD" Mandatory="No" OrderNumber="31" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.EPOCH" Mandatory="No" OrderNumber="32" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSDTC" Mandatory="No" OrderNumber="33" KeySequence="2" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSDY" Mandatory="No" OrderNumber="34" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPT" Mandatory="No" OrderNumber="35" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPTNUM" Mandatory="No" OrderNumber="36" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSELTM" Mandatory="No" OrderNumber="37" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSTPTREF" Mandatory="No" OrderNumber="38" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSRFTDTC" Mandatory="No" OrderNumber="39" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSEVLINT" Mandatory="No" OrderNumber="40" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSEVINTX" Mandatory="No" OrderNumber="41" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSSTRTPT" Mandatory="No" OrderNumber="42" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSSTTPT" Mandatory="No" OrderNumber="43" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSENRTPT" Mandatory="No" OrderNumber="44" Role="Timing"/>
+        <ItemRef ItemOID="IT.RS.RSENTPT" Mandatory="No" OrderNumber="45" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.RS" xlink:href="rs.xpt">
+          <def:title>rs.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.TR" Name="TR" Repeating="Yes" IsReferenceData="No" SASDatasetName="TR" Domain="TR" Purpose="Tabulation" def:Structure="One record per tumor measurement/assessment per visit per subject per assessor" def:ArchiveLocationID="LF.TR" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Results</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.TR.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRGRPID" Mandatory="No" OrderNumber="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRLNKID" Mandatory="No" OrderNumber="8" KeySequence="10" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRLNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TR.TRTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="5" Role="Topic"/>
+        <ItemRef ItemOID="IT.TR.TRTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRORRES" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRORRESU" Mandatory="No" OrderNumber="13" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC" Mandatory="No" OrderNumber="14" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESN" Mandatory="No" OrderNumber="15" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESU" Mandatory="No" OrderNumber="16" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRSTAT" Mandatory="No" OrderNumber="17" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRREASND" Mandatory="No" OrderNumber="18" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRNAM" Mandatory="No" OrderNumber="19" KeySequence="7" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRMETHOD" Mandatory="No" OrderNumber="20" KeySequence="6" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRLOBXFL" Mandatory="No" OrderNumber="21" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRBLFL" Mandatory="No" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TREVAL" Mandatory="No" OrderNumber="23" KeySequence="8" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TREVALID" Mandatory="No" OrderNumber="24" KeySequence="9" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TR.TRACPTFL" Mandatory="No" OrderNumber="25" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TR.VISITNUM" Mandatory="No" OrderNumber="26" KeySequence="2" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.VISIT" Mandatory="No" OrderNumber="27" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.VISITDY" Mandatory="No" OrderNumber="28" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TAETORD" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.EPOCH" Mandatory="No" OrderNumber="30" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TRDTC" Mandatory="No" OrderNumber="31" KeySequence="3" Role="Timing"/>
+        <ItemRef ItemOID="IT.TR.TRDY" Mandatory="No" OrderNumber="32" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.TR" xlink:href="tr.xpt">
+          <def:title>tr.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.TU" Name="TU" Repeating="Yes" IsReferenceData="No" SASDatasetName="TU" Domain="TU" Purpose="Tabulation" def:Structure="One record per identified tumor per subject per assessor" def:ArchiveLocationID="LF.TU" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.TU.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUGRPID" Mandatory="No" OrderNumber="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUREFID" Mandatory="No" OrderNumber="6" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUSPID" Mandatory="No" OrderNumber="7" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TULNKID" Mandatory="No" OrderNumber="8" KeySequence="3" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TULNKGRP" Mandatory="No" OrderNumber="9" Role="Identifier"/>
+        <ItemRef ItemOID="IT.TU.TUTESTCD" Mandatory="Yes" OrderNumber="10" KeySequence="7" Role="Topic"/>
+        <ItemRef ItemOID="IT.TU.TUTEST" Mandatory="Yes" OrderNumber="11" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUORRES" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC" Mandatory="No" OrderNumber="13" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUNAM" Mandatory="No" OrderNumber="14" KeySequence="11" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULOC" Mandatory="No" OrderNumber="15" KeySequence="8" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULAT" Mandatory="No" OrderNumber="16" KeySequence="9" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUDIR" Mandatory="No" OrderNumber="17" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUPORTOT" Mandatory="No" OrderNumber="18" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUMETHOD" Mandatory="No" OrderNumber="19" KeySequence="10" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TULOBXFL" Mandatory="No" OrderNumber="20" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUBLFL" Mandatory="No" OrderNumber="21" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUEVAL" Mandatory="No" OrderNumber="22" KeySequence="12" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUEVALID" Mandatory="No" OrderNumber="23" KeySequence="2" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.TU.TUACPTFL" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.TU.VISITNUM" Mandatory="No" OrderNumber="25" KeySequence="4" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.VISIT" Mandatory="No" OrderNumber="26" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.VISITDY" Mandatory="No" OrderNumber="27" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TAETORD" Mandatory="No" OrderNumber="28" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.EPOCH" Mandatory="No" OrderNumber="29" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TUDTC" Mandatory="No" OrderNumber="30" KeySequence="5" Role="Timing"/>
+        <ItemRef ItemOID="IT.TU.TUDY" Mandatory="No" OrderNumber="31" Role="Timing"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.TU" xlink:href="tu.xpt">
+          <def:title>tu.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.SUPPTU" Name="SUPPTU" Repeating="Yes" IsReferenceData="No" SASDatasetName="SUPPTU" Domain="TU" Purpose="Tabulation" def:Structure="One record per IDVAR, IDVARVAL, and QNAM value per subject" def:ArchiveLocationID="LF.SUPPTU" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Supplemental Qualifiers for TU</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.SUPPTU.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.RDOMAIN" Mandatory="Yes" OrderNumber="2" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="3" Role="Identifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.IDVAR" Mandatory="No" OrderNumber="4" KeySequence="4" Role="Identifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.IDVARVAL" Mandatory="No" OrderNumber="5" KeySequence="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.QNAM" Mandatory="Yes" OrderNumber="6" KeySequence="6" Role="Topic"/>
+        <ItemRef ItemOID="IT.SUPPTU.QLABEL" Mandatory="Yes" OrderNumber="7" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.QVAL" Mandatory="Yes" OrderNumber="8" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.QORIG" Mandatory="Yes" OrderNumber="9" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPTU.QEVAL" Mandatory="No" OrderNumber="10" Role="Record Qualifier"/>
+        <Alias Context="DomainDescription" Name="Tumor Identification"/>
+        <def:Class Name="RELATIONSHIP"/>
+        <def:leaf ID="LF.SUPPTU" xlink:href="supptu.xpt">
+          <def:title>supptu.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemDef OID="IT.RS.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EPOCH"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSACPTFL" Name="RSACPTFL" DataType="text" Length="1" SASFieldName="RSACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSBLFL" Name="RSBLFL" DataType="text" Length="1" SASFieldName="RSBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSCAT" Name="RSCAT" DataType="text" Length="200" SASFieldName="RSCAT">
+        <Description>
+          <TranslatedText xml:lang="en">Category for Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDRVFL" Name="RSDRVFL" DataType="text" Length="1" SASFieldName="RSDRVFL">
+        <Description>
+          <TranslatedText xml:lang="en">Derived Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDTC" Name="RSDTC" DataType="datetime" SASFieldName="RSDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSDY" Name="RSDY" DataType="integer" Length="8" SASFieldName="RSDY" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Assessment</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSELTM" Name="RSELTM" DataType="text" Length="200" SASFieldName="RSELTM">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Elapsed Time from Time Point Ref</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSENRTPT" Name="RSENRTPT" DataType="text" Length="200" SASFieldName="RSENRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSENTPT" Name="RSENTPT" DataType="text" Length="200" SASFieldName="RSENTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVAL" Name="RSEVAL" DataType="text" Length="200" SASFieldName="RSEVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVALID" Name="RSEVALID" DataType="text" Length="200" SASFieldName="RSEVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVINTX" Name="RSEVINTX" DataType="text" Length="200" SASFieldName="RSEVINTX">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluation Interval Text</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSEVLINT" Name="RSEVLINT" DataType="text" Length="200" SASFieldName="RSEVLINT">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluation Interval</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSGRPID" Name="RSGRPID" DataType="text" Length="200" SASFieldName="RSGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLNKGRP" Name="RSLNKGRP" DataType="text" Length="200" SASFieldName="RSLNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLNKID" Name="RSLNKID" DataType="text" Length="20" SASFieldName="RSLNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSLOBXFL" Name="RSLOBXFL" DataType="text" Length="1" SASFieldName="RSLOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSNAM" Name="RSNAM" DataType="text" Length="200" SASFieldName="RSNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:ValueListRef ValueListOID="VL.RS.RSORRES"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRESU" Name="RSORRESU" DataType="text" Length="200" SASFieldName="RSORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSREASND" Name="RSREASND" DataType="text" Length="200" SASFieldName="RSREASND">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSREFID" Name="RSREFID" DataType="text" Length="200" SASFieldName="RSREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="text" SASFieldName="RSRFTDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSCAT" Name="RSSCAT" DataType="text" Length="200" SASFieldName="RSSCAT">
+        <Description>
+          <TranslatedText xml:lang="en">Subcategory</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSEQ" Name="RSSEQ" DataType="integer" Length="8" SASFieldName="RSSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSPID" Name="RSSPID" DataType="text" Length="200" SASFieldName="RSSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTAT" Name="RSSTAT" DataType="text" Length="8" SASFieldName="RSSTAT">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+        <def:ValueListRef ValueListOID="VL.RS.RSSTRESC"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESN" Name="RSSTRESN" DataType="float" Length="8" SASFieldName="RSSTRESN">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESU" Name="RSSTRESU" DataType="text" Length="200" SASFieldName="RSSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRTPT" Name="RSSTRTPT" DataType="text" Length="200" SASFieldName="RSSTRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Start Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTTPT" Name="RSSTTPT" DataType="text" Length="200" SASFieldName="RSSTTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Start Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTEST" Name="RSTEST" DataType="text" Length="40" SASFieldName="RSTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Assessment Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRTS"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTESTCD" Name="RSTESTCD" DataType="text" Length="8" SASFieldName="RSTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Assessment Short Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRTSCD"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPT" Name="RSTPT" DataType="text" Length="200" SASFieldName="RSTPT">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Time Point Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPTNUM" Name="RSTPTNUM" DataType="integer" Length="8" SASFieldName="RSTPTNUM">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Time Point Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSTPTREF" Name="RSTPTREF" DataType="text" Length="200" SASFieldName="RSTPTREF">
+        <Description>
+          <TranslatedText xml:lang="en">Time Point Reference</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.IDVAR" Name="IDVAR" DataType="text" Length="8" SASFieldName="IDVAR">
+        <Description>
+          <TranslatedText xml:lang="en">Identifying Variable</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.IDVARVAL" Name="IDVARVAL" DataType="text" Length="200" SASFieldName="IDVARVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Identifying Variable Value</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.QEVAL" Name="QEVAL" DataType="text" Length="80" SASFieldName="QEVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.QLABEL" Name="QLABEL" DataType="text" Length="40" SASFieldName="QLABEL">
+        <Description>
+          <TranslatedText xml:lang="en">Qualifier Variable Label</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.QNAM" Name="QNAM" DataType="text" Length="8" SASFieldName="QNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Qualifier Variable Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.QORIG" Name="QORIG" DataType="text" Length="20" SASFieldName="QORIG">
+        <Description>
+          <TranslatedText xml:lang="en">Origin</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.QVAL" Name="QVAL" DataType="text" Length="200" SASFieldName="QVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Data Value</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.RDOMAIN" Name="RDOMAIN" DataType="text" Length="4" SASFieldName="RDOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Related Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPTU.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EPOCH"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRACPTFL" Name="TRACPTFL" DataType="text" Length="1" SASFieldName="TRACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRBLFL" Name="TRBLFL" DataType="text" Length="1" SASFieldName="TRBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRDTC" Name="TRDTC" DataType="datetime" SASFieldName="TRDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Tumor/Lesion Measurement</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRDY" Name="TRDY" DataType="integer" Length="8" SASFieldName="TRDY" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Tumor/Lesion Measurement</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TREVAL" Name="TREVAL" DataType="text" Length="200" SASFieldName="TREVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EVAL"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TREVALID" Name="TREVALID" DataType="text" Length="200" SASFieldName="TREVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRGRPID" Name="TRGRPID" DataType="text" Length="200" SASFieldName="TRGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLNKGRP" Name="TRLNKGRP" DataType="text" Length="200" SASFieldName="TRLNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLNKID" Name="TRLNKID" DataType="text" Length="20" SASFieldName="TRLNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRLOBXFL" Name="TRLOBXFL" DataType="text" Length="1" SASFieldName="TRLOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRMETHOD" Name="TRMETHOD" DataType="text" Length="200" SASFieldName="TRMETHOD">
+        <Description>
+          <TranslatedText xml:lang="en">Method Used to Identify the Tumor/Lesion</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.METHOD"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRNAM" Name="TRNAM" DataType="text" Length="200" SASFieldName="TRNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Laboratory/Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:ValueListRef ValueListOID="VL.TR.TRORRES"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRESU" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Original Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:ValueListRef ValueListOID="VL.TR.TRORRESU"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRREASND" Name="TRREASND" DataType="text" Length="200" SASFieldName="TRREASND">
+        <Description>
+          <TranslatedText xml:lang="en">Reason Not Done</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRREFID" Name="TRREFID" DataType="text" Length="200" SASFieldName="TRREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSEQ" Name="TRSEQ" DataType="integer" Length="8" SASFieldName="TRSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSPID" Name="TRSPID" DataType="text" Length="200" SASFieldName="TRSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTAT" Name="TRSTAT" DataType="text" Length="8" SASFieldName="TRSTAT">
+        <Description>
+          <TranslatedText xml:lang="en">Completion Status</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+        <def:ValueListRef ValueListOID="VL.TR.TRSTRESC"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESN" Name="TRSTRESN" DataType="float" Length="22" SignificantDigits="7" SASFieldName="TRSTRESN" def:DisplayFormat="24.7">
+        <Description>
+          <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+        <def:ValueListRef ValueListOID="VL.TR.TRSTRESN"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESU" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Standard Units</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+        <def:ValueListRef ValueListOID="VL.TR.TRSTRESU"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRTEST" Name="TRTEST" DataType="text" Length="40" SASFieldName="TRTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Assessment Test Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRTEST"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRTESTCD" Name="TRTESTCD" DataType="text" Length="8" SASFieldName="TRTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion Assessment Short Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRTESTCD"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.DOMAIN" Name="DOMAIN" DataType="text" Length="4" SASFieldName="DOMAIN">
+        <Description>
+          <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.EPOCH" Name="EPOCH" DataType="text" Length="200" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EPOCH"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.STUDYID" Name="STUDYID" DataType="text" Length="10" SASFieldName="STUDYID">
+        <Description>
+          <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TAETORD" Name="TAETORD" DataType="integer" Length="8" SASFieldName="TAETORD">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Order of Element within Arm</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUACPTFL" Name="TUACPTFL" DataType="text" Length="1" SASFieldName="TUACPTFL">
+        <Description>
+          <TranslatedText xml:lang="en">Accepted Record Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUBLFL" Name="TUBLFL" DataType="text" Length="1" SASFieldName="TUBLFL">
+        <Description>
+          <TranslatedText xml:lang="en">Baseline Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDIR" Name="TUDIR" DataType="text" Length="200" SASFieldName="TUDIR">
+        <Description>
+          <TranslatedText xml:lang="en">Directionality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDTC" Name="TUDTC" DataType="datetime" SASFieldName="TUDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Date/Time of Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUDY" Name="TUDY" DataType="integer" Length="8" SASFieldName="TUDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Tumor/Lesion Identification</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUEVAL" Name="TUEVAL" DataType="text" Length="200" SASFieldName="TUEVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EVAL"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUEVALID" Name="TUEVALID" DataType="text" Length="200" SASFieldName="TUEVALID">
+        <Description>
+          <TranslatedText xml:lang="en">Evaluator Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUGRPID" Name="TUGRPID" DataType="text" Length="200" SASFieldName="TUGRPID">
+        <Description>
+          <TranslatedText xml:lang="en">Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULAT" Name="TULAT" DataType="text" Length="200" SASFieldName="TULAT">
+        <Description>
+          <TranslatedText xml:lang="en">Laterality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULNKGRP" Name="TULNKGRP" DataType="text" Length="200" SASFieldName="TULNKGRP">
+        <Description>
+          <TranslatedText xml:lang="en">Link Group ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULNKID" Name="TULNKID" DataType="text" Length="20" SASFieldName="TULNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULOBXFL" Name="TULOBXFL" DataType="text" Length="1" SASFieldName="TULOBXFL">
+        <Description>
+          <TranslatedText xml:lang="en">Last Observation Before Exposure Flag</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TULOC" Name="TULOC" DataType="text" Length="200" SASFieldName="TULOC">
+        <Description>
+          <TranslatedText xml:lang="en">Location of the Tumor/Lesion</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUMETHOD" Name="TUMETHOD" DataType="text" Length="200" SASFieldName="TUMETHOD">
+        <Description>
+          <TranslatedText xml:lang="en">Method of Identification</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.METHOD"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUNAM" Name="TUNAM" DataType="text" Length="200" SASFieldName="TUNAM">
+        <Description>
+          <TranslatedText xml:lang="en">Laboratory/Vendor Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES" Name="TUORRES" DataType="text" Length="200" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Result</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+        <def:ValueListRef ValueListOID="VL.TU.TUORRES"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUPORTOT" Name="TUPORTOT" DataType="text" Length="200" SASFieldName="TUPORTOT">
+        <Description>
+          <TranslatedText xml:lang="en">Portion or Totality</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUREFID" Name="TUREFID" DataType="text" Length="200" SASFieldName="TUREFID">
+        <Description>
+          <TranslatedText xml:lang="en">Reference ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSEQ" Name="TUSEQ" DataType="integer" Length="8" SASFieldName="TUSEQ" def:DisplayFormat="9">
+        <Description>
+          <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSPID" Name="TUSPID" DataType="text" Length="200" SASFieldName="TUSPID">
+        <Description>
+          <TranslatedText xml:lang="en">Sponsor-Defined Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC" Name="TUSTRESC" DataType="text" Length="200" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Result Std. Format</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+        <def:ValueListRef ValueListOID="VL.TU.TUSTRESC"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUTEST" Name="TUTEST" DataType="text" Length="40" SASFieldName="TUTEST">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Test Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUTEST"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUTESTCD" Name="TUTESTCD" DataType="text" Length="8" SASFieldName="TUTESTCD">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor/Lesion ID Short Name</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUTESTCD"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.USUBJID" Name="USUBJID" DataType="text" Length="20" SASFieldName="USUBJID">
+        <Description>
+          <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISIT" Name="VISIT" DataType="text" Length="40" SASFieldName="VISIT">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Name</TranslatedText>
+        </Description>
+        <def:Origin Type="Protocol" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISITDY" Name="VISITDY" DataType="integer" Length="8" SASFieldName="VISITDY">
+        <Description>
+          <TranslatedText xml:lang="en">Planned Study Day of Visit</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.VISITNUM" Name="VISITNUM" DataType="float" Length="6" SignificantDigits="2" SASFieldName="VISITNUM" def:DisplayFormat="8.2">
+        <Description>
+          <TranslatedText xml:lang="en">Visit Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00001" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">New Lesion Progression</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_OR_NEWLPROG"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00002" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Non-Target Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_OR_NTRGRESP"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00003" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Overall Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_OR_OVRLRESP"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00004" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Target Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_OR_TRGRESP"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00005" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">New Lesion Progression</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_STC_NEWLPROG"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Non-Target Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_STC_NTRGRESP"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Overall Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_STC_OVRLRESP"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Target Response</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ONCRSR_STC_TRGRESP"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00009" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00010" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRPROPRS_OR_LNSTATE"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00011" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00012" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRPROPRS_OR_TUMSTATE"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00013" Name="TRORRESU" DataType="text" SASFieldName="TRORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.UNIT_ORU_LDIAM"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00014" Name="TRORRESU" DataType="text" SASFieldName="TRORRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.UNIT_ORU_LPERP"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00015" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00016" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRPROPRS_STC_LNSTATE"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TRPROPRS_STC_TUMSTATE"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00019" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00020" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00021" Name="TRSTRESU" DataType="text" SASFieldName="TRSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.UNIT_STU_LDIAM"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00022" Name="TRSTRESU" DataType="text" SASFieldName="TRSTRESU">
+        <Description>
+          <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.UNIT_STU_LPERP"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00023" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Non-Target Indicator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_OR_NTIND"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00024" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Target Indicator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_OR_TIND"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00025" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Merged</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_OR_TUMERGE"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00026" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Identification</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_OR_TUMIDENT"/>
+        <def:Origin Type="Collected" Source="Investigator"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00027" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Split</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_OR_TUSPLIT"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00028" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Non-Target Indicator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_STC_NTIND"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00029" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Target Indicator</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_STC_TIND"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00030" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Merged</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_STC_TUMERGE"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00031" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Identification</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_STC_TUMIDENT"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00032" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+        <Description>
+          <TranslatedText xml:lang="en">Tumor Split</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.TUIDRS_STC_TUSPLIT"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <CodeList OID="CL.EPOCH" Name="Epoch" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="SCREENING">
+          <Alias Context="nci:ExtCodeID" Name="C48262"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="TREATMENT">
+          <Alias Context="nci:ExtCodeID" Name="C101526"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C99079"/>
+      </CodeList>
+      <CodeList OID="CL.EVAL" Name="Evaluator" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="ADJUDICATOR">
+          <Alias Context="nci:ExtCodeID" Name="C96561"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="INDEPENDENT ASSESSOR">
+          <Alias Context="nci:ExtCodeID" Name="C78720"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="INVESTIGATOR">
+          <Alias Context="nci:ExtCodeID" Name="C25936"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C78735"/>
+      </CodeList>
+      <CodeList OID="CL.METHOD" Name="Method" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CALIPER MEASUREMENT METHOD">
+          <Alias Context="nci:ExtCodeID" Name="C176470"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="CT SCAN">
+          <Alias Context="nci:ExtCodeID" Name="C17204"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="ENDOSCOPY">
+          <Alias Context="nci:ExtCodeID" Name="C16546"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="LYMPHANGIOGRAPHY">
+          <Alias Context="nci:ExtCodeID" Name="C38069"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="MAMMOGRAPHY">
+          <Alias Context="nci:ExtCodeID" Name="C16818"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="MRI">
+          <Alias Context="nci:ExtCodeID" Name="C16809"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NUCLEAR RADIOLOGY">
+          <Alias Context="nci:ExtCodeID" Name="C127514"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PET SCAN">
+          <Alias Context="nci:ExtCodeID" Name="C17007"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PET/CT SCAN">
+          <Alias Context="nci:ExtCodeID" Name="C103512"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PET/MRI SCAN">
+          <Alias Context="nci:ExtCodeID" Name="C103514"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PHOTOGRAPHY">
+          <Alias Context="nci:ExtCodeID" Name="C94527"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SCINTIGRAPHY">
+          <Alias Context="nci:ExtCodeID" Name="C62667"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="TOTAL BODY RADIOGRAPHY">
+          <Alias Context="nci:ExtCodeID" Name="C96640"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="ULTRASOUND">
+          <Alias Context="nci:ExtCodeID" Name="C17230"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="X-RAY">
+          <Alias Context="nci:ExtCodeID" Name="C38101"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C85492"/>
+      </CodeList>
+      <CodeList OID="CL.NY_OR_NTIND" Name="No Yes Response, subset for Non-Target Indicator - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49487"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="U">
+          <Decode>
+            <TranslatedText>U</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C17998"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49488"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66742"/>
+      </CodeList>
+      <CodeList OID="CL.NY_OR_TIND" Name="No Yes Response, subset for Target Indicator - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49487"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="U">
+          <Decode>
+            <TranslatedText>U</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C17998"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49488"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66742"/>
+      </CodeList>
+      <CodeList OID="CL.NY_STC_NTIND" Name="No Yes Response, subset for Non-Target Indicator - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49487"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="U">
+          <Decode>
+            <TranslatedText>U</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C17998"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49488"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66742"/>
+      </CodeList>
+      <CodeList OID="CL.NY_STC_TIND" Name="No Yes Response, subset for Target Indicator - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49487"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="U">
+          <Decode>
+            <TranslatedText>U</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C17998"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49488"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66742"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_OR_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="EQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C86071"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C123645"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_OR_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+          <Alias Context="nci:ExtCodeID" Name="C96700"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_OR_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NED">
+          <Alias Context="nci:ExtCodeID" Name="C40413"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+          <Alias Context="nci:ExtCodeID" Name="C96700"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PR">
+          <Alias Context="nci:ExtCodeID" Name="C18058"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SD">
+          <Alias Context="nci:ExtCodeID" Name="C18213"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_OR_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PR">
+          <Alias Context="nci:ExtCodeID" Name="C18058"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SD">
+          <Alias Context="nci:ExtCodeID" Name="C18213"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_STC_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="EQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C86071"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C123645"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_STC_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+          <Alias Context="nci:ExtCodeID" Name="C96700"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_STC_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NED">
+          <Alias Context="nci:ExtCodeID" Name="C40413"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+          <Alias Context="nci:ExtCodeID" Name="C96700"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PR">
+          <Alias Context="nci:ExtCodeID" Name="C18058"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SD">
+          <Alias Context="nci:ExtCodeID" Name="C18213"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRSR_STC_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="CR">
+          <Alias Context="nci:ExtCodeID" Name="C4870"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NE">
+          <Alias Context="nci:ExtCodeID" Name="C62222"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PD">
+          <Alias Context="nci:ExtCodeID" Name="C35571"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PR">
+          <Alias Context="nci:ExtCodeID" Name="C18058"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SD">
+          <Alias Context="nci:ExtCodeID" Name="C18213"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96785"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRTS" Name="Oncology Response Assessment Test Name" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="New Lesion Progression">
+          <Alias Context="nci:ExtCodeID" Name="C103420"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Non-target Response">
+          <Alias Context="nci:ExtCodeID" Name="C94535"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Overall Response">
+          <Alias Context="nci:ExtCodeID" Name="C96613"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Target Response">
+          <Alias Context="nci:ExtCodeID" Name="C94534"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96781"/>
+      </CodeList>
+      <CodeList OID="CL.ONCRTSCD" Name="Oncology Response Assessment Test Code" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="NEWLPROG">
+          <Alias Context="nci:ExtCodeID" Name="C103420"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NTRGRESP">
+          <Alias Context="nci:ExtCodeID" Name="C94535"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="OVRLRESP">
+          <Alias Context="nci:ExtCodeID" Name="C96613"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="TRGRESP">
+          <Alias Context="nci:ExtCodeID" Name="C94534"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96782"/>
+      </CodeList>
+      <CodeList OID="CL.TRPROPRS_OR_LNSTATE" Name="Tumor or Lesion Properties Test Result, subset for Lymph Node State - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="NON-PATHOLOGICAL">
+          <Alias Context="nci:ExtCodeID" Name="C126054"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PATHOLOGICAL">
+          <Alias Context="nci:ExtCodeID" Name="C25610"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C124309"/>
+      </CodeList>
+      <CodeList OID="CL.TRPROPRS_OR_TUMSTATE" Name="Tumor or Lesion Properties Test Result, subset for Tumor Status - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="ABSENT">
+          <Alias Context="nci:ExtCodeID" Name="C48190"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="EQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C86071"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PRESENT">
+          <Alias Context="nci:ExtCodeID" Name="C25626"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C123645"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C124309"/>
+      </CodeList>
+      <CodeList OID="CL.TRPROPRS_STC_LNSTATE" Name="Tumor or Lesion Properties Test Result, subset for Lymph Node State - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="NON-PATHOLOGICAL">
+          <Alias Context="nci:ExtCodeID" Name="C126054"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PATHOLOGICAL">
+          <Alias Context="nci:ExtCodeID" Name="C25610"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C124309"/>
+      </CodeList>
+      <CodeList OID="CL.TRPROPRS_STC_TUMSTATE" Name="Tumor or Lesion Properties Test Result, subset for Tumor Status - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="ABSENT">
+          <Alias Context="nci:ExtCodeID" Name="C48190"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="EQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C86071"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="PRESENT">
+          <Alias Context="nci:ExtCodeID" Name="C25626"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+          <Alias Context="nci:ExtCodeID" Name="C123645"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C124309"/>
+      </CodeList>
+      <CodeList OID="CL.TRTEST" Name="Tumor or Lesion Properties Test Name" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="Longest Diameter">
+          <Alias Context="nci:ExtCodeID" Name="C96684"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Longest Perpendicular">
+          <Alias Context="nci:ExtCodeID" Name="C96685"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Lymph Node State">
+          <Alias Context="nci:ExtCodeID" Name="C124448"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Tumor State">
+          <Alias Context="nci:ExtCodeID" Name="C96643"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96778"/>
+      </CodeList>
+      <CodeList OID="CL.TRTESTCD" Name="Tumor or Lesion Properties Test Code" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="LDIAM">
+          <Decode>
+            <TranslatedText>Longest Diameter</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C96684"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="LNSTATE">
+          <Decode>
+            <TranslatedText>Lymph Node State</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C124448"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="LPERP">
+          <Decode>
+            <TranslatedText>Longest Perpendicular</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C96685"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="TUMSTATE">
+          <Decode>
+            <TranslatedText>Tumor State</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C96643"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C96779"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_OR_TUMERGE" Name="Tumor or Lesion Identification Test Results, subset for Tumor Merged - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_OR_TUMIDENT" Name="Tumor or Lesion Identification Test Results, subset for Tumor Identification - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="NEW">
+          <Alias Context="nci:ExtCodeID" Name="C94522"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94521"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_OR_TUSPLIT" Name="Tumor or Lesion Identification Test Results, subset for Tumor Split - Original (Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_STC_TUMERGE" Name="Tumor or Lesion Identification Test Results, subset for Tumor Merged - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_STC_TUMIDENT" Name="Tumor or Lesion Identification Test Results, subset for Tumor Identification - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="NEW">
+          <Alias Context="nci:ExtCodeID" Name="C94522"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NON-TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94521"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUIDRS_STC_TUSPLIT" Name="Tumor or Lesion Identification Test Results, subset for Tumor Split - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="TARGET">
+          <Alias Context="nci:ExtCodeID" Name="C94520"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C123650"/>
+      </CodeList>
+      <CodeList OID="CL.TUTEST" Name="Tumor or Lesion Identification Test Name" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="Non-Target Indicator">
+          <Alias Context="nci:ExtCodeID" Name="C161483"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Target Indicator">
+          <Alias Context="nci:ExtCodeID" Name="C178053"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Tumor Identification">
+          <Alias Context="nci:ExtCodeID" Name="C94523"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Tumor Merged">
+          <Alias Context="nci:ExtCodeID" Name="C94525"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="Tumor Split">
+          <Alias Context="nci:ExtCodeID" Name="C96642"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C96783"/>
+      </CodeList>
+      <CodeList OID="CL.TUTESTCD" Name="Tumor or Lesion Identification Test Code" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="NTIND">
+          <Decode>
+            <TranslatedText>Non-Target Indicator</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C161483"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="TIND">
+          <Decode>
+            <TranslatedText>Target Indicator</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C178053"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="TUMERGE">
+          <Decode>
+            <TranslatedText>Tumor Merged</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C94525"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="TUMIDENT">
+          <Decode>
+            <TranslatedText>Tumor Identification</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C94523"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="TUSPLIT">
+          <Decode>
+            <TranslatedText>Tumor Split</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C96642"/>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C96784"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_ORU_LDIAM" Name="Unit, subset for Longest Diameter - Original" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_ORU_LPERP" Name="Unit, subset for Longest Perpendicular - Original" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_STU_LDIAM" Name="Unit, subset for Longest Diameter - Standardized" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
+      </CodeList>
+      <CodeList OID="CL.UNIT_STU_LPERP" Name="Unit, subset for Longest Perpendicular - Standardized" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="mm">
+          <Alias Context="nci:ExtCodeID" Name="C28251"/>
+        </EnumeratedItem>
+        <Alias Context="nci:ExtCodeID" Name="C71620"/>
+      </CodeList>
+      <def:CommentDef OID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
+        <Description>
+          <TranslatedText xml:lang="en">This Define-XML document is based on basic RS, TR and TU dataset and column metadata. Value level metadata (VLM) and codelists were programmatically created by extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.</TranslatedText>
+        </Description>
+      </def:CommentDef>
+    </MetaDataVersion>
+  </Study>
+</ODM>

@@ -8,6 +8,7 @@
 
 %let _cstTrgStandard=CDISC-SDTM;   * <----- User sets to standard of the source study *;
 %let _cstTrgStandardVersion=3.3;
+%let _cstStudyVersion=%str(MDV.CDISC01.SDTMIG.3.3.SDTM.1.7);
 
 %let _cstDefineFile=define_sdtm_3.3_vlm;
 %* Subfolder with the SAS Source Metadata data sets;
@@ -56,13 +57,9 @@ proc sql;
   values ("&_cstStandard"     "&_cstStandardVersion"    "results"         "results"     "results"  "libref"  "output" "dataset"  "Y"  "" "&workPath"  .  "srctodefinexml_results.sas7bdat" "")
   values ("&_cstStandard"     "&_cstStandardVersion"    "sourcedata"      ""            "srcdata"  "libref"  "output" "folder"   "Y"  "" "&workPath"  .  ""             "")
 
-  values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "study"       "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_study"          "")
-  values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "standard"    "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_standards"      "")
   values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "table"       "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_tables"         "")
   values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "column"      "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_columns"        "")
-  values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "codelist"    "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_codelists"      "")
-  values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "value"       "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_values"         "")
-  values ("&_cstStandard"  "&_cstStandardVersion" "studymetadata"   "document"    "sampdata" "libref"  "input"  "dataset"  "N"  "" "&studyRootPath/&subfolder"   .  "source_documents"      "")
+
   values ("&_cstStandard"  "&_cstStandardVersion" "externalxml"     "xml"         "extxml"   "fileref" "output" "file"     "Y"  ""  "&studyOutputPath/definexml" .  "&_cstDefineFile..xml"  "")
   values ("&_cstStandard"  "&_cstStandardVersion" "report"          "outputfile"  "html"     "fileref" "output" "file"     "Y"  ""  "&studyOutputPath/definexml" .  "&_cstDefineFile..html" "")
   values ("&_cstStandard"  "&_cstStandardVersion" "referencexml"    "stylesheet"  "xslt01"   "fileref" "input"  "file"     "Y"  ""  ""                           .  "define2-1.xsl"         "")
@@ -128,6 +125,7 @@ run;
 
 %cstutil_processsetup();
 
+
 data work.source_columns;
   set sampdata.source_columns;
   select(column);
@@ -147,18 +145,11 @@ data work.source_columns;
 run;
 
 data work.source_values;
-  set sampdata.source_values data.source_values_sdtm;
+  set metadata.source_values data.source_values_sdtm;
 run;
 
 data work.source_codelists;
-  set sampdata.source_codelists data.source_codelists_sdtm;
-run;
-
-data work.source_study;
-  set sampdata.source_study;
-  comment="This Define-XML document is based on basic RS, TR and TU dataset and column metadata. 
-Value level metadata (VLM) and codelists were programmatically created by 
-extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.";
+  set metadata.source_codelists data.source_codelists_sdtm;
 run;
 
 *******************************************************************************;
@@ -167,7 +158,7 @@ run;
 
 %define_sourcetodefine(
   _cstOutLib=srcdata,
-  _cstSourceStudy=work.source_study,
+  _cstSourceStudy=sampdata.source_study,
   _cstSourceStandards=sampdata.source_standards,
   _cstSourceTables=sampdata.source_tables,
   _cstSourceColumns=work.source_columns,
