@@ -45,7 +45,7 @@ proc sql;
   insert into work.source_standards(sasref, cdiscstandard, cdiscstandardversion, type, publishingset, order, status, comment,
                                     studyversion, standard, standardversion)
     values("SRCDATA", "SDTMIG", "&_cstTrgStandardVersion", "IG", "", 1, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
-    values("SRCDATA", "CDISC/NCI", "2023-06-30", "CT", "SDTM", 2, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
+    values("SRCDATA", "CDISC/NCI", "2023-09-29", "CT", "SDTM", 2, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
     values("SRCDATA", "CDISC/NCI", "2022-12-16", "CT", "DEFINE-XML", 3, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
   ;
   quit;

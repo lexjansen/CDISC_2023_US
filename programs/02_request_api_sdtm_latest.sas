@@ -1,31 +1,3 @@
-%macro get_sdtm_specializations(package);
-
-  filename jsonfile "%sysfunc(pathname(work))/dataspecializations_&package..json";
-
-  %get_api_response(
-    baseurl=&base_url_cosmos,
-    endpoint=/mdr/specializations/sdtm/packages/&package/datasetspecializations,
-    response_fileref=jsonfile
-  );
-
-  filename mapfile "%sysfunc(pathname(work))/dataspecialization.map";
-  libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata ordinalcount=none;
-
-  data __sdtm;
-    length datasetSpecializationId $64 latest_package_date $10 href title $1024;
-    set __sdtm jsonfile._links_datasetspecializations;
-    datasetSpecializationId=scan(href, -1, "\/");
-    latest_package_date=scan(href, -3, "\/");
-  run;  
-
-  filename jsonfile clear;
-  libname jsonfile clear;
-  filename mapfile clear;
-  
-%mend get_sdtm_specializations;  
-
-/*************************************************************************************************/
-
 %global project_folder;
 %let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %let subfolder=json;
@@ -33,51 +5,31 @@
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-filename jsonf "&project_folder/&subfolder/datasetspecialization_packages.json";
+filename jsonfile "&project_folder/&subfolder/datasetspecialization_latest.json";
+
 %get_api_response(
     baseurl=&base_url_cosmos,
-    endpoint=/mdr/specializations/sdtm/packages,
-    response_fileref=jsonf
+    endpoint=/mdr/specializations/sdtm/datasetspecializations,
+    response_fileref=jsonfile
   );
   
-filename mpfile "%sysfunc(pathname(work))/package.map";
-libname jsonf json map=mpfile automap=create fileref=jsonf noalldata ordinalcount=none;
-
-data __sdtm;
-  if 0=1;
-run;  
+filename mapfile "%sysfunc(pathname(work))/package.map";
+libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata ordinalcount=none;
 
 data _null_;
-  set jsonf._links_packages;
-  length code $4096 package $32;
-  package=scan(href, -2, "\/");
-  code=cats('%get_sdtm_specializations(package=', package, ');');
-  call execute (code);
-run;
-
-filename jsonf clear;
-libname jsonf clear;
-filename mpfile clear;
-
-proc sort data=__sdtm;
-  by datasetSpecializationId latest_package_date;
-run;
-
-data work.latest_sdtm;
-  set __sdtm;
-  by datasetSpecializationId latest_package_date;
-  if last.datasetSpecializationId;
-run;  
-
-data _null_;
-  set work.latest_sdtm;
-  length code $4096 response_file $1024;
+  set jsonfile._links_datasetspecializations;
+  length code $4096 response_file $1024 length datasetSpecializationId $64;
   baseurl="&base_url_cosmos";
+  datasetSpecializationId = scan(href, -1, "\/");
   response_file=cats("&project_folder/json/sdtm/", datasetSpecializationId, ".json");
   response_file=lowcase(response_file);
   code=cats('%get_api_response(baseurl=', baseurl, ', endpoint=', href, ', response_file=', response_file, ');');
   call execute (code);
 run;
+
+filename jsonfile clear;
+libname jsonfile clear;
+filename mapfile clear;
 
 %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
 libname jsontmp "%sysfunc(pathname(work))/jsontmp";
