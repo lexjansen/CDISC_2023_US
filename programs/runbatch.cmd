@@ -10,7 +10,6 @@ if exist ..\definexml\*result*.html del ..\definexml\*result*.html
 
 %SAScmd% 00_define_study_standards.sas %SASconfig%
 %SAScmd% 01_request_api_ct.sas %SASconfig%
-%SAScmd% 02_request_api_bc_latest.sas %SASconfig%
 %SAScmd% 02_request_api_sdtm_latest.sas %SASconfig%
 %SAScmd% 03_request_api_sdtm_domains.sas %SASconfig%
 %SAScmd% 04_create_vlm_from_sdtm_specializations.sas %SASconfig%

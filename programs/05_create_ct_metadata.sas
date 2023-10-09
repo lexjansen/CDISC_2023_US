@@ -72,8 +72,6 @@ data sdtm_specializations_ct;
 */
 run;
 
-options ls=200;  
-
 ods listing close;
 ods html5 file="&project_folder/programs/05_create_ct_metadata.html";
 ods excel file="&project_folder/programs/05_create_ct_metadata.xlsx" options(sheet_name="CT" flow="tables" autofilter = 'all');
@@ -103,8 +101,8 @@ proc sql;
       ct_vlm.datasetSpecializationId      
   from data.sdtm_ct sdtm_ct, sdtm_specializations_ct ct_vlm
   where (sdtm_ct.codelistncicode = ct_vlm.codelist) and 
-        ((sdtm_ct.codedvaluechar = ct_vlm.term) or (sdtm_ct.codedvaluencicode = ct_vlm.assigned_term)) and 
-        (not missing(ct_vlm.xmlcodelist))
+        (not missing(ct_vlm.xmlcodelist)) and
+        ((sdtm_ct.codedvaluechar = ct_vlm.term) or (sdtm_ct.codedvaluencicode = ct_vlm.assigned_term) or (missing(ct_vlm.term) and missing (ct_vlm.assigned_term))) 
   ;
 quit;
 
@@ -137,10 +135,11 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
 
   if index(codelist, "TESTCD") or index(codelist, "NY")
      then do;
-    if not missing(code_synonym) then decodetext = code_synonym;
-                                 else decodetext = codedvaluechar;
-  end;
-  else decodetext="";
+      if not missing(code_synonym) then decodetext = code_synonym;
+                                   else decodetext = codedvaluechar;
+    end;
+    else decodetext="";
+
 run;
 
 proc sort data=work.source_codelists_sdtm out=data.source_codelists_sdtm(label="Source Codelist Metadata") NODUPRECS;
@@ -159,3 +158,37 @@ ods html5 close;
 ods listing;
 
 
+
+data col_ct(keep=xmlcodelist);
+  set metadata.source_columns(where=(not missing(xmlcodelist)));
+run;
+proc sort data=col_ct nodupkey;
+  by xmlcodelist;
+run;  
+
+proc sql noprint;
+  select t1.xmlcodelist into :xmlcodelists separated by '" "'
+  from work.col_ct t1 
+    left join data.source_codelists_sdtm t2
+    on t1.xmlcodelist = t2.codelist
+    where missing(t2.codelist)
+  ;
+quit;   
+
+%put xmlcodelists = "&xmlcodelists";
+
+%cst_createdsfromtemplate(
+  _cstStandard=CDISC-DEFINE-XML,_cstStandardVersion=2.1,
+  _cstType=studymetadata,_cstSubType=codelist,_cstOutputDS=work.source_codelists_template
+  );
+
+data metadata.source_codelists(drop=code_synonym);
+  set work.source_codelists_template 
+      data.sdtm_ct(where=(codelist in ("&xmlcodelists")));
+  sasref="SRCDATA";
+  studyversion="&_cstStudyVersion";
+  standard="&_cstStandard";
+  standardversion="&_cstStandardVersion";
+  codelistdatatype="text";
+run;
+  

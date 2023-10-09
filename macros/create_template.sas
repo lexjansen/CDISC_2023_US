@@ -7,21 +7,22 @@
          packageDate char(10),
          conceptId char(64),
          parentConceptId char(64),
+         ncitCode char(64),
          href char(1024),
-         category char(1024),
+         categories char(4096),
          shortName char(256),
-         synonym char(1024),
-         resultScale char(256),
+         synonyms char(1024),
+         resultScales char(256),
          definition char(2048),
          system char(1024),
          systemname char(1024),
          code char (1024),
          dec_conceptId char(64),
          dec_href char(1024),
+         dec_ncitCode char(64),
          dec_shortName char(256),
-         order num,
          dec_dataType char(16),
-         dec_exampleSet char(2048)
+         dec_exampleSet char(32000)
         );
     quit;
   %end;
@@ -42,7 +43,6 @@
          datasetSpecializationId char(64),
          shortName char(256),
          name char(32),
-         order num,
          isNonStandard num,
          codelist char(64),
          codelist_href char(1024),
@@ -70,6 +70,37 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq BC_ISSUE %then %do;
+    proc sql;
+    create table &out
+      (
+       _excel_file_  char(128),
+       _tab_  char(128),
+       BC_ID char(64),
+       dec_id char(64),
+       issue_type char(64),
+       expected_value char(2048),
+       actual_value char(2048),
+       comment char(2048)
+      );
+    quit;
+  %end;
+  
+  %if %upcase(&type) eq SDTM_ISSUE %then %do;
+    proc sql;
+    create table &out
+      (
+       _excel_file_  char(128),
+       _tab_  char(128),
+       vlm_group_id char(128),
+       sdtm_variable char(64),
+       issue_type char(64),
+       expected_value char(2048),
+       actual_value char(2048),
+       comment char(2048)
+      );
+    quit;
+  %end;
   
 %mend;
   

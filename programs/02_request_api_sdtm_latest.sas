@@ -5,35 +5,42 @@
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-filename jsonfile "&project_folder/&subfolder/datasetspecialization_latest.json";
-
-%get_api_response(
-    baseurl=&base_url_cosmos,
-    endpoint=/mdr/specializations/sdtm/datasetspecializations,
-    response_fileref=jsonfile
-  );
+%macro get_sdtm_specs_by_domain(domain);
   
-filename mapfile "%sysfunc(pathname(work))/package.map";
-libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata ordinalcount=none;
+  filename jsonfile "&project_folder/&subfolder/datasetspecialization_latest_%lowcase(&domain).json";
 
-data _null_;
-  set jsonfile._links_datasetspecializations;
-  length code $4096 response_file $1024 length datasetSpecializationId $64;
-  baseurl="&base_url_cosmos";
-  datasetSpecializationId = scan(href, -1, "\/");
-  response_file=cats("&project_folder/json/sdtm/", datasetSpecializationId, ".json");
-  response_file=lowcase(response_file);
-  code=cats('%get_api_response(baseurl=', baseurl, ', endpoint=', href, ', response_file=', response_file, ');');
-  call execute (code);
-run;
+  %get_api_response(
+      baseurl=&base_url_cosmos,
+      endpoint=/mdr/specializations/sdtm/datasetspecializations?domain=&domain,
+      response_fileref=jsonfile
+    );
+    
+  filename mapfile "%sysfunc(pathname(work))/package.map";
+  libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata ordinalcount=none;
 
-filename jsonfile clear;
-libname jsonfile clear;
-filename mapfile clear;
+  data _null_;
+    set jsonfile._links_datasetspecializations;
+    length code $4096 response_file $1024 datasetSpecializationId $64;
+    baseurl="&base_url_cosmos";
+    datasetSpecializationId = scan(href, -1, "\/");
+    response_file=cats("&project_folder/json/sdtm/", datasetSpecializationId, ".json");
+    response_file=lowcase(response_file);
+    code=cats('%get_api_response(baseurl=', baseurl, ', endpoint=', href, ', response_file=', response_file, ');');
+    call execute (code);
+  run;
+
+  filename jsonfile clear;
+  libname jsonfile clear;
+  filename mapfile clear;
+
+%mend get_sdtm_specs_by_domain;
+
+%get_sdtm_specs_by_domain(RS);
+%get_sdtm_specs_by_domain(TR);
+%get_sdtm_specs_by_domain(TU);
 
 %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
 libname jsontmp "%sysfunc(pathname(work))/jsontmp";
-* libname jsontmp "&project_folder/_temp";
 
 %create_template(type=sdtm, out=work.sdtm__template);
 
@@ -91,29 +98,12 @@ data work.sdtm_specializations;
     putlog 'WAR' 'NING: ' datasetSpecializationId= name= comparator= vlmTarget=;
   end;
   
-/*
-  if datasetSpecializationId = "CARBXHGB" and name = "LBSTRESU" and missing(assigned_value) then assigned_value="g/dL";
-  if datasetSpecializationId = "BMI" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "kg/m2";
-  if datasetSpecializationId = "HEIGHT" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "cm";
-  if datasetSpecializationId = "WEIGHT" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "kg";
-  if datasetSpecializationId = "TEMP" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "C";
-  if datasetSpecializationId = "WSTCIR" and name = "VSSTRESU" and missing(assigned_value) then assigned_value = "cm";
-  
-  if index(value_list, "COROTID ARTERY") then value_list = tranwrd(value_list, "COROTID ARTERY", "CAROTID ARTERY");
-  if index(value_list, "RADIAL ARTERY")=0 then value_list = tranwrd(value_list, "RADIAL ARTER", "RADIAL ARTERY");
-  if assigned_value="mmHG" then assigned_value="mmHg";
-  
-  if datasetSpecializationId = "FRMSIZE" and name="VSSTRESC" and missing(value_list) then value_list="SMALL;MEDIUM;LARGE";
-  
-  if codelist_submission_value="VSTESTCD" then codelist="C66741";
-  if codelist_submission_value="VSTEST" then codelist="C67153";
-*/
 run;
 /*********************************************************************************************************************/
 /*********************************************************************************************************************/
 
 proc sort data=sdtm_specializations out=data.sdtm_specializations;
-  by datasetSpecializationId order;
+  by datasetSpecializationId;
 run;  
 
 ods listing close;
@@ -123,7 +113,7 @@ ods excel options(sheet_name="SDTM_DatasetSpecializations" flow="tables" autofil
   title "SDTM Specializations (generated on %sysfunc(datetime(), is8601dt.))";
   proc report data=data.sdtm_specializations;
     columns packageDate biomedicalConceptId dataElementConceptId sdtmigStartVersion sdtmigEndVersion domain source datasetSpecializationId
-            shortName name order isNonStandard codelist_href codelist codelist_submission_value subsetCodelist
+            shortName name isNonStandard codelist_href codelist codelist_submission_value subsetCodelist
             value_list assigned_term assigned_value role subject linkingPhrase predicateTerm object 
             dataType length format significantDigits mandatoryVariable mandatoryValue originType originSource comparator vlmTarget;
     

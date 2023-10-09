@@ -128,6 +128,7 @@ run;
 
 data work.source_columns;
   set sampdata.source_columns;
+/*
   select(column);
     when("RSTEST") xmlcodelist  = "ONCRTS";
     when("RSTESTCD") xmlcodelist  = "ONCRTSCD";
@@ -142,6 +143,7 @@ data work.source_columns;
     when("EPOCH") xmlcodelist  = "EPOCH";
     otherwise;
   end;
+*/
 run;
 
 data work.source_values;
@@ -223,3 +225,15 @@ quit;
     ,_cstResetSASOptions=0
     ,_cstDeleteFiles=1
     ,_cstDeleteGlobalMacroVars=0);
+
+
+title "WORK._CSTRESULTS";
+
+proc print data=work._cstResults;
+    
+    format _character_;
+    
+    where resultseverity ne "Info";
+    
+  run;
+    

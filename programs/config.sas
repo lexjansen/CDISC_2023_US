@@ -4,7 +4,6 @@
 %end;  
 
 options sasautos = ("&project_folder/macros", "/library/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options nomprint nomlogic nosymbolgen;
 
 %* This file contains the credentials;
 %*let credentials_file=&project_folder/programs/credentials.cfg;

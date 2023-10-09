@@ -15,7 +15,6 @@
 
   %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
   libname jsontmp "%sysfunc(pathname(work))/&domain";
-  * libname jsontmp "&project_folder/&subfolder/data/%lowcase(&domain)";
 
   proc datasets library=jsontmp kill nolist;
   quit;
@@ -81,12 +80,14 @@ proc sort data=work.nsv_metadata;
 run;  
 
 data work.nsv_metadata(
-  rename=(Simple_Datatype=simpleDatatype Define_XML_Datatype=xmldatatype)
+  drop=Description Source_s_ Define_XML_Datatype Limited_to_Domain_s_ Used_in_Domain_s_ External_Dictionary Codelist_Reference
+  rename=(Simple_Datatype=simpleDatatype)
   where = (domain in ("RS" "TR" "TU"))
   );
-  length variable $ 32;
+  length variable $ 32 codelist_ccode $ 64 xmldatatype $ 18;
   set work.nsv_metadata;
   by domain variable;
+  xmldatatype=Define_XML_Datatype;
   if index(Codelist_Reference, "evs.nci.nih.gov") then codelist_ccode = scan(scan(Codelist_Reference, 2, '"'), -2, ".");
   if last.variable;
 run;  
@@ -110,13 +111,10 @@ proc sql;
   ;  
 quit;  
 
-proc contents data=work.source_columns_nsv varnum;
-run;  
-
 ods listing close;
 ods html5 file="&project_folder/programs/03_request_api_sdtm_domains.html";
 proc print data=work.source_columns_nsv;
-  var domain variable label Source_s_ role xmldatatype codelist_ccode;
+  var domain variable label role xmldatatype codelist_ccode;
 run;
 ods html5 close;
 ods listing;
@@ -151,18 +149,18 @@ run;
 
 
 
-%macro add_domain(clib_domain=, order=, suppdomain=);
+%macro add_domain(clib_domain=, order=);
 
   %get_domain(domain=&clib_domain, version=&_cstCDISCStandardVersion);
 
   libname clib "%sysfunc(pathname(work))/&clib_domain";
 
   data mdr_datasets_&clib_domain(keep=dataset description class key_variables repeating reference_data);
-    set mdr_datasets(where=(dataset=upcase("&clib_domain") or dataset=upcase("SUPP&suppdomain")));
+    set mdr_datasets(where=(dataset=upcase("&clib_domain")));
   run;
 
   data mdr_variables_&clib_domain(keep=dataset variable label data_type length significant_digits format mandatory codelist origin role);
-    set mdr_variables(where=(dataset=upcase("&clib_domain") or dataset=upcase("SUPP&suppdomain")));
+    set mdr_variables(where=(dataset=upcase("&clib_domain")));
   run;
 
   %if %sysfunc(exist(clib.datasetvariables_valuelist)) %then %do;
@@ -191,17 +189,10 @@ run;
     length domain $32;
     set clib.root;
     domain=name;
-    %if %sysevalf(%superq(suppdomain)=, boolean)=0 %then %do;
-      name = "SUPP&suppdomain";
-      domain="&suppdomain";
-    %end;
-
   run;
 
   data work.datasetvariables;
     set clib.datasetvariables;
-    %if %sysevalf(%superq(suppdomain)=, boolean)=0 %then %do;
-    %end;
   run;
 
 
@@ -210,7 +201,6 @@ run;
       root.name as table,
       root.domain,
       root.label as label,
-      mdrfull.description as domaindescription,
       /* root.description as table_description, */
       root.datasetStructure as structure,
       translate(mdr.key_variables, " ", ",") as keys length=200,
@@ -223,14 +213,11 @@ run;
     from work.root root
       left join work.mdr_datasets_&clib_domain mdr
     on (root.name = mdr.dataset)
-      left join work.mdr_datasets mdrfull
-    on (mdrfull.dataset = "&suppdomain")
     ;
     create table work.source_columns as select
       root.name as table,
       t1.name as column,
       t1.label,
-      mdr.label as label_mdr,      
       input(t1.ordinal, best.) as order,
       input(mdr.length, best.) as length,
       mdr.format as displayformat,
@@ -239,13 +226,12 @@ run;
       mdr.data_type as xmldatatype length=18,
 
       mdr.codelist as xmlcodelist_,
-      scan(t3.href, -1, "/") as codelist_ccode,
+      scan(t3.href, -1, "/") as codelist_ccode length=64,
 
       t1.core,
       mdr.mandatory length=3,
       put(mdr.origin, $origtyp.) as origintype,
-      t1.role,
-      mdr.role as role_mdr
+      t1.role
   /*
       t1.simpleDatatype,
       t1.describedValuedomain,
@@ -276,10 +262,6 @@ run;
     cdiscstandardversion="&_cstTrgStandardVersion";
     date=put(date(), e8601da10.);
     if intable then order=&order;
-    %if %sysevalf(%superq(suppdomain)=, boolean)=0 %then %do;
-      if table = "SUPP&suppdomain" then label = tranwrd(label, "[domain name]", "&suppdomain");
-    %end;
-
   run;
 
   data work.source_columns_nsv_&clib_domain;
@@ -288,7 +270,8 @@ run;
     );
   run;
   
-  data work.source_columns;
+  data work.source_columns(drop = simpleDatatype);
+    length xmldatatype $18;
     set work.source_columns_template
         work.source_columns
         work.source_columns_nsv_&clib_domain(
@@ -308,8 +291,8 @@ run;
       type = substr(simpleDatatype, 1, 1);
       isNonStandard = "Yes";
       order = _n_;
-      if missing(xmlcodelist) then xmlcodelist = xmlcodelist_; 
     end;  
+    
   run;
    
   data metadata.source_columns(
@@ -317,6 +300,8 @@ run;
     );
     set metadata.source_columns 
         work.source_columns; 
+    if missing(xmlcodelist) and (not missing(xmlcodelist_)) and (not missing(codelist_ccode)) 
+      then xmlcodelist = xmlcodelist_;
   run;
 
   libname clib clear;
@@ -326,9 +311,4 @@ run;
 %add_domain(clib_domain=rs, order=1);
 %add_domain(clib_domain=tr, order=2);
 %add_domain(clib_domain=tu, order=3);
-%*add_domain(clib_domain=suppqual, order=4, suppdomain=TU);
 
-proc print data=metadata.source_columns;
-  var table column xmlcodelist_ codelist_ccode;
-  where ((missing(xmlcodelist_) or missing(codelist_ccode)) and not (missing(xmlcodelist_) and missing(codelist_ccode)));
-run;

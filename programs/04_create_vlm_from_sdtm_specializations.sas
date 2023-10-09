@@ -108,47 +108,49 @@ data source_values(drop = datasetSpecializationId codelist subsetcodelist value_
    name = datasetSpecializationId;  
 
   if table="RS" then do;
-    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('RSCAT')) then do;
+    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('RSCAT')  */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('RSEVAL')) then do;
+    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('RSEVAL') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
       name = "";
     end;
-    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
+    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH'))*/ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
   end;
+
   if table="TR" then do;
-    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('TRMETHOD')) then do;
+    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('TRMETHOD') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('TREVAL')) then do;
+    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('TREVAL') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
       name = "";
     end;
-    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
+    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
   end;
   if table="TU" then do;
-    if (not missing(_whereclause2) and scan(_whereclause2, 1, ' ') in ('TUEVAL' 'TUMETHOD')) then do;
+    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('TUEVAL' 'TUMETHOD') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) and scan(_whereclause3, 1, ' ') in ('TUEVAL' 'EPOCH')) then do;
+    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('TUEVAL' 'EPOCH') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
       name = "";
     end;
-    if (not missing(_whereclause4) and scan(_whereclause4, 1, ' ') in ('EPOCH')) then do;
+    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH') */ ) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
   end;
+
 
   /* Assign codelists */
   if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*ORRES$/i',strip(column))
