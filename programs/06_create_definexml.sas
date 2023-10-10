@@ -128,22 +128,13 @@ run;
 
 data work.source_columns;
   set sampdata.source_columns;
-/*
   select(column);
-    when("RSTEST") xmlcodelist  = "ONCRTS";
-    when("RSTESTCD") xmlcodelist  = "ONCRTSCD";
-    when("TRTEST") xmlcodelist  = "TRTEST";
-    when("TRTESTCD") xmlcodelist  = "TRTESTCD";
-    when("TREVAL") xmlcodelist  = "EVAL";
-    when("TRMETHOD") xmlcodelist  = "METHOD";
-    when("TUTEST") xmlcodelist  = "TUTEST";
-    when("TUTESTCD") xmlcodelist  = "TUTESTCD";
-    when("TUEVAL") xmlcodelist  = "EVAL";
-    when("TUMETHOD") xmlcodelist  = "METHOD";
-    when("EPOCH") xmlcodelist  = "EPOCH";
+    when("RSORRESU") xmlcodelist  = "";
+    when("RSSTRESU") xmlcodelist  = "";
+    when("TRORRESU") xmlcodelist  = "";
+    when("TRSTRESU") xmlcodelist  = "";
     otherwise;
   end;
-*/
 run;
 
 data work.source_values;
@@ -174,7 +165,7 @@ run;
 
 data srcdata.metadataversion;
   set srcdata.metadataversion;
-  DefineVersion = "2.1.5";
+  DefineVersion = "2.1.6";
 run;  
 
 %define_write(

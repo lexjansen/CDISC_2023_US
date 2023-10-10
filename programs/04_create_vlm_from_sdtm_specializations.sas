@@ -22,7 +22,7 @@ quit;
 data whereclause(keep=datasetSpecializationId domain _whereclause:);
   array whereclause{&max_whereclauses} $ 1024 _whereclause1 - _whereclause&max_whereclauses;
   retain _whereclause: j max;
-  set data.sdtm_specializations(where=(domain in (&domains) /* and isNonStandard ne 1 */)) end=end;
+  set data.sdtm_specializations(where=(domain in (&domains))) end=end;
   by datasetSpecializationId notsorted;
   if first.datasetSpecializationId then do;
     do i=1 to dim(whereclause); whereclause(i) = ""; end;
@@ -60,8 +60,9 @@ ods listing;
 
 
 
-data sdtm_specializations(drop = vlmTarget);
+data sdtm_specializations(drop = vlmTarget shortName);
   retain datasetSpecializationId domain name shortName;
+  length label $ 200;
   set data.sdtm_specializations(
     where = ((vlmTarget = 1) and domain in (&domains))
     keep = datasetSpecializationId domain shortName name codelist codelist_submission_value subsetcodelist
@@ -69,7 +70,8 @@ data sdtm_specializations(drop = vlmTarget);
            origintype originsource vlmTarget
 
     );
-    rename domain=table name=column shortName=label format=displayformat datatype=xmldatatype codelist_submission_value=xmlcodelist;
+    label = shortName;
+    rename domain=table name=column format=displayformat datatype=xmldatatype codelist_submission_value=xmlcodelist;
 run;
 
 

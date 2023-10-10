@@ -297,6 +297,7 @@ run;
    
   data metadata.source_columns(
       label="Source Column Metadata"
+      drop=xmlcodelist_ codelist_ccode
     );
     set metadata.source_columns 
         work.source_columns; 

@@ -30,9 +30,10 @@ run;
 
 data metadata.source_study;
   set work.source_study;
-  comment="This Define-XML document is based on basic RS, TR and TU dataset and column metadata.
-Value level metadata (VLM) and codelists were programmatically created by
-extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.";
+  comment="This Define-XML document is based on RS, TR and TU dataset and column metadata
+ extracted from the CDISC Library.
+ Value level metadata (VLM) and codelists were programmatically created by
+ extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.";
 run;
 
 
@@ -46,7 +47,7 @@ proc sql;
                                     studyversion, standard, standardversion)
     values("SRCDATA", "SDTMIG", "&_cstTrgStandardVersion", "IG", "", 1, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
     values("SRCDATA", "CDISC/NCI", "2023-09-29", "CT", "SDTM", 2, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
-    values("SRCDATA", "CDISC/NCI", "2022-12-16", "CT", "DEFINE-XML", 3, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
+    values("SRCDATA", "CDISC/NCI", "2023-06-30", "CT", "DEFINE-XML", 3, "Final", "", "&_cstStudyVersion", "&_cstTrgStandard", "&_cstTrgStandardVersion")
   ;
   quit;
 run;

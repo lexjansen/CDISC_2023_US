@@ -34,7 +34,7 @@ run;
   
 data sdtm_specializations_ct;
   set sdtm_specializations_ct;
-  length xmlcodelist $128;
+  length xmlcodelist $200;
   /* Assign codelists */
 
   xmlcodelist = codelist_submission_value;
@@ -120,7 +120,8 @@ proc sql noprint;
  from metadata.source_study;
 quit;
 
-data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname subsetcodelist code_synonym term__ );
+data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname subsetcodelist code_synonym term__);
+  length codelistname $ 200;
   set work.source_codelist_template work.source_codelists_sdtm(drop=codelist rename=(xmlcodelist__=codelist));
   sasref="SRCDATA";
   studyversion="&_cstStudyVersion";
@@ -133,13 +134,14 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
   if index(codelist, '_OR_') or (index(column, "ORRES") and index(column, "ORRESU")=0 )then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Original (Res)");
   if index(codelist, '_STC_') or index(column, "STRESC") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized (Char Res)");
 
-  if index(codelist, "TESTCD") or index(codelist, "NY")
+  if index(codelist, "TESTCD") or index(codelist, "NY") or index(codelist, "ONCRSR")
      then do;
       if not missing(code_synonym) then decodetext = code_synonym;
                                    else decodetext = codedvaluechar;
     end;
     else decodetext="";
 
+  if index(codelistname, "subset")=0 and not missing(term__) then codelistname = catx(' ', cats(codelistname, ","), "subset");
 run;
 
 proc sort data=work.source_codelists_sdtm out=data.source_codelists_sdtm(label="Source Codelist Metadata") NODUPRECS;
@@ -183,6 +185,7 @@ quit;
   );
 
 data metadata.source_codelists(drop=code_synonym);
+  length codelistname $ 200;
   set work.source_codelists_template 
       data.sdtm_ct(where=(codelist in ("&xmlcodelists")));
   sasref="SRCDATA";

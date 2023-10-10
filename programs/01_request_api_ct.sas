@@ -39,15 +39,22 @@ quit;
 proc copy in=jsonf out=jsontmp;
 run; 
 
+data work.terms_synonyms(drop=synonyms:);
+  set jsontmp.terms_synonyms;
+  length _synonyms $ 2048;
+  array synonyms_{*} $ 1024 synonyms:;
+  _synonyms = catx(";", OF synonyms_{*});
+run;
+
 proc sql;
   create table data.sdtm_ct as
   select 
     cl.submissionvalue as codelist,
-    cl.name as codelistname,
+    cl.name as codelistname length=128,
     cl.conceptid as codelistncicode,
     clt.conceptid as codedvaluencicode,
     clt.submissionvalue as codedvaluechar,
-    clts.synonyms1 as code_synonym,
+    clts._synonyms as code_synonym,
     "CDISC/NCI" as cdiscstandard,
     root.version as cdiscstandardversion,
     scan(root.name, 1, " ") as publishingset
@@ -56,7 +63,7 @@ proc sql;
   on (root.ordinal_root = cl.ordinal_root)
     left join jsontmp.codelists_terms clt 
   on (cl.ordinal_codelists = clt.ordinal_codelists)
-    left join jsontmp.terms_synonyms clts 
+    left join work.terms_synonyms clts 
   on (clt.ordinal_terms = clts.ordinal_terms)
   order by codelist, codedvaluechar
   ;

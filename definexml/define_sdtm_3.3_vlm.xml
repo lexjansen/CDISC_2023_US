@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-09T16:54:47-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-10T16:19:45-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
       <StudyDescription>CDISC Test Study</StudyDescription>
       <ProtocolName>CDISC01</ProtocolName>
     </GlobalVariables>
-    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.5" def:CommentOID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
+    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.6" def:CommentOID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
       <def:Standards>
         <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
         <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2023-09-29" Status="Final"/>
-        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2022-12-16" Status="Final"/>
+        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2023-06-30" Status="Final"/>
       </def:Standards>
       <def:ValueListDef OID="VL.RS.RSORRES">
         <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00001" OrderNumber="1" Mandatory="No" Role="Qualifier">
@@ -1177,7 +1177,6 @@
         <Description>
           <TranslatedText xml:lang="en">Original Units</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSREASND" Name="RSREASND" DataType="text" Length="200" SASFieldName="RSREASND">
@@ -1241,7 +1240,6 @@
         <Description>
           <TranslatedText xml:lang="en">Standard Units</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSSTRTPT" Name="RSSTRTPT" DataType="text" Length="200" SASFieldName="RSSTRTPT">
@@ -1439,7 +1437,6 @@
         <Description>
           <TranslatedText xml:lang="en">Original Units</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT"/>
         <def:Origin Type="Collected" Source="Investigator"/>
         <def:ValueListRef ValueListOID="VL.TR.TRORRESU"/>
       </ItemDef>
@@ -1493,7 +1490,6 @@
         <Description>
           <TranslatedText xml:lang="en">Standard Units</TranslatedText>
         </Description>
-        <CodeListRef CodeListOID="CL.UNIT"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.TR.TRSTRESU"/>
       </ItemDef>
@@ -2134,7 +2130,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C99074"/>
       </CodeList>
-      <CodeList OID="CL.EPOCH" Name="Epoch" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.EPOCH" Name="Epoch, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="SCREENING">
           <Alias Context="nci:ExtCodeID" Name="C48262"/>
         </EnumeratedItem>
@@ -2143,7 +2139,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C99079"/>
       </CodeList>
-      <CodeList OID="CL.EVAL" Name="Evaluator" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.EVAL" Name="Evaluator, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="ADJUDICATOR">
           <Alias Context="nci:ExtCodeID" Name="C96561"/>
         </EnumeratedItem>
@@ -6430,7 +6426,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96777"/>
       </CodeList>
-      <CodeList OID="CL.METHOD" Name="Method" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.METHOD" Name="Method, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CALIPER MEASUREMENT METHOD">
           <Alias Context="nci:ExtCodeID" Name="C176470"/>
         </EnumeratedItem>
@@ -6484,7 +6480,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C66789"/>
       </CodeList>
-      <CodeList OID="CL.NY" Name="No Yes Response" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.NY" Name="No Yes Response, subset" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="N">
           <Decode>
             <TranslatedText>No</TranslatedText>
@@ -6508,7 +6504,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U</TranslatedText>
+            <TranslatedText>U;UNK;Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6529,7 +6525,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U</TranslatedText>
+            <TranslatedText>U;UNK;Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6550,7 +6546,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U</TranslatedText>
+            <TranslatedText>U;UNK;Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6571,7 +6567,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U</TranslatedText>
+            <TranslatedText>U;UNK;Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6583,7 +6579,7 @@
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C66742"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSCAT" Name="Category of Oncology Response Assessment" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.ONCRSCAT" Name="Category of Oncology Response Assessment, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="RECIST 1.1">
           <Alias Context="nci:ExtCodeID" Name="C124415"/>
         </EnumeratedItem>
@@ -6869,60 +6865,108 @@
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_OR_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="NON-CR/NON-PD">
+          <Decode>
+            <TranslatedText>Non Complete Response/Non Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96700"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_OR_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NED">
+        </CodeListItem>
+        <CodeListItem CodedValue="NED">
+          <Decode>
+            <TranslatedText>No Evidence of Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C40413"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="NON-CR/NON-PD">
+          <Decode>
+            <TranslatedText>Non Complete Response/Non Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96700"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
+        </CodeListItem>
+        <CodeListItem CodedValue="PR">
+          <Decode>
+            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
+        </CodeListItem>
+        <CodeListItem CodedValue="SD">
+          <Decode>
+            <TranslatedText>Stable Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_OR_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
+        </CodeListItem>
+        <CodeListItem CodedValue="PR">
+          <Decode>
+            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
+        </CodeListItem>
+        <CodeListItem CodedValue="SD">
+          <Decode>
+            <TranslatedText>Stable Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
@@ -6935,63 +6979,111 @@
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="NON-CR/NON-PD">
+          <Decode>
+            <TranslatedText>Non Complete Response/Non Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96700"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NED">
+        </CodeListItem>
+        <CodeListItem CodedValue="NED">
+          <Decode>
+            <TranslatedText>No Evidence of Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C40413"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NON-CR/NON-PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="NON-CR/NON-PD">
+          <Decode>
+            <TranslatedText>Non Complete Response/Non Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96700"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
+        </CodeListItem>
+        <CodeListItem CodedValue="PR">
+          <Decode>
+            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
+        </CodeListItem>
+        <CodeListItem CodedValue="SD">
+          <Decode>
+            <TranslatedText>Stable Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
+        <CodeListItem CodedValue="CR">
+          <Decode>
+            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
+        </CodeListItem>
+        <CodeListItem CodedValue="NE">
+          <Decode>
+            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
+        </CodeListItem>
+        <CodeListItem CodedValue="PD">
+          <Decode>
+            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
+        </CodeListItem>
+        <CodeListItem CodedValue="PR">
+          <Decode>
+            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
+        </CodeListItem>
+        <CodeListItem CodedValue="SD">
+          <Decode>
+            <TranslatedText>Stable Disease</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRTS" Name="Oncology Response Assessment Test Name" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.ONCRTS" Name="Oncology Response Assessment Test Name, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="New Lesion Progression">
           <Alias Context="nci:ExtCodeID" Name="C103420"/>
         </EnumeratedItem>
@@ -7006,7 +7098,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96781"/>
       </CodeList>
-      <CodeList OID="CL.ONCRTSCD" Name="Oncology Response Assessment Test Code" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.ONCRTSCD" Name="Oncology Response Assessment Test Code, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="NEWLPROG">
           <Alias Context="nci:ExtCodeID" Name="C103420"/>
         </EnumeratedItem>
@@ -7189,7 +7281,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C124309"/>
       </CodeList>
-      <CodeList OID="CL.TRTEST" Name="Tumor or Lesion Properties Test Name" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.TRTEST" Name="Tumor or Lesion Properties Test Name, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="Longest Diameter">
           <Alias Context="nci:ExtCodeID" Name="C96684"/>
         </EnumeratedItem>
@@ -7204,7 +7296,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96778"/>
       </CodeList>
-      <CodeList OID="CL.TRTESTCD" Name="Tumor or Lesion Properties Test Code" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.TRTESTCD" Name="Tumor or Lesion Properties Test Code, subset" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="LDIAM">
           <Decode>
             <TranslatedText>Longest Diameter</TranslatedText>
@@ -7219,7 +7311,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="LPERP">
           <Decode>
-            <TranslatedText>Longest Perpendicular</TranslatedText>
+            <TranslatedText>Longest Perpendicular;Short Axis Diameter</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96685"/>
         </CodeListItem>
@@ -7366,7 +7458,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C123650"/>
       </CodeList>
-      <CodeList OID="CL.TUTEST" Name="Tumor or Lesion Identification Test Name" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.TUTEST" Name="Tumor or Lesion Identification Test Name, subset" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="Non-Target Indicator">
           <Alias Context="nci:ExtCodeID" Name="C161483"/>
         </EnumeratedItem>
@@ -7384,7 +7476,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96783"/>
       </CodeList>
-      <CodeList OID="CL.TUTESTCD" Name="Tumor or Lesion Identification Test Code" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.TUTESTCD" Name="Tumor or Lesion Identification Test Code, subset" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="NTIND">
           <Decode>
             <TranslatedText>Non-Target Indicator</TranslatedText>
@@ -7417,2667 +7509,6 @@
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96784"/>
       </CodeList>
-      <CodeList OID="CL.UNIT" Name="Unit" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="%">
-          <Alias Context="nci:ExtCodeID" Name="C25613"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="% INHIBITION">
-          <Alias Context="nci:ExtCodeID" Name="C117963"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%(v/v)">
-          <Alias Context="nci:ExtCodeID" Name="C48571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%(w/v)">
-          <Alias Context="nci:ExtCodeID" Name="C48527"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%(w/w)">
-          <Alias Context="nci:ExtCodeID" Name="C48528"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%*min/h">
-          <Alias Context="nci:ExtCodeID" Name="C187981"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%/min">
-          <Alias Context="nci:ExtCodeID" Name="C114240"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="%/s">
-          <Alias Context="nci:ExtCodeID" Name="C163560"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="(mmHg*min/L)*m2">
-          <Alias Context="nci:ExtCodeID" Name="C201486"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10 HPFs">
-          <Alias Context="nci:ExtCodeID" Name="C158699"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/100 HPFs">
-          <Alias Context="nci:ExtCodeID" Name="C102695"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/100 RBC">
-          <Alias Context="nci:ExtCodeID" Name="C191358"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/100 WBC">
-          <Alias Context="nci:ExtCodeID" Name="C67219"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/100x FIELD">
-          <Alias Context="nci:ExtCodeID" Name="C199995"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10^3">
-          <Alias Context="nci:ExtCodeID" Name="C123634"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10^3 RBC">
-          <Alias Context="nci:ExtCodeID" Name="C191359"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10^4">
-          <Alias Context="nci:ExtCodeID" Name="C135515"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10^5">
-          <Alias Context="nci:ExtCodeID" Name="C135516"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/10^6">
-          <Alias Context="nci:ExtCodeID" Name="C184719"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/2 mm2">
-          <Alias Context="nci:ExtCodeID" Name="C189646"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/200 HPFs">
-          <Alias Context="nci:ExtCodeID" Name="C132472"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/2000 RBC">
-          <Alias Context="nci:ExtCodeID" Name="C132473"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/2500 WBC">
-          <Alias Context="nci:ExtCodeID" Name="C132474"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/4.0 mL">
-          <Alias Context="nci:ExtCodeID" Name="C122197"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/40 HPFs">
-          <Alias Context="nci:ExtCodeID" Name="C132475"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/400 Cells">
-          <Alias Context="nci:ExtCodeID" Name="C191355"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/500 WBC">
-          <Alias Context="nci:ExtCodeID" Name="C132476"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/5x10^4 WBC">
-          <Alias Context="nci:ExtCodeID" Name="C170636"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/7.5 mL">
-          <Alias Context="nci:ExtCodeID" Name="C122198"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/HPF">
-          <Alias Context="nci:ExtCodeID" Name="C96619"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/LPF">
-          <Alias Context="nci:ExtCodeID" Name="C96620"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/LSQN">
-          <Alias Context="nci:ExtCodeID" Name="C130187"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/MBP">
-          <Alias Context="nci:ExtCodeID" Name="C176387"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/VF">
-          <Alias Context="nci:ExtCodeID" Name="C105516"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/animal">
-          <Alias Context="nci:ExtCodeID" Name="C198368"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/cmH2O">
-          <Alias Context="nci:ExtCodeID" Name="C135517"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/day">
-          <Alias Context="nci:ExtCodeID" Name="C25473"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/g">
-          <Alias Context="nci:ExtCodeID" Name="C198369"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/h">
-          <Alias Context="nci:ExtCodeID" Name="C66966"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/kg">
-          <Alias Context="nci:ExtCodeID" Name="C120844"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/min">
-          <Alias Context="nci:ExtCodeID" Name="C66967"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/mm">
-          <Alias Context="nci:ExtCodeID" Name="C130188"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/mm2">
-          <Alias Context="nci:ExtCodeID" Name="C122199"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/month">
-          <Alias Context="nci:ExtCodeID" Name="C64498"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/ms">
-          <Alias Context="nci:ExtCodeID" Name="C161490"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/s">
-          <Alias Context="nci:ExtCodeID" Name="C66965"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="/wk">
-          <Alias Context="nci:ExtCodeID" Name="C67069"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="1/(s*kPa)">
-          <Alias Context="nci:ExtCodeID" Name="C127804"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C199993"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C199992"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="100 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71185"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="100 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C199994"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^10 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198371"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^10 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198370"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^10 vp/dose">
-          <Alias Context="nci:ExtCodeID" Name="C198372"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^10 vp/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198373"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^10/L">
-          <Alias Context="nci:ExtCodeID" Name="C105517"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^11/L">
-          <Alias Context="nci:ExtCodeID" Name="C105488"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^12 IU/L">
-          <Alias Context="nci:ExtCodeID" Name="C105518"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^12/L">
-          <Alias Context="nci:ExtCodeID" Name="C67308"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C68895"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 CFU/g">
-          <Alias Context="nci:ExtCodeID" Name="C68899"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68903"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 DNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98788"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198374"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 RNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98790"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 Therapeutic Cells">
-          <Alias Context="nci:ExtCodeID" Name="C187975"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C100897"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 organisms">
-          <Alias Context="nci:ExtCodeID" Name="C71187"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 organisms/g">
-          <Alias Context="nci:ExtCodeID" Name="C71190"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3 organisms/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71195"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3/L">
-          <Alias Context="nci:ExtCodeID" Name="C105519"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^3/hpf">
-          <Alias Context="nci:ExtCodeID" Name="C98789"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C158293"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C166095"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198376"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198375"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4/L">
-          <Alias Context="nci:ExtCodeID" Name="C73771"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^4/hpf">
-          <Alias Context="nci:ExtCodeID" Name="C98787"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C198377"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C181551"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198379"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5 Therapeutic Cells">
-          <Alias Context="nci:ExtCodeID" Name="C187971"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198378"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5/L">
-          <Alias Context="nci:ExtCodeID" Name="C105490"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5/hpf">
-          <Alias Context="nci:ExtCodeID" Name="C98743"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^5/kg">
-          <Alias Context="nci:ExtCodeID" Name="C184715"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C68896"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 CFU/g">
-          <Alias Context="nci:ExtCodeID" Name="C68900"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68904"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 DNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98756"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 IU">
-          <Alias Context="nci:ExtCodeID" Name="C67335"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98757"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 PFU">
-          <Alias Context="nci:ExtCodeID" Name="C67268"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 RNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98760"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 TCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C150415"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 Therapeutic Cells">
-          <Alias Context="nci:ExtCodeID" Name="C187973"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 U">
-          <Alias Context="nci:ExtCodeID" Name="C67310"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C100898"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 organisms">
-          <Alias Context="nci:ExtCodeID" Name="C71188"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 organisms/g">
-          <Alias Context="nci:ExtCodeID" Name="C71191"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 organisms/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71196"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6 organisms/mg">
-          <Alias Context="nci:ExtCodeID" Name="C71193"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6/Ejaculate U">
-          <Alias Context="nci:ExtCodeID" Name="C130189"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6/L">
-          <Alias Context="nci:ExtCodeID" Name="C67452"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6/g">
-          <Alias Context="nci:ExtCodeID" Name="C98758"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6/hpf">
-          <Alias Context="nci:ExtCodeID" Name="C98759"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^6/kg">
-          <Alias Context="nci:ExtCodeID" Name="C198380"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C158294"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C166096"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198382"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 PFU">
-          <Alias Context="nci:ExtCodeID" Name="C67265"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 TCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C150416"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198381"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7/L">
-          <Alias Context="nci:ExtCodeID" Name="C98786"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^7/kg">
-          <Alias Context="nci:ExtCodeID" Name="C184717"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C198383"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 IU">
-          <Alias Context="nci:ExtCodeID" Name="C156119"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198385"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 PFU">
-          <Alias Context="nci:ExtCodeID" Name="C67266"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 TCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C150417"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198384"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^8/L">
-          <Alias Context="nci:ExtCodeID" Name="C105489"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 CFU">
-          <Alias Context="nci:ExtCodeID" Name="C68897"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 CFU/g">
-          <Alias Context="nci:ExtCodeID" Name="C68901"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68905"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198387"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 PFU">
-          <Alias Context="nci:ExtCodeID" Name="C67267"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 Therapeutic Cells">
-          <Alias Context="nci:ExtCodeID" Name="C187998"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198386"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 organisms">
-          <Alias Context="nci:ExtCodeID" Name="C71189"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 organisms/g">
-          <Alias Context="nci:ExtCodeID" Name="C71192"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 organisms/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71197"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9 organisms/mg">
-          <Alias Context="nci:ExtCodeID" Name="C71194"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9/L">
-          <Alias Context="nci:ExtCodeID" Name="C67255"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9/dose">
-          <Alias Context="nci:ExtCodeID" Name="C163561"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9/g">
-          <Alias Context="nci:ExtCodeID" Name="C122200"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="10^9/uL">
-          <Alias Context="nci:ExtCodeID" Name="C198388"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ACTUATION">
-          <Alias Context="nci:ExtCodeID" Name="C122629"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="AFU">
-          <Alias Context="nci:ExtCodeID" Name="C77534"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="AMPULE">
-          <Alias Context="nci:ExtCodeID" Name="C48473"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="APL U">
-          <Alias Context="nci:ExtCodeID" Name="C122202"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="APL U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117965"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="APPLICATION">
-          <Alias Context="nci:ExtCodeID" Name="C25397"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="APS U">
-          <Alias Context="nci:ExtCodeID" Name="C161498"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="APS U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C186219"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ARMOUR UNIT">
-          <Alias Context="nci:ExtCodeID" Name="C189642"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="AU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C70504"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Absorbance U">
-          <Alias Context="nci:ExtCodeID" Name="C73686"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Absorbance U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C126078"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Absorbance U/min">
-          <Alias Context="nci:ExtCodeID" Name="C73687"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="AgU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C70500"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Anson U">
-          <Alias Context="nci:ExtCodeID" Name="C122201"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Antibody Unit">
-          <Alias Context="nci:ExtCodeID" Name="C111129"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Arbitrary U">
-          <Alias Context="nci:ExtCodeID" Name="C75765"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Arbitrary U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C191361"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BAG">
-          <Alias Context="nci:ExtCodeID" Name="C48474"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BAR">
-          <Alias Context="nci:ExtCodeID" Name="C48475"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BAU">
-          <Alias Context="nci:ExtCodeID" Name="C70505"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BAU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116235"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BE/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116231"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BEAM BREAKS">
-          <Alias Context="nci:ExtCodeID" Name="C129002"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BISCUIT">
-          <Alias Context="nci:ExtCodeID" Name="C111139"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BLOCKS">
-          <Alias Context="nci:ExtCodeID" Name="C111140"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BOLUS">
-          <Alias Context="nci:ExtCodeID" Name="C48476"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BOTTLE">
-          <Alias Context="nci:ExtCodeID" Name="C48477"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BOWL">
-          <Alias Context="nci:ExtCodeID" Name="C151970"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BOX">
-          <Alias Context="nci:ExtCodeID" Name="C48478"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BP">
-          <Alias Context="nci:ExtCodeID" Name="C132477"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BU">
-          <Alias Context="nci:ExtCodeID" Name="C117966"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="BU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117967"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Binding Ab Unit">
-          <Alias Context="nci:ExtCodeID" Name="C189120"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Binding Ab Unit/mL">
-          <Alias Context="nci:ExtCodeID" Name="C189647"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq">
-          <Alias Context="nci:ExtCodeID" Name="C42562"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/L">
-          <Alias Context="nci:ExtCodeID" Name="C71165"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/g">
-          <Alias Context="nci:ExtCodeID" Name="C70522"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/kg">
-          <Alias Context="nci:ExtCodeID" Name="C70521"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71167"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/mg">
-          <Alias Context="nci:ExtCodeID" Name="C70524"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/uL">
-          <Alias Context="nci:ExtCodeID" Name="C71166"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bq/ug">
-          <Alias Context="nci:ExtCodeID" Name="C70523"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="C">
-          <Alias Context="nci:ExtCodeID" Name="C42559"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAE Unit">
-          <Alias Context="nci:ExtCodeID" Name="C67270"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAN">
-          <Alias Context="nci:ExtCodeID" Name="C48479"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAPFUL">
-          <Alias Context="nci:ExtCodeID" Name="C102405"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAPLET">
-          <Alias Context="nci:ExtCodeID" Name="C64696"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CAPSULE">
-          <Alias Context="nci:ExtCodeID" Name="C48480"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CARTRIDGE">
-          <Alias Context="nci:ExtCodeID" Name="C48481"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70535"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CCID 50/mL">
-          <Alias Context="nci:ExtCodeID" Name="C120845"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CFU/g">
-          <Alias Context="nci:ExtCodeID" Name="C68898"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68902"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CGE">
-          <Alias Context="nci:ExtCodeID" Name="C128269"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CIGAR">
-          <Alias Context="nci:ExtCodeID" Name="C116244"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CIGARETTE">
-          <Alias Context="nci:ExtCodeID" Name="C116245"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="COAT">
-          <Alias Context="nci:ExtCodeID" Name="C48483"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CONTAINER">
-          <Alias Context="nci:ExtCodeID" Name="C48484"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CUP">
-          <Alias Context="nci:ExtCodeID" Name="C54703"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CYLINDER">
-          <Alias Context="nci:ExtCodeID" Name="C48489"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci">
-          <Alias Context="nci:ExtCodeID" Name="C48466"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/L">
-          <Alias Context="nci:ExtCodeID" Name="C71170"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/g">
-          <Alias Context="nci:ExtCodeID" Name="C70528"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/kg">
-          <Alias Context="nci:ExtCodeID" Name="C70529"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71172"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/mg">
-          <Alias Context="nci:ExtCodeID" Name="C70531"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/uL">
-          <Alias Context="nci:ExtCodeID" Name="C71171"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ci/ug">
-          <Alias Context="nci:ExtCodeID" Name="C70530"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Coulomb">
-          <Alias Context="nci:ExtCodeID" Name="C42550"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DAYS">
-          <Alias Context="nci:ExtCodeID" Name="C25301"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DAgU">
-          <Alias Context="nci:ExtCodeID" Name="C70501"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DAgU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C70502"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DDU">
-          <Alias Context="nci:ExtCodeID" Name="C161494"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DIOPTER">
-          <Alias Context="nci:ExtCodeID" Name="C100899"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DIP">
-          <Alias Context="nci:ExtCodeID" Name="C82483"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DISK">
-          <Alias Context="nci:ExtCodeID" Name="C48490"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C98719"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DNA copies/ug">
-          <Alias Context="nci:ExtCodeID" Name="C170632"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DPM">
-          <Alias Context="nci:ExtCodeID" Name="C73710"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DRINK">
-          <Alias Context="nci:ExtCodeID" Name="C161487"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DROP">
-          <Alias Context="nci:ExtCodeID" Name="C69441"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="DRUM">
-          <Alias Context="nci:ExtCodeID" Name="C48492"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ECL unit">
-          <Alias Context="nci:ExtCodeID" Name="C161491"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EIA unit">
-          <Alias Context="nci:ExtCodeID" Name="C122205"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70533"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EID 50/mL">
-          <Alias Context="nci:ExtCodeID" Name="C120847"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ELISA unit">
-          <Alias Context="nci:ExtCodeID" Name="C68875"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ELISA unit/dose">
-          <Alias Context="nci:ExtCodeID" Name="C68876"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ELISA unit/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68877"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ENVELOPE">
-          <Alias Context="nci:ExtCodeID" Name="C186220"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EP U">
-          <Alias Context="nci:ExtCodeID" Name="C176384"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EU">
-          <Alias Context="nci:ExtCodeID" Name="C96599"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="EVENTS">
-          <Alias Context="nci:ExtCodeID" Name="C150901"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Ejaculate U">
-          <Alias Context="nci:ExtCodeID" Name="C130046"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Enzyme U">
-          <Alias Context="nci:ExtCodeID" Name="C64778"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Enzyme U/L">
-          <Alias Context="nci:ExtCodeID" Name="C147130"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Enzyme U/g Hb">
-          <Alias Context="nci:ExtCodeID" Name="C154856"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Enzyme U/m2">
-          <Alias Context="nci:ExtCodeID" Name="C156467"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="F">
-          <Alias Context="nci:ExtCodeID" Name="C44277"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FEU">
-          <Alias Context="nci:ExtCodeID" Name="C96649"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FFU">
-          <Alias Context="nci:ExtCodeID" Name="C75303"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C189650"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FINGERTIP UNIT">
-          <Alias Context="nci:ExtCodeID" Name="C71321"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="FIU">
-          <Alias Context="nci:ExtCodeID" Name="C163045"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Farad">
-          <Alias Context="nci:ExtCodeID" Name="C42552"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Frames/s">
-          <Alias Context="nci:ExtCodeID" Name="C106524"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GBq">
-          <Alias Context="nci:ExtCodeID" Name="C70513"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GBq/g">
-          <Alias Context="nci:ExtCodeID" Name="C70525"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GBq/mg">
-          <Alias Context="nci:ExtCodeID" Name="C70527"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GBq/ug">
-          <Alias Context="nci:ExtCodeID" Name="C70526"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GLASS">
-          <Alias Context="nci:ExtCodeID" Name="C198391"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GLOBULE">
-          <Alias Context="nci:ExtCodeID" Name="C91803"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GPL U">
-          <Alias Context="nci:ExtCodeID" Name="C67347"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GPL U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117971"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GPS U">
-          <Alias Context="nci:ExtCodeID" Name="C161497"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GPS U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C186221"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="GUMMY">
-          <Alias Context="nci:ExtCodeID" Name="C186222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Gauss">
-          <Alias Context="nci:ExtCodeID" Name="C68915"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Gravitational Unit">
-          <Alias Context="nci:ExtCodeID" Name="C73772"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Gy">
-          <Alias Context="nci:ExtCodeID" Name="C18063"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Gy/h">
-          <Alias Context="nci:ExtCodeID" Name="C158295"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Gy/min">
-          <Alias Context="nci:ExtCodeID" Name="C158296"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="HEP">
-          <Alias Context="nci:ExtCodeID" Name="C116232"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="HOMEOPATHIC DILUTION">
-          <Alias Context="nci:ExtCodeID" Name="C48498"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="HOURS">
-          <Alias Context="nci:ExtCodeID" Name="C25529"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Henry">
-          <Alias Context="nci:ExtCodeID" Name="C42558"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Hounsfield Unit">
-          <Alias Context="nci:ExtCodeID" Name="C94908"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Hz">
-          <Alias Context="nci:ExtCodeID" Name="C42545"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Hz/s">
-          <Alias Context="nci:ExtCodeID" Name="C154854"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IMPLANT">
-          <Alias Context="nci:ExtCodeID" Name="C48499"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="INHALATION">
-          <Alias Context="nci:ExtCodeID" Name="C48501"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU">
-          <Alias Context="nci:ExtCodeID" Name="C48579"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/L">
-          <Alias Context="nci:ExtCodeID" Name="C67376"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/dL">
-          <Alias Context="nci:ExtCodeID" Name="C120848"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/day">
-          <Alias Context="nci:ExtCodeID" Name="C85645"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/g">
-          <Alias Context="nci:ExtCodeID" Name="C70493"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/g Hb">
-          <Alias Context="nci:ExtCodeID" Name="C122207"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/h">
-          <Alias Context="nci:ExtCodeID" Name="C85646"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67379"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/kg/h">
-          <Alias Context="nci:ExtCodeID" Name="C71209"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C67377"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/mg">
-          <Alias Context="nci:ExtCodeID" Name="C67380"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="IU/mmol">
-          <Alias Context="nci:ExtCodeID" Name="C122208"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="J/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C67357"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="JAR">
-          <Alias Context="nci:ExtCodeID" Name="C48502"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="JDF Unit">
-          <Alias Context="nci:ExtCodeID" Name="C172606"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Joule">
-          <Alias Context="nci:ExtCodeID" Name="C42548"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="K">
-          <Alias Context="nci:ExtCodeID" Name="C42537"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="KALLIKREIN INHIBITOR UNIT">
-          <Alias Context="nci:ExtCodeID" Name="C48503"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="KIT">
-          <Alias Context="nci:ExtCodeID" Name="C48504"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L">
-          <Alias Context="nci:ExtCodeID" Name="C48505"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/L">
-          <Alias Context="nci:ExtCodeID" Name="C105495"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/day">
-          <Alias Context="nci:ExtCodeID" Name="C69110"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/h">
-          <Alias Context="nci:ExtCodeID" Name="C69160"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/h/m2">
-          <Alias Context="nci:ExtCodeID" Name="C105494"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/kg">
-          <Alias Context="nci:ExtCodeID" Name="C73725"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/min">
-          <Alias Context="nci:ExtCodeID" Name="C67388"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/min/m2">
-          <Alias Context="nci:ExtCodeID" Name="C105496"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/s">
-          <Alias Context="nci:ExtCodeID" Name="C67390"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="L/s/kPa">
-          <Alias Context="nci:ExtCodeID" Name="C139133"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="LB">
-          <Alias Context="nci:ExtCodeID" Name="C48531"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="LENS">
-          <Alias Context="nci:ExtCodeID" Name="C170638"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="LOZENGE">
-          <Alias Context="nci:ExtCodeID" Name="C48506"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Linear ft*LB">
-          <Alias Context="nci:ExtCodeID" Name="C139134"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Lipase Units">
-          <Alias Context="nci:ExtCodeID" Name="C178059"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Lipase Units/kg">
-          <Alias Context="nci:ExtCodeID" Name="C178058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Log10 ELISA unit">
-          <Alias Context="nci:ExtCodeID" Name="C68878"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Log10 ELISA unit/dose">
-          <Alias Context="nci:ExtCodeID" Name="C68879"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MAC50">
-          <Alias Context="nci:ExtCodeID" Name="C139130"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MASK">
-          <Alias Context="nci:ExtCodeID" Name="C170637"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MBP">
-          <Alias Context="nci:ExtCodeID" Name="C176388"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MBq">
-          <Alias Context="nci:ExtCodeID" Name="C70512"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MBq/uL">
-          <Alias Context="nci:ExtCodeID" Name="C71169"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MESF">
-          <Alias Context="nci:ExtCodeID" Name="C96691"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MET">
-          <Alias Context="nci:ExtCodeID" Name="C127805"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MET*h">
-          <Alias Context="nci:ExtCodeID" Name="C127806"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MET*min">
-          <Alias Context="nci:ExtCodeID" Name="C127807"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MHz">
-          <Alias Context="nci:ExtCodeID" Name="C67314"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MONTHS">
-          <Alias Context="nci:ExtCodeID" Name="C29846"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MPL U">
-          <Alias Context="nci:ExtCodeID" Name="C67348"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MPL U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117973"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MPS U">
-          <Alias Context="nci:ExtCodeID" Name="C161496"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MPS U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C186223"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MdFI">
-          <Alias Context="nci:ExtCodeID" Name="C96687"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MeV">
-          <Alias Context="nci:ExtCodeID" Name="C152057"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Mile">
-          <Alias Context="nci:ExtCodeID" Name="C71183"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="MnFI">
-          <Alias Context="nci:ExtCodeID" Name="C163046"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Mrad">
-          <Alias Context="nci:ExtCodeID" Name="C67349"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NEBULE">
-          <Alias Context="nci:ExtCodeID" Name="C71204"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NFIU">
-          <Alias Context="nci:ExtCodeID" Name="C154680"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Newton">
-          <Alias Context="nci:ExtCodeID" Name="C42546"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="OD Unit">
-          <Alias Context="nci:ExtCodeID" Name="C73681"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="OI50">
-          <Alias Context="nci:ExtCodeID" Name="C130193"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Organisms">
-          <Alias Context="nci:ExtCodeID" Name="C71186"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Organisms/g">
-          <Alias Context="nci:ExtCodeID" Name="C198398"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Organisms/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198399"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Osm">
-          <Alias Context="nci:ExtCodeID" Name="C67330"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="P">
-          <Alias Context="nci:ExtCodeID" Name="C154857"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PA">
-          <Alias Context="nci:ExtCodeID" Name="C74924"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PACK">
-          <Alias Context="nci:ExtCodeID" Name="C62653"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PACKAGE">
-          <Alias Context="nci:ExtCodeID" Name="C48520"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PACKET">
-          <Alias Context="nci:ExtCodeID" Name="C48521"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PATCH">
-          <Alias Context="nci:ExtCodeID" Name="C48524"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PELLET">
-          <Alias Context="nci:ExtCodeID" Name="C48525"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PFU">
-          <Alias Context="nci:ExtCodeID" Name="C67264"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PFU/animal">
-          <Alias Context="nci:ExtCodeID" Name="C122221"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PFU/dose">
-          <Alias Context="nci:ExtCodeID" Name="C71198"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C71199"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PHERESIS UNIT">
-          <Alias Context="nci:ExtCodeID" Name="C127810"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PILL">
-          <Alias Context="nci:ExtCodeID" Name="C122634"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PIPE">
-          <Alias Context="nci:ExtCodeID" Name="C116246"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PIXEL">
-          <Alias Context="nci:ExtCodeID" Name="C48367"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PIXELS/cm">
-          <Alias Context="nci:ExtCodeID" Name="C114238"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PIXELS/in">
-          <Alias Context="nci:ExtCodeID" Name="C114239"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PLUG">
-          <Alias Context="nci:ExtCodeID" Name="C149763"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PNU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116236"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="POINT">
-          <Alias Context="nci:ExtCodeID" Name="C113499"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="POUCH">
-          <Alias Context="nci:ExtCodeID" Name="C48530"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PRESSOR UNITS">
-          <Alias Context="nci:ExtCodeID" Name="C48532"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PUFF">
-          <Alias Context="nci:ExtCodeID" Name="C65060"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PUMP">
-          <Alias Context="nci:ExtCodeID" Name="C111984"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Pa">
-          <Alias Context="nci:ExtCodeID" Name="C42547"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Pack Year">
-          <Alias Context="nci:ExtCodeID" Name="C73993"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="QUANTITY SUFFICIENT">
-          <Alias Context="nci:ExtCodeID" Name="C48590"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RADIOACTIVE SEED IMPLANT">
-          <Alias Context="nci:ExtCodeID" Name="C67446"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RAE">
-          <Alias Context="nci:ExtCodeID" Name="C67436"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RATIO">
-          <Alias Context="nci:ExtCodeID" Name="C44256"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RFU">
-          <Alias Context="nci:ExtCodeID" Name="C77535"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RING">
-          <Alias Context="nci:ExtCodeID" Name="C62609"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RLU">
-          <Alias Context="nci:ExtCodeID" Name="C184722"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RNA copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C67441"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Rad">
-          <Alias Context="nci:ExtCodeID" Name="C18064"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Roentgen">
-          <Alias Context="nci:ExtCodeID" Name="C70575"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SACHET">
-          <Alias Context="nci:ExtCodeID" Name="C71324"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SBE/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116233"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SCOOPFUL">
-          <Alias Context="nci:ExtCodeID" Name="C48536"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SERVING">
-          <Alias Context="nci:ExtCodeID" Name="C184720"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SFC/10^5 PBMC">
-          <Alias Context="nci:ExtCodeID" Name="C191356"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SFC/10^6 PBMC">
-          <Alias Context="nci:ExtCodeID" Name="C120850"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SFC/2x10^5 PBMC">
-          <Alias Context="nci:ExtCodeID" Name="C191357"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SPRAY">
-          <Alias Context="nci:ExtCodeID" Name="C48537"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SQU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116234"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STEPS">
-          <Alias Context="nci:ExtCodeID" Name="C111318"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STRIP">
-          <Alias Context="nci:ExtCodeID" Name="C48538"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SUPPOSITORY">
-          <Alias Context="nci:ExtCodeID" Name="C48539"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SYRINGE">
-          <Alias Context="nci:ExtCodeID" Name="C48540"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Shock Wave">
-          <Alias Context="nci:ExtCodeID" Name="C112433"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Siemens">
-          <Alias Context="nci:ExtCodeID" Name="C42555"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Sv">
-          <Alias Context="nci:ExtCodeID" Name="C42553"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TABLET">
-          <Alias Context="nci:ExtCodeID" Name="C48542"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TAMPON">
-          <Alias Context="nci:ExtCodeID" Name="C48543"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70537"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TRACE">
-          <Alias Context="nci:ExtCodeID" Name="C48547"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TRANSDUCING UNIT">
-          <Alias Context="nci:ExtCodeID" Name="C124460"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TRANSDUCING UNIT/mL">
-          <Alias Context="nci:ExtCodeID" Name="C124461"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TROCHE">
-          <Alias Context="nci:ExtCodeID" Name="C48548"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TUBE">
-          <Alias Context="nci:ExtCodeID" Name="C48549"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Tbsp">
-          <Alias Context="nci:ExtCodeID" Name="C48541"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Tesla">
-          <Alias Context="nci:ExtCodeID" Name="C42557"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Therapeutic Cells">
-          <Alias Context="nci:ExtCodeID" Name="C187669"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Therapeutic Cells/m2">
-          <Alias Context="nci:ExtCodeID" Name="C186224"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Torr">
-          <Alias Context="nci:ExtCodeID" Name="C112423"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U">
-          <Alias Context="nci:ExtCodeID" Name="C44278"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U.CARR">
-          <Alias Context="nci:ExtCodeID" Name="C120851"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/10^12 RBC">
-          <Alias Context="nci:ExtCodeID" Name="C122228"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/L">
-          <Alias Context="nci:ExtCodeID" Name="C67456"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/animal">
-          <Alias Context="nci:ExtCodeID" Name="C73773"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/cL">
-          <Alias Context="nci:ExtCodeID" Name="C105520"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/dL">
-          <Alias Context="nci:ExtCodeID" Name="C105521"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/g">
-          <Alias Context="nci:ExtCodeID" Name="C77606"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/g Hb">
-          <Alias Context="nci:ExtCodeID" Name="C105522"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/g/day">
-          <Alias Context="nci:ExtCodeID" Name="C73774"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/g/h">
-          <Alias Context="nci:ExtCodeID" Name="C73775"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/g/min">
-          <Alias Context="nci:ExtCodeID" Name="C73776"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/h">
-          <Alias Context="nci:ExtCodeID" Name="C66970"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67465"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C73777"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/kg/h">
-          <Alias Context="nci:ExtCodeID" Name="C73778"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/kg/min">
-          <Alias Context="nci:ExtCodeID" Name="C73779"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/m2">
-          <Alias Context="nci:ExtCodeID" Name="C67467"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/m2/day">
-          <Alias Context="nci:ExtCodeID" Name="C73783"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/m2/h">
-          <Alias Context="nci:ExtCodeID" Name="C73784"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/m2/min">
-          <Alias Context="nci:ExtCodeID" Name="C73785"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C77607"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/mg">
-          <Alias Context="nci:ExtCodeID" Name="C73780"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="U/mmol">
-          <Alias Context="nci:ExtCodeID" Name="C92618"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="USP U">
-          <Alias Context="nci:ExtCodeID" Name="C48469"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="V">
-          <Alias Context="nci:ExtCodeID" Name="C42551"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="V/s">
-          <Alias Context="nci:ExtCodeID" Name="C105524"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="VIAL">
-          <Alias Context="nci:ExtCodeID" Name="C48551"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="VIRTUAL PIXEL">
-          <Alias Context="nci:ExtCodeID" Name="C114237"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="VOXEL">
-          <Alias Context="nci:ExtCodeID" Name="C79424"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="WAFER">
-          <Alias Context="nci:ExtCodeID" Name="C48552"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="WEEKS">
-          <Alias Context="nci:ExtCodeID" Name="C29844"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Watt">
-          <Alias Context="nci:ExtCodeID" Name="C42549"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Weber">
-          <Alias Context="nci:ExtCodeID" Name="C42556"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="YEARS">
-          <Alias Context="nci:ExtCodeID" Name="C29848"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="aMFI">
-          <Alias Context="nci:ExtCodeID" Name="C163562"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ag">
-          <Alias Context="nci:ExtCodeID" Name="C64553"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="amol">
-          <Alias Context="nci:ExtCodeID" Name="C68855"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="amp">
-          <Alias Context="nci:ExtCodeID" Name="C42536"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="amu">
-          <Alias Context="nci:ExtCodeID" Name="C64559"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="anti-Xa IU">
-          <Alias Context="nci:ExtCodeID" Name="C70497"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="anti-Xa IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C70498"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="atm">
-          <Alias Context="nci:ExtCodeID" Name="C54711"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="beats/min">
-          <Alias Context="nci:ExtCodeID" Name="C49673"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="bel">
-          <Alias Context="nci:ExtCodeID" Name="C71200"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="breaths/30 s">
-          <Alias Context="nci:ExtCodeID" Name="C176382"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="breaths/min">
-          <Alias Context="nci:ExtCodeID" Name="C49674"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cGy">
-          <Alias Context="nci:ExtCodeID" Name="C64693"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cL">
-          <Alias Context="nci:ExtCodeID" Name="C69087"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cP">
-          <Alias Context="nci:ExtCodeID" Name="C69092"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cal">
-          <Alias Context="nci:ExtCodeID" Name="C67193"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cd">
-          <Alias Context="nci:ExtCodeID" Name="C42538"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cd*s/m2">
-          <Alias Context="nci:ExtCodeID" Name="C122203"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cd/m2">
-          <Alias Context="nci:ExtCodeID" Name="C122204"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cg">
-          <Alias Context="nci:ExtCodeID" Name="C64554"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cm">
-          <Alias Context="nci:ExtCodeID" Name="C49668"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cm H2O">
-          <Alias Context="nci:ExtCodeID" Name="C91060"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cm/min">
-          <Alias Context="nci:ExtCodeID" Name="C105481"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cm/s">
-          <Alias Context="nci:ExtCodeID" Name="C102406"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cm2">
-          <Alias Context="nci:ExtCodeID" Name="C48460"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmH2O*s/mL">
-          <Alias Context="nci:ExtCodeID" Name="C135518"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmH2O*s2/mL">
-          <Alias Context="nci:ExtCodeID" Name="C135519"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmH2O/mL">
-          <Alias Context="nci:ExtCodeID" Name="C135520"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmH2O/mL/s">
-          <Alias Context="nci:ExtCodeID" Name="C201487"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmHg">
-          <Alias Context="nci:ExtCodeID" Name="C147129"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmol">
-          <Alias Context="nci:ExtCodeID" Name="C68687"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cmol/L">
-          <Alias Context="nci:ExtCodeID" Name="C68886"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="copies/cell">
-          <Alias Context="nci:ExtCodeID" Name="C198389"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C100900"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="copies/uL">
-          <Alias Context="nci:ExtCodeID" Name="C116237"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="copies/ug">
-          <Alias Context="nci:ExtCodeID" Name="C126079"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cpm">
-          <Alias Context="nci:ExtCodeID" Name="C73688"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cs">
-          <Alias Context="nci:ExtCodeID" Name="C105482"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cup eq">
-          <Alias Context="nci:ExtCodeID" Name="C172604"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cy/cm">
-          <Alias Context="nci:ExtCodeID" Name="C114242"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="cycle/min">
-          <Alias Context="nci:ExtCodeID" Name="C71176"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dB">
-          <Alias Context="nci:ExtCodeID" Name="C102407"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dL">
-          <Alias Context="nci:ExtCodeID" Name="C64697"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="daPa">
-          <Alias Context="nci:ExtCodeID" Name="C191360"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="damol/L">
-          <Alias Context="nci:ExtCodeID" Name="C105483"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="day*ng/mL/(mg/kg)">
-          <Alias Context="nci:ExtCodeID" Name="C198211"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="days/month">
-          <Alias Context="nci:ExtCodeID" Name="C170634"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="days/wk">
-          <Alias Context="nci:ExtCodeID" Name="C170633"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="deg">
-          <Alias Context="nci:ExtCodeID" Name="C68667"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="deg/mm">
-          <Alias Context="nci:ExtCodeID" Name="C161488"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="deg/s">
-          <Alias Context="nci:ExtCodeID" Name="C166097"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="deg2">
-          <Alias Context="nci:ExtCodeID" Name="C166098"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dmol">
-          <Alias Context="nci:ExtCodeID" Name="C68685"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dpm/0.5 mL">
-          <Alias Context="nci:ExtCodeID" Name="C120846"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dpm/100 mg">
-          <Alias Context="nci:ExtCodeID" Name="C117968"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dpm/g">
-          <Alias Context="nci:ExtCodeID" Name="C187969"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dpm/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117970"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dpm/mg">
-          <Alias Context="nci:ExtCodeID" Name="C117969"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dram">
-          <Alias Context="nci:ExtCodeID" Name="C64564"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="dyn">
-          <Alias Context="nci:ExtCodeID" Name="C70470"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="eq">
-          <Alias Context="nci:ExtCodeID" Name="C67273"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fL">
-          <Alias Context="nci:ExtCodeID" Name="C64780"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fg">
-          <Alias Context="nci:ExtCodeID" Name="C64552"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fmol">
-          <Alias Context="nci:ExtCodeID" Name="C68854"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fmol/L">
-          <Alias Context="nci:ExtCodeID" Name="C68887"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fmol/L/s">
-          <Alias Context="nci:ExtCodeID" Name="C122206"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fmol/g">
-          <Alias Context="nci:ExtCodeID" Name="C73711"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="foz_br">
-          <Alias Context="nci:ExtCodeID" Name="C48577"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="foz_us">
-          <Alias Context="nci:ExtCodeID" Name="C48494"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="fraction of 1">
-          <Alias Context="nci:ExtCodeID" Name="C105484"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ft">
-          <Alias Context="nci:ExtCodeID" Name="C71253"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ft2">
-          <Alias Context="nci:ExtCodeID" Name="C48461"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ft3">
-          <Alias Context="nci:ExtCodeID" Name="C68859"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g">
-          <Alias Context="nci:ExtCodeID" Name="C48155"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/L">
-          <Alias Context="nci:ExtCodeID" Name="C42576"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/U">
-          <Alias Context="nci:ExtCodeID" Name="C166099"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/animal">
-          <Alias Context="nci:ExtCodeID" Name="C73713"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/animal/day">
-          <Alias Context="nci:ExtCodeID" Name="C73714"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/animal/wk">
-          <Alias Context="nci:ExtCodeID" Name="C73715"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/cage">
-          <Alias Context="nci:ExtCodeID" Name="C73716"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/cage/day">
-          <Alias Context="nci:ExtCodeID" Name="C73717"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/cage/wk">
-          <Alias Context="nci:ExtCodeID" Name="C73718"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C71201"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/dL">
-          <Alias Context="nci:ExtCodeID" Name="C64783"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/day">
-          <Alias Context="nci:ExtCodeID" Name="C67372"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/g">
-          <Alias Context="nci:ExtCodeID" Name="C70453"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/g/day">
-          <Alias Context="nci:ExtCodeID" Name="C73720"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/kg">
-          <Alias Context="nci:ExtCodeID" Name="C69104"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C66975"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/m2">
-          <Alias Context="nci:ExtCodeID" Name="C67282"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/m2*h">
-          <Alias Context="nci:ExtCodeID" Name="C187982"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/m2/day">
-          <Alias Context="nci:ExtCodeID" Name="C73722"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/mol">
-          <Alias Context="nci:ExtCodeID" Name="C73721"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/ston_av">
-          <Alias Context="nci:ExtCodeID" Name="C198390"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="g/wk">
-          <Alias Context="nci:ExtCodeID" Name="C89829"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="gMFI">
-          <Alias Context="nci:ExtCodeID" Name="C163563"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="genEq">
-          <Alias Context="nci:ExtCodeID" Name="C161493"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="genEq/mL">
-          <Alias Context="nci:ExtCodeID" Name="C161492"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="gpELISA unit/mL">
-          <Alias Context="nci:ExtCodeID" Name="C130190"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="grain">
-          <Alias Context="nci:ExtCodeID" Name="C48497"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="gtt">
-          <Alias Context="nci:ExtCodeID" Name="C48491"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="h*%">
-          <Alias Context="nci:ExtCodeID" Name="C139131"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="h/wk">
-          <Alias Context="nci:ExtCodeID" Name="C170635"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="hPa">
-          <Alias Context="nci:ExtCodeID" Name="C105487"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="hr/day">
-          <Alias Context="nci:ExtCodeID" Name="C176380"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="in">
-          <Alias Context="nci:ExtCodeID" Name="C48500"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="in2">
-          <Alias Context="nci:ExtCodeID" Name="C68871"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kBq">
-          <Alias Context="nci:ExtCodeID" Name="C70511"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kBq/uL">
-          <Alias Context="nci:ExtCodeID" Name="C71168"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kDa">
-          <Alias Context="nci:ExtCodeID" Name="C105491"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kHz">
-          <Alias Context="nci:ExtCodeID" Name="C67279"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kIU">
-          <Alias Context="nci:ExtCodeID" Name="C70492"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kN/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C92615"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kPa">
-          <Alias Context="nci:ExtCodeID" Name="C67284"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kPa/L/s">
-          <Alias Context="nci:ExtCodeID" Name="C105492"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kUSP">
-          <Alias Context="nci:ExtCodeID" Name="C71202"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kV">
-          <Alias Context="nci:ExtCodeID" Name="C170630"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ka_u/dL">
-          <Alias Context="nci:ExtCodeID" Name="C122209"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kat">
-          <Alias Context="nci:ExtCodeID" Name="C42566"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kcal">
-          <Alias Context="nci:ExtCodeID" Name="C67194"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kcal/day">
-          <Alias Context="nci:ExtCodeID" Name="C139135"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="keV">
-          <Alias Context="nci:ExtCodeID" Name="C67276"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg">
-          <Alias Context="nci:ExtCodeID" Name="C28252"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg/L">
-          <Alias Context="nci:ExtCodeID" Name="C64566"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg/cm">
-          <Alias Context="nci:ExtCodeID" Name="C120849"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C69094"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg/m2">
-          <Alias Context="nci:ExtCodeID" Name="C49671"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="kg/mol">
-          <Alias Context="nci:ExtCodeID" Name="C122210"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="km">
-          <Alias Context="nci:ExtCodeID" Name="C71177"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="km/h">
-          <Alias Context="nci:ExtCodeID" Name="C71203"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ks">
-          <Alias Context="nci:ExtCodeID" Name="C105493"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="lm">
-          <Alias Context="nci:ExtCodeID" Name="C42560"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 CCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70485"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 CFU/g">
-          <Alias Context="nci:ExtCodeID" Name="C102658"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 CFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C102659"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 EID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70480"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 IU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C116238"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 PFU">
-          <Alias Context="nci:ExtCodeID" Name="C73568"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 PFU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C170631"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 TCID 50/dose">
-          <Alias Context="nci:ExtCodeID" Name="C70489"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 TCID 50/mL">
-          <Alias Context="nci:ExtCodeID" Name="C132478"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 TCID 50/uL">
-          <Alias Context="nci:ExtCodeID" Name="C132479"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C198393"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 copies/mL">
-          <Alias Context="nci:ExtCodeID" Name="C117972"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="log10 minutes of arc">
-          <Alias Context="nci:ExtCodeID" Name="C198392"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="lton_av">
-          <Alias Context="nci:ExtCodeID" Name="C198394"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="lx">
-          <Alias Context="nci:ExtCodeID" Name="C42561"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m">
-          <Alias Context="nci:ExtCodeID" Name="C41139"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m*%">
-          <Alias Context="nci:ExtCodeID" Name="C184713"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m/s">
-          <Alias Context="nci:ExtCodeID" Name="C42571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m/s2">
-          <Alias Context="nci:ExtCodeID" Name="C42572"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m2">
-          <Alias Context="nci:ExtCodeID" Name="C42569"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m2/s">
-          <Alias Context="nci:ExtCodeID" Name="C68906"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="m3">
-          <Alias Context="nci:ExtCodeID" Name="C42570"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mAmp">
-          <Alias Context="nci:ExtCodeID" Name="C97343"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mAnson U/mL">
-          <Alias Context="nci:ExtCodeID" Name="C122211"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mCi">
-          <Alias Context="nci:ExtCodeID" Name="C48511"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mCi/L">
-          <Alias Context="nci:ExtCodeID" Name="C71174"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mCi/kg">
-          <Alias Context="nci:ExtCodeID" Name="C70570"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq">
-          <Alias Context="nci:ExtCodeID" Name="C48512"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/L">
-          <Alias Context="nci:ExtCodeID" Name="C67474"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67473"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/day">
-          <Alias Context="nci:ExtCodeID" Name="C67471"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/g">
-          <Alias Context="nci:ExtCodeID" Name="C70580"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67475"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/mL">
-          <Alias Context="nci:ExtCodeID" Name="C73737"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/mmol">
-          <Alias Context="nci:ExtCodeID" Name="C92616"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/uL">
-          <Alias Context="nci:ExtCodeID" Name="C70578"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mEq/ug">
-          <Alias Context="nci:ExtCodeID" Name="C70581"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mIU/L">
-          <Alias Context="nci:ExtCodeID" Name="C67405"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mIU/m2">
-          <Alias Context="nci:ExtCodeID" Name="C67409"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mJoule/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C116241"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL">
-          <Alias Context="nci:ExtCodeID" Name="C28254"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL*cmH2O">
-          <Alias Context="nci:ExtCodeID" Name="C135521"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/(min*100mL)">
-          <Alias Context="nci:ExtCodeID" Name="C130191"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/100g/min">
-          <Alias Context="nci:ExtCodeID" Name="C154855"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/animal">
-          <Alias Context="nci:ExtCodeID" Name="C73746"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/animal/day">
-          <Alias Context="nci:ExtCodeID" Name="C73747"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/animal/wk">
-          <Alias Context="nci:ExtCodeID" Name="C73748"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/beat">
-          <Alias Context="nci:ExtCodeID" Name="C127808"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/breath">
-          <Alias Context="nci:ExtCodeID" Name="C73749"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cage">
-          <Alias Context="nci:ExtCodeID" Name="C73750"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cage/day">
-          <Alias Context="nci:ExtCodeID" Name="C73751"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cage/wk">
-          <Alias Context="nci:ExtCodeID" Name="C73752"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cm">
-          <Alias Context="nci:ExtCodeID" Name="C105503"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cm H2O">
-          <Alias Context="nci:ExtCodeID" Name="C98755"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/cm3/min">
-          <Alias Context="nci:ExtCodeID" Name="C163564"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/dL">
-          <Alias Context="nci:ExtCodeID" Name="C105504"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/day">
-          <Alias Context="nci:ExtCodeID" Name="C67410"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124459"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/g/day">
-          <Alias Context="nci:ExtCodeID" Name="C73755"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/g/h">
-          <Alias Context="nci:ExtCodeID" Name="C73756"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/g/min">
-          <Alias Context="nci:ExtCodeID" Name="C73757"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/h">
-          <Alias Context="nci:ExtCodeID" Name="C66962"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67411"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C73758"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/kg/h">
-          <Alias Context="nci:ExtCodeID" Name="C73759"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/kg/min">
-          <Alias Context="nci:ExtCodeID" Name="C73760"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/m2">
-          <Alias Context="nci:ExtCodeID" Name="C73761"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/m2/day">
-          <Alias Context="nci:ExtCodeID" Name="C66977"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/m2/h">
-          <Alias Context="nci:ExtCodeID" Name="C73762"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/m2/min">
-          <Alias Context="nci:ExtCodeID" Name="C73763"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/min">
-          <Alias Context="nci:ExtCodeID" Name="C64777"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/min/1.73 m2">
-          <Alias Context="nci:ExtCodeID" Name="C67412"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/min/mmHg">
-          <Alias Context="nci:ExtCodeID" Name="C67417"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/mmHg">
-          <Alias Context="nci:ExtCodeID" Name="C106542"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/mmHg/min/L">
-          <Alias Context="nci:ExtCodeID" Name="C67418"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/s">
-          <Alias Context="nci:ExtCodeID" Name="C69073"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/s/1.73 m2">
-          <Alias Context="nci:ExtCodeID" Name="C105505"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/s/kg">
-          <Alias Context="nci:ExtCodeID" Name="C85715"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mL/s/m2">
-          <Alias Context="nci:ExtCodeID" Name="C166100"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mMU/mL">
-          <Alias Context="nci:ExtCodeID" Name="C132480"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mN">
-          <Alias Context="nci:ExtCodeID" Name="C127809"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mOsm">
-          <Alias Context="nci:ExtCodeID" Name="C67318"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mOsm/L">
-          <Alias Context="nci:ExtCodeID" Name="C122214"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mOsm/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67427"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mPa">
-          <Alias Context="nci:ExtCodeID" Name="C73765"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mU">
-          <Alias Context="nci:ExtCodeID" Name="C67315"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mU/L">
-          <Alias Context="nci:ExtCodeID" Name="C67408"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mU/g">
-          <Alias Context="nci:ExtCodeID" Name="C122215"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mV">
-          <Alias Context="nci:ExtCodeID" Name="C67324"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mV*min">
-          <Alias Context="nci:ExtCodeID" Name="C105512"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mV/s">
-          <Alias Context="nci:ExtCodeID" Name="C122216"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mV2/Hz">
-          <Alias Context="nci:ExtCodeID" Name="C114241"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="meq/h">
-          <Alias Context="nci:ExtCodeID" Name="C67472"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg">
-          <Alias Context="nci:ExtCodeID" Name="C28253"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/CAPSULE">
-          <Alias Context="nci:ExtCodeID" Name="C73739"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/L">
-          <Alias Context="nci:ExtCodeID" Name="C64572"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/L FEU">
-          <Alias Context="nci:ExtCodeID" Name="C158291"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/animal">
-          <Alias Context="nci:ExtCodeID" Name="C73738"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/breath">
-          <Alias Context="nci:ExtCodeID" Name="C184723"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C124456"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67015"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/day">
-          <Alias Context="nci:ExtCodeID" Name="C67399"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124457"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/g/h">
-          <Alias Context="nci:ExtCodeID" Name="C73740"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/g/min">
-          <Alias Context="nci:ExtCodeID" Name="C73741"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/h">
-          <Alias Context="nci:ExtCodeID" Name="C66969"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67401"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C66976"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124458"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg/h">
-          <Alias Context="nci:ExtCodeID" Name="C71362"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg/min">
-          <Alias Context="nci:ExtCodeID" Name="C71207"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/kg/week">
-          <Alias Context="nci:ExtCodeID" Name="C161486"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/m2">
-          <Alias Context="nci:ExtCodeID" Name="C67402"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/m2/day">
-          <Alias Context="nci:ExtCodeID" Name="C66974"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/m2/h">
-          <Alias Context="nci:ExtCodeID" Name="C73743"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/m2/min">
-          <Alias Context="nci:ExtCodeID" Name="C73744"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/m2/wk">
-          <Alias Context="nci:ExtCodeID" Name="C88148"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/mL/day">
-          <Alias Context="nci:ExtCodeID" Name="C176378"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/mL/min">
-          <Alias Context="nci:ExtCodeID" Name="C67403"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/min">
-          <Alias Context="nci:ExtCodeID" Name="C73742"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/mol">
-          <Alias Context="nci:ExtCodeID" Name="C120843"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg/wk">
-          <Alias Context="nci:ExtCodeID" Name="C67404"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mg2/dL2">
-          <Alias Context="nci:ExtCodeID" Name="C122212"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mgEq">
-          <Alias Context="nci:ExtCodeID" Name="C156468"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="min">
-          <Alias Context="nci:ExtCodeID" Name="C48154"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="min*mg/mL">
-          <Alias Context="nci:ExtCodeID" Name="C85729"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="min/day">
-          <Alias Context="nci:ExtCodeID" Name="C176381"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mkat">
-          <Alias Context="nci:ExtCodeID" Name="C70507"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mkat/L">
-          <Alias Context="nci:ExtCodeID" Name="C189643"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm">
-          <Alias Context="nci:ExtCodeID" Name="C28251"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm/2h">
-          <Alias Context="nci:ExtCodeID" Name="C105509"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm/h">
-          <Alias Context="nci:ExtCodeID" Name="C67419"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm/min">
-          <Alias Context="nci:ExtCodeID" Name="C105507"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm/s">
-          <Alias Context="nci:ExtCodeID" Name="C105508"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm2">
-          <Alias Context="nci:ExtCodeID" Name="C65104"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm2/us">
-          <Alias Context="nci:ExtCodeID" Name="C189649"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mm3/mm2/year">
-          <Alias Context="nci:ExtCodeID" Name="C126080"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmAL">
-          <Alias Context="nci:ExtCodeID" Name="C150898"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmHg">
-          <Alias Context="nci:ExtCodeID" Name="C49670"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmHg*beats/min">
-          <Alias Context="nci:ExtCodeID" Name="C187972"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmHg*min/L">
-          <Alias Context="nci:ExtCodeID" Name="C150900"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmHg/L/min">
-          <Alias Context="nci:ExtCodeID" Name="C105506"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmHg/s">
-          <Alias Context="nci:ExtCodeID" Name="C73764"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol">
-          <Alias Context="nci:ExtCodeID" Name="C48513"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/L">
-          <Alias Context="nci:ExtCodeID" Name="C64387"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/L/day">
-          <Alias Context="nci:ExtCodeID" Name="C189648"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/L/h">
-          <Alias Context="nci:ExtCodeID" Name="C189644"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/day">
-          <Alias Context="nci:ExtCodeID" Name="C67420"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/g">
-          <Alias Context="nci:ExtCodeID" Name="C68740"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/h">
-          <Alias Context="nci:ExtCodeID" Name="C85720"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/kg">
-          <Alias Context="nci:ExtCodeID" Name="C68892"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/min/kPa">
-          <Alias Context="nci:ExtCodeID" Name="C116242"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/min/kPa/L">
-          <Alias Context="nci:ExtCodeID" Name="C67423"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/mol">
-          <Alias Context="nci:ExtCodeID" Name="C111253"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol/s">
-          <Alias Context="nci:ExtCodeID" Name="C85723"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mmol2/L2">
-          <Alias Context="nci:ExtCodeID" Name="C122213"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol">
-          <Alias Context="nci:ExtCodeID" Name="C42539"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/L">
-          <Alias Context="nci:ExtCodeID" Name="C48555"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/day">
-          <Alias Context="nci:ExtCodeID" Name="C85737"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/g">
-          <Alias Context="nci:ExtCodeID" Name="C68893"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/mL">
-          <Alias Context="nci:ExtCodeID" Name="C68891"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/mg">
-          <Alias Context="nci:ExtCodeID" Name="C68894"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mol/mol">
-          <Alias Context="nci:ExtCodeID" Name="C70455"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="mph">
-          <Alias Context="nci:ExtCodeID" Name="C105500"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ms">
-          <Alias Context="nci:ExtCodeID" Name="C41140"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ms/mmHg">
-          <Alias Context="nci:ExtCodeID" Name="C163565"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ms2">
-          <Alias Context="nci:ExtCodeID" Name="C161489"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nCi">
-          <Alias Context="nci:ExtCodeID" Name="C67352"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nL">
-          <Alias Context="nci:ExtCodeID" Name="C69188"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nU/cL">
-          <Alias Context="nci:ExtCodeID" Name="C105513"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng">
-          <Alias Context="nci:ExtCodeID" Name="C48516"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng/L">
-          <Alias Context="nci:ExtCodeID" Name="C67327"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67326"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng/day">
-          <Alias Context="nci:ExtCodeID" Name="C85741"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67429"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ng/mol">
-          <Alias Context="nci:ExtCodeID" Name="C176386"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ngEq">
-          <Alias Context="nci:ExtCodeID" Name="C184705"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ngEq/L">
-          <Alias Context="nci:ExtCodeID" Name="C130192"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ngEq/g">
-          <Alias Context="nci:ExtCodeID" Name="C166082"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nkat">
-          <Alias Context="nci:ExtCodeID" Name="C70508"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nkat/L">
-          <Alias Context="nci:ExtCodeID" Name="C70510"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nkat/g Hb">
-          <Alias Context="nci:ExtCodeID" Name="C176383"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nm">
-          <Alias Context="nci:ExtCodeID" Name="C67328"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nm/min">
-          <Alias Context="nci:ExtCodeID" Name="C191362"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol">
-          <Alias Context="nci:ExtCodeID" Name="C48517"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol BCE/L">
-          <Alias Context="nci:ExtCodeID" Name="C117974"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol BCE/mmol">
-          <Alias Context="nci:ExtCodeID" Name="C118137"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol BCE/nmol">
-          <Alias Context="nci:ExtCodeID" Name="C122217"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/L">
-          <Alias Context="nci:ExtCodeID" Name="C67432"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/L/h">
-          <Alias Context="nci:ExtCodeID" Name="C122218"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/L/min">
-          <Alias Context="nci:ExtCodeID" Name="C122219"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/L/s">
-          <Alias Context="nci:ExtCodeID" Name="C189645"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/dL">
-          <Alias Context="nci:ExtCodeID" Name="C198395"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/day">
-          <Alias Context="nci:ExtCodeID" Name="C85751"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/g">
-          <Alias Context="nci:ExtCodeID" Name="C85752"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C176379"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/mL/min">
-          <Alias Context="nci:ExtCodeID" Name="C92613"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/mg/h">
-          <Alias Context="nci:ExtCodeID" Name="C198396"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/mg/min">
-          <Alias Context="nci:ExtCodeID" Name="C198397"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="nmol/mol">
-          <Alias Context="nci:ExtCodeID" Name="C122220"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ns">
-          <Alias Context="nci:ExtCodeID" Name="C73767"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ohm">
-          <Alias Context="nci:ExtCodeID" Name="C42554"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="oz">
-          <Alias Context="nci:ExtCodeID" Name="C48519"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="oz eq">
-          <Alias Context="nci:ExtCodeID" Name="C172605"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pL">
-          <Alias Context="nci:ExtCodeID" Name="C69189"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pg">
-          <Alias Context="nci:ExtCodeID" Name="C64551"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pg/L">
-          <Alias Context="nci:ExtCodeID" Name="C85597"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pg/cell">
-          <Alias Context="nci:ExtCodeID" Name="C176377"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pg/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67331"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pkat">
-          <Alias Context="nci:ExtCodeID" Name="C70509"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pkat/L">
-          <Alias Context="nci:ExtCodeID" Name="C122222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pm">
-          <Alias Context="nci:ExtCodeID" Name="C69148"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol">
-          <Alias Context="nci:ExtCodeID" Name="C65045"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/10^10 cells">
-          <Alias Context="nci:ExtCodeID" Name="C122223"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/10^9 cells">
-          <Alias Context="nci:ExtCodeID" Name="C122224"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/L">
-          <Alias Context="nci:ExtCodeID" Name="C67434"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/L/h">
-          <Alias Context="nci:ExtCodeID" Name="C122227"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/dL">
-          <Alias Context="nci:ExtCodeID" Name="C122226"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/day">
-          <Alias Context="nci:ExtCodeID" Name="C122225"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/g">
-          <Alias Context="nci:ExtCodeID" Name="C85754"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pmol/punch/h">
-          <Alias Context="nci:ExtCodeID" Name="C201485"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ppb">
-          <Alias Context="nci:ExtCodeID" Name="C70565"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ppm">
-          <Alias Context="nci:ExtCodeID" Name="C48523"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ppth">
-          <Alias Context="nci:ExtCodeID" Name="C69112"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pptr">
-          <Alias Context="nci:ExtCodeID" Name="C70566"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ps">
-          <Alias Context="nci:ExtCodeID" Name="C73768"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="psi">
-          <Alias Context="nci:ExtCodeID" Name="C67334"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pt_br">
-          <Alias Context="nci:ExtCodeID" Name="C69114"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="pt_us">
-          <Alias Context="nci:ExtCodeID" Name="C48529"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="rad/s">
-          <Alias Context="nci:ExtCodeID" Name="C184714"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="rpm">
-          <Alias Context="nci:ExtCodeID" Name="C70469"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="s">
-          <Alias Context="nci:ExtCodeID" Name="C42535"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="s*kPa">
-          <Alias Context="nci:ExtCodeID" Name="C139132"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="s/h">
-          <Alias Context="nci:ExtCodeID" Name="C150899"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="s^-1(%O2)^-1">
-          <Alias Context="nci:ExtCodeID" Name="C130194"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="scm">
-          <Alias Context="nci:ExtCodeID" Name="C68858"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="steps/min">
-          <Alias Context="nci:ExtCodeID" Name="C166101"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ston_av">
-          <Alias Context="nci:ExtCodeID" Name="C198400"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="titer">
-          <Alias Context="nci:ExtCodeID" Name="C67454"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tonne">
-          <Alias Context="nci:ExtCodeID" Name="C48546"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tsp">
-          <Alias Context="nci:ExtCodeID" Name="C48544"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tsp eq">
-          <Alias Context="nci:ExtCodeID" Name="C172603"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tuberculin unit">
-          <Alias Context="nci:ExtCodeID" Name="C65132"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tuberculin unit/0.1mL">
-          <Alias Context="nci:ExtCodeID" Name="C184721"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="tuberculin unit/mL">
-          <Alias Context="nci:ExtCodeID" Name="C70506"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uCi">
-          <Alias Context="nci:ExtCodeID" Name="C48507"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uCi/L">
-          <Alias Context="nci:ExtCodeID" Name="C71173"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uCi/kg">
-          <Alias Context="nci:ExtCodeID" Name="C70571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uEq">
-          <Alias Context="nci:ExtCodeID" Name="C73726"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uEq/L">
-          <Alias Context="nci:ExtCodeID" Name="C117975"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uIU/L">
-          <Alias Context="nci:ExtCodeID" Name="C124464"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uIU/dL">
-          <Alias Context="nci:ExtCodeID" Name="C124463"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uL">
-          <Alias Context="nci:ExtCodeID" Name="C48153"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uL/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124466"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uL/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C132481"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uL/mL">
-          <Alias Context="nci:ExtCodeID" Name="C69175"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uOsm">
-          <Alias Context="nci:ExtCodeID" Name="C73736"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uSiemens">
-          <Alias Context="nci:ExtCodeID" Name="C154859"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uU/L">
-          <Alias Context="nci:ExtCodeID" Name="C124470"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uU/dL">
-          <Alias Context="nci:ExtCodeID" Name="C124469"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uV">
-          <Alias Context="nci:ExtCodeID" Name="C71175"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uV*s">
-          <Alias Context="nci:ExtCodeID" Name="C105499"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="uV2">
-          <Alias Context="nci:ExtCodeID" Name="C166102"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug">
-          <Alias Context="nci:ExtCodeID" Name="C48152"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/L">
-          <Alias Context="nci:ExtCodeID" Name="C67306"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/L DDU">
-          <Alias Context="nci:ExtCodeID" Name="C161495"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/L FEU">
-          <Alias Context="nci:ExtCodeID" Name="C158292"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/L/h">
-          <Alias Context="nci:ExtCodeID" Name="C122229"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/animal">
-          <Alias Context="nci:ExtCodeID" Name="C73728"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/cm2">
-          <Alias Context="nci:ExtCodeID" Name="C67311"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67305"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/day">
-          <Alias Context="nci:ExtCodeID" Name="C71205"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124462"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/g/day">
-          <Alias Context="nci:ExtCodeID" Name="C74921"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/g/h">
-          <Alias Context="nci:ExtCodeID" Name="C74922"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/g/min">
-          <Alias Context="nci:ExtCodeID" Name="C74923"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/h">
-          <Alias Context="nci:ExtCodeID" Name="C67394"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/kg">
-          <Alias Context="nci:ExtCodeID" Name="C67396"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/kg/day">
-          <Alias Context="nci:ExtCodeID" Name="C73729"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/kg/h">
-          <Alias Context="nci:ExtCodeID" Name="C73730"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/kg/min">
-          <Alias Context="nci:ExtCodeID" Name="C71210"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/kg/wk">
-          <Alias Context="nci:ExtCodeID" Name="C89830"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/m2">
-          <Alias Context="nci:ExtCodeID" Name="C67312"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/m2/day">
-          <Alias Context="nci:ExtCodeID" Name="C73787"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/m2/h">
-          <Alias Context="nci:ExtCodeID" Name="C73727"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/m2/min">
-          <Alias Context="nci:ExtCodeID" Name="C73733"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/mL/h">
-          <Alias Context="nci:ExtCodeID" Name="C75905"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/min">
-          <Alias Context="nci:ExtCodeID" Name="C71211"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ug/mol">
-          <Alias Context="nci:ExtCodeID" Name="C176385"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ugEq">
-          <Alias Context="nci:ExtCodeID" Name="C105497"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ugEq/L">
-          <Alias Context="nci:ExtCodeID" Name="C122230"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ukat">
-          <Alias Context="nci:ExtCodeID" Name="C70562"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ukat/10^12 RBC">
-          <Alias Context="nci:ExtCodeID" Name="C124465"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ukat/L">
-          <Alias Context="nci:ExtCodeID" Name="C67397"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ukat/g Hb">
-          <Alias Context="nci:ExtCodeID" Name="C189651"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="um">
-          <Alias Context="nci:ExtCodeID" Name="C48510"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="um/day">
-          <Alias Context="nci:ExtCodeID" Name="C126081"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="um/s">
-          <Alias Context="nci:ExtCodeID" Name="C154858"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="um2">
-          <Alias Context="nci:ExtCodeID" Name="C73770"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol">
-          <Alias Context="nci:ExtCodeID" Name="C48509"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/L">
-          <Alias Context="nci:ExtCodeID" Name="C48508"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/L/h">
-          <Alias Context="nci:ExtCodeID" Name="C124468"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/L/min">
-          <Alias Context="nci:ExtCodeID" Name="C120852"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/L/s">
-          <Alias Context="nci:ExtCodeID" Name="C105498"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/dL">
-          <Alias Context="nci:ExtCodeID" Name="C67407"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/day">
-          <Alias Context="nci:ExtCodeID" Name="C67406"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/h/mmol">
-          <Alias Context="nci:ExtCodeID" Name="C124467"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/kg/min">
-          <Alias Context="nci:ExtCodeID" Name="C126082"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/mg/min">
-          <Alias Context="nci:ExtCodeID" Name="C73735"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/min">
-          <Alias Context="nci:ExtCodeID" Name="C85708"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="umol/mol">
-          <Alias Context="nci:ExtCodeID" Name="C122231"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="us">
-          <Alias Context="nci:ExtCodeID" Name="C69149"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="vg/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124471"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="vg/kg">
-          <Alias Context="nci:ExtCodeID" Name="C163566"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="vg/mL">
-          <Alias Context="nci:ExtCodeID" Name="C124472"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="vp/dose">
-          <Alias Context="nci:ExtCodeID" Name="C124473"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="vp/mL">
-          <Alias Context="nci:ExtCodeID" Name="C124474"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="yd">
-          <Alias Context="nci:ExtCodeID" Name="C48553"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C71620"/>
-      </CodeList>
       <CodeList OID="CL.UNIT_ORU_LDIAM" Name="Unit, subset for Longest Diameter - Original" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="mm">
           <Alias Context="nci:ExtCodeID" Name="C28251"/>
@@ -10104,7 +7535,7 @@
       </CodeList>
       <def:CommentDef OID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
         <Description>
-          <TranslatedText xml:lang="en">This Define-XML document is based on basic RS, TR and TU dataset and column metadata.Value level metadata (VLM) and codelists were programmatically created byextracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.</TranslatedText>
+          <TranslatedText xml:lang="en">This Define-XML document is based on RS, TR and TU dataset and column metadata extracted from the CDISC Library. Value level metadata (VLM) and codelists were programmatically created by extracting metadata from CDISC SDTM Dataset Specializations and the CDISC Library.</TranslatedText>
         </Description>
       </def:CommentDef>
     </MetaDataVersion>
