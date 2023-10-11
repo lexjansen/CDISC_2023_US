@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-10T16:19:45-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-11T16:43:35-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -43,16 +43,16 @@
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRORRES">
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00009" OrderNumber="9" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00009" OrderNumber="9" Mandatory="Yes" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00009"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00010" OrderNumber="10" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00010" OrderNumber="10" Mandatory="Yes" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00010"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00011" OrderNumber="11" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00011" OrderNumber="11" Mandatory="Yes" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00011"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00012" OrderNumber="12" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00012" OrderNumber="12" Mandatory="Yes" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00012"/>
         </ItemRef>
       </def:ValueListDef>
@@ -6504,7 +6504,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U;UNK;Unknown</TranslatedText>
+            <TranslatedText>Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6525,7 +6525,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U;UNK;Unknown</TranslatedText>
+            <TranslatedText>Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6546,7 +6546,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U;UNK;Unknown</TranslatedText>
+            <TranslatedText>Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6567,7 +6567,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="U">
           <Decode>
-            <TranslatedText>U;UNK;Unknown</TranslatedText>
+            <TranslatedText>Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
         </CodeListItem>
@@ -6856,24 +6856,30 @@
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_OR_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="EQUIVOCAL">
+        <CodeListItem CodedValue="EQUIVOCAL">
+          <Decode>
+            <TranslatedText>Equivocal</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C86071"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+        </CodeListItem>
+        <CodeListItem CodedValue="UNEQUIVOCAL">
+          <Decode>
+            <TranslatedText>Unequivocal</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C123645"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_OR_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
@@ -6885,7 +6891,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
@@ -6894,13 +6900,13 @@
       <CodeList OID="CL.ONCRSR_OR_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
@@ -6918,13 +6924,13 @@
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
         <CodeListItem CodedValue="PR">
           <Decode>
-            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+            <TranslatedText>Partial Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
         </CodeListItem>
@@ -6939,25 +6945,25 @@
       <CodeList OID="CL.ONCRSR_OR_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
         <CodeListItem CodedValue="PR">
           <Decode>
-            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+            <TranslatedText>Partial Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
         </CodeListItem>
@@ -6970,24 +6976,30 @@
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="EQUIVOCAL">
+        <CodeListItem CodedValue="EQUIVOCAL">
+          <Decode>
+            <TranslatedText>Equivocal</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C86071"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="UNEQUIVOCAL">
+        </CodeListItem>
+        <CodeListItem CodedValue="UNEQUIVOCAL">
+          <Decode>
+            <TranslatedText>Unequivocal</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C123645"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
       <CodeList OID="CL.ONCRSR_STC_NTRGRESP" Name="Oncology Response Assessment Result, subset for Non-Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
@@ -6999,7 +7011,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
@@ -7008,13 +7020,13 @@
       <CodeList OID="CL.ONCRSR_STC_OVRLRESP" Name="Oncology Response Assessment Result, subset for Overall Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
@@ -7032,13 +7044,13 @@
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
         <CodeListItem CodedValue="PR">
           <Decode>
-            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+            <TranslatedText>Partial Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
         </CodeListItem>
@@ -7053,25 +7065,25 @@
       <CodeList OID="CL.ONCRSR_STC_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="CR">
           <Decode>
-            <TranslatedText>Complete Remission;Complete Response</TranslatedText>
+            <TranslatedText>Complete Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </CodeListItem>
         <CodeListItem CodedValue="NE">
           <Decode>
-            <TranslatedText>Not Assessable;Not Evaluable</TranslatedText>
+            <TranslatedText>Unevaluable</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C62222"/>
         </CodeListItem>
         <CodeListItem CodedValue="PD">
           <Decode>
-            <TranslatedText>Disease Progression;Progressive Disease</TranslatedText>
+            <TranslatedText>Progressive Disease</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
         </CodeListItem>
         <CodeListItem CodedValue="PR">
           <Decode>
-            <TranslatedText>Partial Remission;Partial Response</TranslatedText>
+            <TranslatedText>Partial Remission</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C18058"/>
         </CodeListItem>
@@ -7099,18 +7111,30 @@
         <Alias Context="nci:ExtCodeID" Name="C96781"/>
       </CodeList>
       <CodeList OID="CL.ONCRTSCD" Name="Oncology Response Assessment Test Code, subset" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="NEWLPROG">
+        <CodeListItem CodedValue="NEWLPROG">
+          <Decode>
+            <TranslatedText>New Lesion Progression</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C103420"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NTRGRESP">
+        </CodeListItem>
+        <CodeListItem CodedValue="NTRGRESP">
+          <Decode>
+            <TranslatedText>Non-target Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C94535"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="OVRLRESP">
+        </CodeListItem>
+        <CodeListItem CodedValue="OVRLRESP">
+          <Decode>
+            <TranslatedText>Overall Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96613"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="TRGRESP">
+        </CodeListItem>
+        <CodeListItem CodedValue="TRGRESP">
+          <Decode>
+            <TranslatedText>Target Response</TranslatedText>
+          </Decode>
           <Alias Context="nci:ExtCodeID" Name="C94534"/>
-        </EnumeratedItem>
+        </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C96782"/>
       </CodeList>
       <CodeList OID="CL.PORTOT" Name="Portion/Totality" DataType="text" def:StandardOID="STD.2">
@@ -7311,7 +7335,7 @@
         </CodeListItem>
         <CodeListItem CodedValue="LPERP">
           <Decode>
-            <TranslatedText>Longest Perpendicular;Short Axis Diameter</TranslatedText>
+            <TranslatedText>Longest Perpendicular</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96685"/>
         </CodeListItem>

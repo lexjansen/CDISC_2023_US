@@ -134,10 +134,14 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
   if index(codelist, '_OR_') or (index(column, "ORRES") and index(column, "ORRESU")=0 )then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Original (Res)");
   if index(codelist, '_STC_') or index(column, "STRESC") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized (Char Res)");
 
-  if index(codelist, "TESTCD") or index(codelist, "NY") or index(codelist, "ONCRSR")
+  decodetext="";
+  if index(codelist, "TESTCD") or index(codelist, "ONCRTSCD") or index(codelist, "NY") or index(codelist, "ONCRSR")
      then do;
-      if not missing(code_synonym) then decodetext = code_synonym;
-                                   else decodetext = codedvaluechar;
+      if not missing(code_synonym) then do;
+        if index(code_synonym, ";")=0 then decodetext = code_synonym;
+      end;  
+      if missing(decodetext) and (not missing(preferredterm)) then decodetext = preferredterm;
+      if missing(decodetext) then decodetext = codedvaluechar;
     end;
     else decodetext="";
 

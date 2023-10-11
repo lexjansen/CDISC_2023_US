@@ -13,10 +13,10 @@ if exist ..\data\*.sas7* del ..\data\*.sas7*
 if exist ..\metadata\*.sas7* del ..\metadata\*.sas7*
 
 %SAScmd% 00_define_study_standards.sas %SASconfig%
-%SAScmd% 01_request_api_ct.sas %SASconfig%
-%SAScmd% 02_request_api_sdtm_latest.sas %SASconfig%
-%SAScmd% 03_request_api_sdtm_domains.sas %SASconfig%
-%SAScmd% 04_create_vlm_from_sdtm_specializations.sas %SASconfig%
+%SAScmd% 01_request_api_sdtm_specs_latest.sas %SASconfig%
+%SAScmd% 02_request_api_sdtm_domains.sas %SASconfig%
+%SAScmd% 03_create_vlm_from_sdtm_specializations.sas %SASconfig%
+%SAScmd% 04_request_api_ct.sas %SASconfig%
 %SAScmd% 05_create_ct_metadata.sas %SASconfig%
 %SAScmd% 06_create_definexml.sas %SASconfig%
 
