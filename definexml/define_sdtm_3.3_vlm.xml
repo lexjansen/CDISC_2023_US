@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-11T16:43:35-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2023-10-12T15:48:33-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -1170,7 +1170,6 @@
         <Description>
           <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
         <def:ValueListRef ValueListOID="VL.RS.RSORRES"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSORRESU" Name="RSORRESU" DataType="text" Length="200" SASFieldName="RSORRESU">
@@ -1191,7 +1190,7 @@
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="text" SASFieldName="RSRFTDTC">
+      <ItemDef OID="IT.RS.RSRFTDTC" Name="RSRFTDTC" DataType="datetime" SASFieldName="RSRFTDTC">
         <Description>
           <TranslatedText xml:lang="en">Date/Time of Reference Time Point</TranslatedText>
         </Description>
@@ -1227,7 +1226,6 @@
           <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.RS.RSSTRESC"/>
       </ItemDef>
       <ItemDef OID="IT.RS.RSSTRESN" Name="RSSTRESN" DataType="float" Length="8" SASFieldName="RSSTRESN">
@@ -1430,14 +1428,12 @@
         <Description>
           <TranslatedText xml:lang="en">Result or Finding in Original Units</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
         <def:ValueListRef ValueListOID="VL.TR.TRORRES"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRORRESU" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Original Units</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
         <def:ValueListRef ValueListOID="VL.TR.TRORRESU"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRREASND" Name="TRREASND" DataType="text" Length="200" SASFieldName="TRREASND">
@@ -1476,21 +1472,18 @@
           <TranslatedText xml:lang="en">Character Result/Finding in Std Format</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.TR.TRSTRESC"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRSTRESN" Name="TRSTRESN" DataType="float" Length="22" SignificantDigits="7" SASFieldName="TRSTRESN" def:DisplayFormat="24.7">
         <Description>
           <TranslatedText xml:lang="en">Numeric Result/Finding in Standard Units</TranslatedText>
         </Description>
-        <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.TR.TRSTRESN"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRSTRESU" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Standard Units</TranslatedText>
         </Description>
-        <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.TR.TRSTRESU"/>
       </ItemDef>
       <ItemDef OID="IT.TR.TRTEST" Name="TRTEST" DataType="text" Length="40" SASFieldName="TRTEST">
@@ -1673,7 +1666,6 @@
         <Description>
           <TranslatedText xml:lang="en">Tumor/Lesion ID Result</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Investigator"/>
         <def:ValueListRef ValueListOID="VL.TU.TUORRES"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TUPORTOT" Name="TUPORTOT" DataType="text" Length="200" SASFieldName="TUPORTOT">
@@ -1706,7 +1698,6 @@
           <TranslatedText xml:lang="en">Tumor/Lesion ID Result Std. Format</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
         <def:ValueListRef ValueListOID="VL.TU.TUSTRESC"/>
       </ItemDef>
       <ItemDef OID="IT.TU.TUTEST" Name="TUTEST" DataType="text" Length="40" SASFieldName="TUTEST">
@@ -1747,122 +1738,122 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00001" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00001" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">New Lesion Progression</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_NEWLPROG"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00002" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00002" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_NTRGRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00003" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00003" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Overall Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_OVRLRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00004" Name="RSORRES" DataType="text" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00004" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Target Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_TRGRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00005" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00005" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">New Lesion Progression</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_NEWLPROG"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_NTRGRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Overall Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_OVRLRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" Name="RSSTRESC" DataType="text" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Target Response</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_TRGRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00009" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00009" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00010" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00010" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_OR_LNSTATE"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00011" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00011" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00012" Name="TRORRES" DataType="text" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00012" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_OR_TUMSTATE"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00013" Name="TRORRESU" DataType="text" SASFieldName="TRORRESU">
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00013" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_ORU_LDIAM"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00014" Name="TRORRESU" DataType="text" SASFieldName="TRORRESU">
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00014" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_ORU_LPERP"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00015" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00015" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00016" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00016" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_STC_LNSTATE"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" Name="TRSTRESC" DataType="text" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
         </Description>
@@ -1881,14 +1872,14 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00021" Name="TRSTRESU" DataType="text" SASFieldName="TRSTRESU">
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00021" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_STU_LDIAM"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00022" Name="TRSTRESU" DataType="text" SASFieldName="TRSTRESU">
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00022" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>

@@ -92,6 +92,7 @@ proc sql;
   select
     sdtm.*,
     col.xmldatatype as parent_xmldatatype,
+    col.length as parent_length,
     wc._whereclause1,
     wc._whereclause2,
     wc._whereclause3,
@@ -194,7 +195,7 @@ proc sql noprint;
  from metadata.source_study;
 quit;
 
-data data.source_values_sdtm(drop=parent_xmldatatype label="Source Value Metadata");
+data data.source_values_sdtm(drop=parent_xmldatatype parent_length label="Source Value Metadata");
   set source_values;
   by table column notsorted;
   order = _n_;
@@ -203,6 +204,7 @@ data data.source_values_sdtm(drop=parent_xmldatatype label="Source Value Metadat
   standard="&_cstStandard";
   standardversion="&_cstStandardVersion";
   if missing(xmldatatype) then xmldatatype=parent_xmldatatype;
+  if missing(length) and xmldatatype="text" then length=parent_length;
 run;
 
 ods listing close;
@@ -215,5 +217,3 @@ ods excel file="&project_folder/data/source_values_sdtm.xlsx" options(sheet_name
 ods excel close;
 ods html5 close;
 ods listing;
-
-

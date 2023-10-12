@@ -301,15 +301,40 @@ run;
     );
     set metadata.source_columns 
         work.source_columns; 
+
     if missing(xmlcodelist) and (not missing(xmlcodelist_)) and (not missing(codelist_ccode)) 
       then xmlcodelist = xmlcodelist_;
+      
+    if column in ("RSORRESU" "RSSTRESU" "TRORRESU" "TRSTRESU") then xmlcodelist  = "";
+
+    if column in ("&vlm_columns") then do;
+      origintype = "";
+      originsource = "";
+    end;
+      
   run;
 
   libname clib clear;
 
 %mend add_domain;
 
+/* Get VLM target variables, tghese will not get origin at the variable level */
+proc sql noprint;
+  select unique name into :vlm_columns separated by '" "'
+  from data.sdtm_specializations
+  where vlmTarget = 1
+  ;
+quit;   
+
+%put "&vlm_columns";
+
+
 %add_domain(clib_domain=rs, order=1);
 %add_domain(clib_domain=tr, order=2);
 %add_domain(clib_domain=tu, order=3);
 
+data metadata.source_columns(
+        label="Source Column Metadata"
+        );
+  set metadata.source_columns;
+run;    

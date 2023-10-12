@@ -6,14 +6,15 @@ cd ..\programs
 
 for %%i in (log html xlsx lst) do @if exist *.%%i del *.%%i
 if exist runbatch*.txt del runbatch*.txt
-if exist ..\definexml\define_sdtm_3.3_vlm*.* del ..\definexml\define_sdtm_3.3_vlm*.*
+if exist ..\definexml\define_sdtm_3.3_vlm.* del ..\definexml\define_sdtm_3.3_vlm.*
 if exist ..\data\*.html del ..\data\*.html
 if exist ..\data\*.xlsx del ..\data\*.xlsx
 if exist ..\data\*.sas7* del ..\data\*.sas7*
 if exist ..\metadata\*.sas7* del ..\metadata\*.sas7*
 
 %SAScmd% 00_define_study_standards.sas %SASconfig%
-%SAScmd% 01_request_api_sdtm_specs_latest.sas %SASconfig%
+%SAScmd% 01_request_api_bc_RECIST.sas %SASconfig%
+%SAScmd% 01_request_api_sdtm_specs_RS_TR_TU.sas %SASconfig%
 %SAScmd% 02_request_api_sdtm_domains.sas %SASconfig%
 %SAScmd% 03_create_vlm_from_sdtm_specializations.sas %SASconfig%
 %SAScmd% 04_request_api_ct.sas %SASconfig%

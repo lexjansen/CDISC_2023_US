@@ -126,17 +126,6 @@ run;
 %cstutil_processsetup();
 
 
-data work.source_columns;
-  set sampdata.source_columns;
-  select(column);
-    when("RSORRESU") xmlcodelist  = "";
-    when("RSSTRESU") xmlcodelist  = "";
-    when("TRORRESU") xmlcodelist  = "";
-    when("TRSTRESU") xmlcodelist  = "";
-    otherwise;
-  end;
-run;
-
 data work.source_values;
   set metadata.source_values data.source_values_sdtm;
 run;
@@ -154,7 +143,7 @@ run;
   _cstSourceStudy=sampdata.source_study,
   _cstSourceStandards=sampdata.source_standards,
   _cstSourceTables=sampdata.source_tables,
-  _cstSourceColumns=work.source_columns,
+  _cstSourceColumns=sampdata.source_columns,
   _cstSourceCodeLists=work.source_codelists,
   _cstSourceValues=work.source_values,
   _cstSourceDocuments=sampdata.source_documents,
