@@ -20,15 +20,11 @@ options sasautos = ("&project_folder/macros", "/library/sas", %sysfunc(compress(
 
 %let env=prod;  
 %let api_key=&&cdisc_api_&env._key;
-
-%*let api_key=&cdisc_api_primary_key;
-%let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-
-%*let base_url=https://&env..cdisclibrary.org/api;
 %let base_url=https://library.cdisc.org/api;
-
-%*let base_url_cosmos=https://&env..cdisclibrary.org/api/cosmos/v2;
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+
+
+%let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 
 libname data "&project_folder/data";
 libname metadata "&project_folder/metadata";
