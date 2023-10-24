@@ -3,7 +3,8 @@
 __pycache__/
 *.log
 *.lst
-*.html
 *.cfg
+0*.html
+*validate*.html
 *.json
 *.sas7bdat
