@@ -5,6 +5,7 @@ __pycache__/
 *.lst
 *.cfg
 0*.html
+0*.xlsx
 *validate*.html
 *.json
 *.sas7bdat
