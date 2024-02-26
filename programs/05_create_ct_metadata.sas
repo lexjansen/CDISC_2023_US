@@ -64,12 +64,6 @@ data sdtm_specializations_ct;
   end;  
 
   output;  
-/*
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and name in ("VSORRES" "LBORRES")
-    then xmlcodelist = cats(codelist_submission_value, "_OR_", datasetSpecializationId);
-  if (not missing(codelist_submission_value)) and (not missing(value_list)) and name in ("VSSTRESC" "LBSTRESC")
-    then xmlcodelist = cats(codelist_submission_value, "_ST_", datasetSpecializationId);
-*/
 run;
 
 ods listing close;

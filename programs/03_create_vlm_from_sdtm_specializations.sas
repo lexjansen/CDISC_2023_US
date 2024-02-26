@@ -4,6 +4,7 @@
 %include "&project_folder/programs/config.sas";
 
 %let domains="RS" "TR" "TU";
+%let tables="RS" "TR" "TU";
 
 *******************************************************************************;
 * Create VLM metadata                                                         *;
@@ -112,50 +113,22 @@ data source_values(drop = datasetSpecializationId codelist subsetcodelist value_
    whereclause = cats("(", _whereclause1, ")");
    name = datasetSpecializationId;  
 
-  if table="RS" then do;
-    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('RSCAT')  */ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('RSEVAL') */ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH'))*/ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
-      name = "";
-    end;
-  end;
+  if table in (&tables) then do;
 
-  if table="TR" then do;
-    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('TRMETHOD') */ ) then do;
+    if (not missing(_whereclause2)) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
       name = "";
     end;
-    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('TREVAL') */ ) then do;
+    if (not missing(_whereclause3)) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
       name = "";
     end;
-    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH') */ ) then do;
+    if (not missing(_whereclause4)) then do;
       whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
       name = "";
     end;
-  end;
-  if table="TU" then do;
-    if (not missing(_whereclause2) /* and scan(_whereclause2, 1, ' ') in ('TUEVAL' 'TUMETHOD') */ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause3) /* and scan(_whereclause3, 1, ' ') in ('TUEVAL' 'EPOCH') */ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause4) /* and scan(_whereclause4, 1, ' ') in ('EPOCH') */ ) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
-      name = "";
-    end;
-  end;
 
+  end;
 
   /* Assign codelists */
   if (not missing(xmlcodelist)) and (not missing(assigned_value)) and prxmatch('/.*ORRES$/i',strip(column))
@@ -179,12 +152,6 @@ data source_values(drop = datasetSpecializationId codelist subsetcodelist value_
     then xmlcodelist = cats(xmlcodelist, "_STU_", datasetSpecializationId);
 
   if (not missing(value_list)) and (not missing(subsetcodelist)) then xmlcodelist = subsetcodelist;
-/*
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and name in ("VSORRES" "LBORRES")
-    then xmlcodelist = cats(xmlcodelist, "_OR_", datasetSpecializationId);
-  if (not missing(xmlcodelist)) and (not missing(value_list)) and name in ("VSSTRESC" "LBSTRESC")
-    then xmlcodelist = cats(xmlcodelist, "_ST_", datasetSpecializationId);
-*/
 run;
 
 %let _cstStudyVersion=;
