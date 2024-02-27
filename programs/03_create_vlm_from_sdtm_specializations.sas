@@ -107,27 +107,21 @@ proc sql;
   ;
 quit;
 
-data source_values(drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause:);
+data source_values(drop = datasetSpecializationId codelist subsetcodelist value_list assigned_term assigned_value _whereclause: i);
   set source_values;
 
-   whereclause = cats("(", _whereclause1, ")");
-   name = datasetSpecializationId;  
+  array whereclauses{&max_whereclauses} $ 1024 _whereclause1 - _whereclause&max_whereclauses;
+  
+  whereclause = cats("(", _whereclause1, ")");
+  name = datasetSpecializationId;  
 
   if table in (&tables) then do;
-
-    if (not missing(_whereclause2)) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause2, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause3)) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause3, ")"));
-      name = "";
-    end;
-    if (not missing(_whereclause4)) then do;
-      whereclause = catx(' ', whereclause, 'AND',  cats("(", _whereclause4, ")"));
-      name = "";
-    end;
-
+    do i = 2 to dim(whereclauses);
+      if (not missing(whereclauses{i})) then do;
+        whereclause = catx(' ', whereclause, 'AND',  cats("(", whereclauses{i}, ")"));
+        name = "";
+      end;
+    end;  
   end;
 
   /* Assign codelists */
