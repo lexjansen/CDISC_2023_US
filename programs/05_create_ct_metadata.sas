@@ -129,7 +129,7 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
   if index(codelist, '_STC_') or index(column, "STRESC") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized (Char Res)");
 
   decodetext="";
-  if index(codelist, "TESTCD") or index(codelist, "ONCRTSCD") or index(codelist, "NY") or index(codelist, "ONCRSR")
+  if index(codelist, "TESTCD") or index(codelist, "ONCRTSCD") or index(codelist, "NY") /* or index(codelist, "ONCRSR") */
      then do;
       if not missing(code_synonym) then do;
         if index(code_synonym, ";")=0 then decodetext = code_synonym;

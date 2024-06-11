@@ -94,12 +94,9 @@ proc sql;
     sdtm.*,
     col.xmldatatype as parent_xmldatatype,
     col.length as parent_length,
-    wc._whereclause1,
-    wc._whereclause2,
-    wc._whereclause3,
-    wc._whereclause4
+    wc.*
   from sdtm_specializations sdtm
-    left join whereclause wc
+    left join whereclause(keep=domain datasetSpecializationId _whereclause:) wc
   on (sdtm.table = wc.domain and sdtm.datasetSpecializationId = wc.datasetSpecializationId)
     left join metadata.source_columns col
   on (sdtm.table = col.table and sdtm.column = col.column)

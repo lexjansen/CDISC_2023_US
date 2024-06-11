@@ -104,6 +104,7 @@ run;
 
 proc sort data=sdtm_specializations out=data.sdtm_specializations;
   by datasetSpecializationId;
+  /* where name ne 'EPOCH'; */
 run;  
 
 ods listing close;
