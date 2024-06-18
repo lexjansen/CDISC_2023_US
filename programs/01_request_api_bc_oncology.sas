@@ -35,7 +35,7 @@
 
 %mend get_bc_by_category;
 
-%get_bc_by_category(RECIST 1.1);
+%get_bc_by_category(Oncology Standards);
 
 %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
 libname jsontmp "%sysfunc(pathname(work))/jsontmp";

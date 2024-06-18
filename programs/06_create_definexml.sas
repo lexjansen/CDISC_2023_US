@@ -154,7 +154,7 @@ run;
 
 data srcdata.metadataversion;
   set srcdata.metadataversion;
-  DefineVersion = "2.1.6";
+  DefineVersion = "2.1.7";
 run;  
 
 %define_write(

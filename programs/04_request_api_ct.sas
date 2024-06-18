@@ -2,6 +2,7 @@
 %let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
+%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
 
 *******************************************************************************;
 * Get CDISC LIbrary SDTM CT package                                           *;

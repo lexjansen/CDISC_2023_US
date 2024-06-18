@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2024-06-12T13:00:59-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2024-06-18T17:49:22-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
       <StudyDescription>CDISC Test Study</StudyDescription>
       <ProtocolName>CDISC01</ProtocolName>
     </GlobalVariables>
-    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.6" def:CommentOID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
+    <MetaDataVersion OID="MDV.CDISC01.SDTMIG.3.3.SDTM.1.7" Name="Study CDISC01_1, Data Definitions V-1" Description="Data Definitions for CDISC01-01 SDTM datasets" def:DefineVersion="2.1.7" def:CommentOID="COM.MDV.CDISC01.SDTMIG.3.3.SDTM.1.7">
       <def:Standards>
         <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.3" Status="Final"/>
-        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2023-09-29" Status="Final"/>
-        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2023-06-30" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2024-03-29" Status="Final"/>
+        <def:Standard OID="STD.3" Name="CDISC/NCI" Type="CT" PublishingSet="DEFINE-XML" Version="2024-03-29" Status="Final"/>
       </def:Standards>
       <def:ValueListDef OID="VL.RS.RSORRES">
         <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00001" OrderNumber="1" Mandatory="No" Role="Qualifier">
@@ -2666,7 +2666,7 @@
       </ItemDef>
       <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00017" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
-          <TranslatedText xml:lang="en">Overall Response (RECIST 1.1)</TranslatedText>
+          <TranslatedText xml:lang="en">Best Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_BESTRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
@@ -2813,7 +2813,7 @@
       </ItemDef>
       <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00038" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
-          <TranslatedText xml:lang="en">Overall Response (RECIST 1.1)</TranslatedText>
+          <TranslatedText xml:lang="en">Best Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_BESTRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
@@ -3123,6 +3123,9 @@
         <EnumeratedItem CodedValue="POSTERIOR">
           <Alias Context="nci:ExtCodeID" Name="C25622"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="POSTEROMEDIAL">
+          <Alias Context="nci:ExtCodeID" Name="C202344"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="PROXIMAL">
           <Alias Context="nci:ExtCodeID" Name="C25236"/>
         </EnumeratedItem>
@@ -3184,13 +3187,13 @@
           <Alias Context="nci:ExtCodeID" Name="C123452"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="FOLLOW-UP">
-          <Alias Context="nci:ExtCodeID" Name="C99158"/>
+          <Alias Context="nci:ExtCodeID" Name="C202578"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="INDUCTION TREATMENT">
           <Alias Context="nci:ExtCodeID" Name="C123453"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="LONG-TERM FOLLOW-UP">
-          <Alias Context="nci:ExtCodeID" Name="C16032"/>
+          <Alias Context="nci:ExtCodeID" Name="C202577"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="OBSERVATION">
           <Alias Context="nci:ExtCodeID" Name="C165873"/>
@@ -3205,7 +3208,7 @@
           <Alias Context="nci:ExtCodeID" Name="C98779"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="SCREENING">
-          <Alias Context="nci:ExtCodeID" Name="C48262"/>
+          <Alias Context="nci:ExtCodeID" Name="C202487"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="TREATMENT">
           <Alias Context="nci:ExtCodeID" Name="C101526"/>
@@ -3378,6 +3381,9 @@
         <EnumeratedItem CodedValue="ANGULAR GYRUS">
           <Alias Context="nci:ExtCodeID" Name="C32077"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="ANKLE DORSIFLEXOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204661"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="ANKLE JOINT">
           <Alias Context="nci:ExtCodeID" Name="C32078"/>
         </EnumeratedItem>
@@ -3395,6 +3401,9 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="ANTECUBITAL FOSSA">
           <Alias Context="nci:ExtCodeID" Name="C103238"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="ANTERIOR CEREBRAL ARTERY">
+          <Alias Context="nci:ExtCodeID" Name="C12829"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="ANTERIOR CINGULATE CORTEX">
           <Alias Context="nci:ExtCodeID" Name="C139185"/>
@@ -3797,6 +3806,12 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="CEREBELLAR LOBE">
           <Alias Context="nci:ExtCodeID" Name="C186108"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="CEREBELLAR PEDUNCLE">
+          <Alias Context="nci:ExtCodeID" Name="C88147"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="CEREBELLAR VERMIS">
+          <Alias Context="nci:ExtCodeID" Name="C33866"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="CEREBELLUM">
           <Alias Context="nci:ExtCodeID" Name="C12445"/>
@@ -4292,6 +4307,9 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="EXTRAHEPATIC PERIHILAR BILE DUCT REGION">
           <Alias Context="nci:ExtCodeID" Name="C174319"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="EXTRANODAL REGION">
+          <Alias Context="nci:ExtCodeID" Name="C202395"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="EXTRAOCULAR MUSCLE">
           <Alias Context="nci:ExtCodeID" Name="C33199"/>
@@ -4824,8 +4842,17 @@
         <EnumeratedItem CodedValue="HIP">
           <Alias Context="nci:ExtCodeID" Name="C64193"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="HIP ABDUCTOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204656"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="HIP ADDUCTOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204657"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="HIP ADDUCTORS">
           <Alias Context="nci:ExtCodeID" Name="C53039"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="HIP EXTENSOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204660"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="HIP FLEXOR MUSCLES">
           <Alias Context="nci:ExtCodeID" Name="C186122"/>
@@ -5016,6 +5043,9 @@
         <EnumeratedItem CodedValue="INTESTINE">
           <Alias Context="nci:ExtCodeID" Name="C12736"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="INTRACRANIAL ARTERY">
+          <Alias Context="nci:ExtCodeID" Name="C12980"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="INTRAHEPATIC BILE DUCT">
           <Alias Context="nci:ExtCodeID" Name="C12677"/>
         </EnumeratedItem>
@@ -5069,6 +5099,9 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="KIDNEY, UPPER POLE">
           <Alias Context="nci:ExtCodeID" Name="C93179"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="KNEE EXTENSOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204655"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="KNEE FLEXOR MUSCLES">
           <Alias Context="nci:ExtCodeID" Name="C186125"/>
@@ -5622,6 +5655,9 @@
         <EnumeratedItem CodedValue="MIDBRAIN">
           <Alias Context="nci:ExtCodeID" Name="C12510"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="MIDDLE CEREBRAL ARTERY">
+          <Alias Context="nci:ExtCodeID" Name="C12830"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="MIDDLE EAR">
           <Alias Context="nci:ExtCodeID" Name="C12274"/>
         </EnumeratedItem>
@@ -5708,6 +5744,9 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="NECK">
           <Alias Context="nci:ExtCodeID" Name="C13063"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="NECK EXTENSOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204658"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="NERVE">
           <Alias Context="nci:ExtCodeID" Name="C12466"/>
@@ -5913,6 +5952,9 @@
         <EnumeratedItem CodedValue="PARIETAL LOBE">
           <Alias Context="nci:ExtCodeID" Name="C12354"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="PARIETAL PLEURA">
+          <Alias Context="nci:ExtCodeID" Name="C33273"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="PAROTID GLAND">
           <Alias Context="nci:ExtCodeID" Name="C12427"/>
         </EnumeratedItem>
@@ -6048,6 +6090,9 @@
         <EnumeratedItem CodedValue="PHARYNX">
           <Alias Context="nci:ExtCodeID" Name="C12425"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="PHRENIC NERVE">
+          <Alias Context="nci:ExtCodeID" Name="C52813"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="PINEAL GLAND">
           <Alias Context="nci:ExtCodeID" Name="C12398"/>
         </EnumeratedItem>
@@ -6110,6 +6155,9 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="POSTCENTRAL GYRUS">
           <Alias Context="nci:ExtCodeID" Name="C33346"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="POSTERIOR CEREBRAL ARTERY">
+          <Alias Context="nci:ExtCodeID" Name="C12831"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="POSTERIOR CERVICAL LYMPH NODE">
           <Alias Context="nci:ExtCodeID" Name="C103428"/>
@@ -6581,6 +6629,12 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="SHOULDER">
           <Alias Context="nci:ExtCodeID" Name="C25203"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SHOULDER ABDUCTOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204654"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SHOULDER EXTERNAL ROTATOR MUSCLES">
+          <Alias Context="nci:ExtCodeID" Name="C204659"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="SHOULDER JOINT">
           <Alias Context="nci:ExtCodeID" Name="C33548"/>
@@ -7656,6 +7710,15 @@
         <EnumeratedItem CodedValue="CMR">
           <Alias Context="nci:ExtCodeID" Name="C123407"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="CNS1">
+          <Alias Context="nci:ExtCodeID" Name="C116833"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="CNS2">
+          <Alias Context="nci:ExtCodeID" Name="C116834"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="CNS3">
+          <Alias Context="nci:ExtCodeID" Name="C116835"/>
+        </EnumeratedItem>
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </EnumeratedItem>
@@ -7715,6 +7778,15 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="INDETERMINATE RESPONSE">
           <Alias Context="nci:ExtCodeID" Name="C123589"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="M1">
+          <Alias Context="nci:ExtCodeID" Name="C204689"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="M2">
+          <Alias Context="nci:ExtCodeID" Name="C204690"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="M3">
+          <Alias Context="nci:ExtCodeID" Name="C204691"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="MAJOR PATHOLOGIC RESPONSE">
           <Alias Context="nci:ExtCodeID" Name="C123590"/>
@@ -7925,7 +7997,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_BESTRESP" Name="Oncology Response Assessment Result, subset for Overall Response (RECIST 1.1) - Original (Res)" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.ONCRSR_OR_BESTRESP" Name="Oncology Response Assessment Result, subset for Best Overall Response (RECIST 1.1) - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </EnumeratedItem>
@@ -8252,7 +8324,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_BESTRESP" Name="Oncology Response Assessment Result, subset for Overall Response (RECIST 1.1) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
+      <CodeList OID="CL.ONCRSR_STC_BESTRESP" Name="Oncology Response Assessment Result, subset for Best Overall Response (RECIST 1.1) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </EnumeratedItem>

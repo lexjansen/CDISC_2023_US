@@ -57,6 +57,8 @@ run;
 
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
+%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+
 options dlcreatedir;
 
 %let _cstStandard=CDISC-DEFINE-XML;
