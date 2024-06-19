@@ -5,7 +5,6 @@
 
 options sasautos = ("&project_folder/macros", "/library/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 
-
 %* Get credentials from environment variables;
 %let api_key_prod=%sysget(CDISC_LIBRARY_API_KEY);
 %let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
