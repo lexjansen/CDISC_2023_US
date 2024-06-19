@@ -186,7 +186,7 @@ proc xsl
   in=extxml
   xsl=xslt01
   out=html;
-  parameter 'nCodeListItemDisplay'=5 'displayMethodsTable'=1 'displayCommentsTable'=0;
+  parameter 'nCodeListItemDisplay'=7 'displayMethodsTable'=1 'displayCommentsTable'=0;
 run;
 
 **********************************************************************************;

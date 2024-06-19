@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="define2-1.xsl"?>
 <!-- Produced with SAS 9.4 - SAS Open Clinical Standards Toolkit-->
-<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2024-06-18T17:49:22-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
+<ODM xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:def="http://www.cdisc.org/ns/def/v2.1" xmlns="http://www.cdisc.org/ns/odm/v1.3" FileOID="www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0" CreationDateTime="2024-06-19T15:24:12-04:00" FileType="Snapshot" ODMVersion="1.3.2" SourceSystem="SAS Clinical Standards Toolkit (openCST)" SourceSystemVersion="1.7" def:Context="Submission">
   <Study OID="STDY.www.cdisc.org.CDISC01_1">
     <GlobalVariables>
       <StudyName>CDISC01</StudyName>
@@ -18,490 +18,192 @@
         <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00001" OrderNumber="1" Mandatory="No" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00001"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00017" OrderNumber="2" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00017"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00002" OrderNumber="3" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00002" OrderNumber="2" Mandatory="No" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00002"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00009" OrderNumber="4" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00009"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00003" OrderNumber="5" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00003" OrderNumber="3" Mandatory="No" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00003"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00004" OrderNumber="6" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00004" OrderNumber="4" Mandatory="No" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00004"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00010" OrderNumber="7" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00010"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00018" OrderNumber="8" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00018"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00011" OrderNumber="9" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00011"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00012" OrderNumber="10" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00012"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00019" OrderNumber="11" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00019"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00005" OrderNumber="12" Mandatory="No" Role="Qualifier">
+        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00005" OrderNumber="5" Mandatory="No" Role="Qualifier">
           <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00005"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00020" OrderNumber="13" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00020"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00006" OrderNumber="14" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00006"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00015" OrderNumber="15" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00015"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00016" OrderNumber="16" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00016"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00007" OrderNumber="17" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00007"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00013" OrderNumber="18" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00013"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00021" OrderNumber="19" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00021"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00008" OrderNumber="20" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00008"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSORRES.WC.RS.RSORRES.00014" OrderNumber="21" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSORRES.00014"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.RS.RSSTRESC">
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00022" OrderNumber="22" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00022"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" OrderNumber="6" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00006"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00038" OrderNumber="23" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00038"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" OrderNumber="7" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00007"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00023" OrderNumber="24" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00023"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" OrderNumber="8" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00008"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00030" OrderNumber="25" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00030"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00009" OrderNumber="9" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00009"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00024" OrderNumber="26" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00024"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00025" OrderNumber="27" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00025"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00031" OrderNumber="28" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00031"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00039" OrderNumber="29" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00039"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00032" OrderNumber="30" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00032"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00033" OrderNumber="31" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00033"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00040" OrderNumber="32" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00040"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00026" OrderNumber="33" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00026"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00041" OrderNumber="34" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00041"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00027" OrderNumber="35" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00027"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00036" OrderNumber="36" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00036"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00037" OrderNumber="37" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00037"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00028" OrderNumber="38" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00028"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00034" OrderNumber="39" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00034"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00042" OrderNumber="40" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00042"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00029" OrderNumber="41" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00029"/>
-        </ItemRef>
-        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00035" OrderNumber="42" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00035"/>
+        <ItemRef ItemOID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00010" OrderNumber="10" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.RS.RSSTRESC.00010"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRORRES">
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00043" OrderNumber="43" Mandatory="Yes" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00043"/>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00011" OrderNumber="11" Mandatory="Yes" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00011"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00044" OrderNumber="44" Mandatory="Yes" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00044"/>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00012" OrderNumber="12" Mandatory="Yes" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00012"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00045" OrderNumber="45" Mandatory="Yes" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00045"/>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00013" OrderNumber="13" Mandatory="Yes" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00013"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00046" OrderNumber="46" Mandatory="Yes" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00046"/>
+        <ItemRef ItemOID="IT.TR.TRORRES.WC.TR.TRORRES.00014" OrderNumber="14" Mandatory="Yes" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRES.00014"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRORRESU">
-        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00047" OrderNumber="47" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00047"/>
+        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00015" OrderNumber="15" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00015"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00048" OrderNumber="48" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00048"/>
+        <ItemRef ItemOID="IT.TR.TRORRESU.WC.TR.TRORRESU.00016" OrderNumber="16" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRORRESU.00016"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRSTRESC">
-        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00049" OrderNumber="49" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00049"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" OrderNumber="17" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00017"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00050" OrderNumber="50" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00050"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" OrderNumber="18" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00018"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00051" OrderNumber="51" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00051"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00019" OrderNumber="19" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00019"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00052" OrderNumber="52" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00052"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00020" OrderNumber="20" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESC.00020"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRSTRESN">
-        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00053" OrderNumber="53" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00053"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00021" OrderNumber="21" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00021"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00054" OrderNumber="54" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00054"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00022" OrderNumber="22" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESN.00022"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TR.TRSTRESU">
-        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00055" OrderNumber="55" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00055"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00023" OrderNumber="23" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00023"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00056" OrderNumber="56" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00056"/>
+        <ItemRef ItemOID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00024" OrderNumber="24" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TR.TRSTRESU.00024"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TU.TUORRES">
-        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00057" OrderNumber="57" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00057"/>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00025" OrderNumber="25" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00025"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00058" OrderNumber="58" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00058"/>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00026" OrderNumber="26" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00026"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00059" OrderNumber="59" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00059"/>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00027" OrderNumber="27" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00027"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00060" OrderNumber="60" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00060"/>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00028" OrderNumber="28" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00028"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00061" OrderNumber="61" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00061"/>
+        <ItemRef ItemOID="IT.TU.TUORRES.WC.TU.TUORRES.00029" OrderNumber="29" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUORRES.00029"/>
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.TU.TUSTRESC">
-        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00062" OrderNumber="62" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00062"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00030" OrderNumber="30" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00030"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00063" OrderNumber="63" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00063"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00031" OrderNumber="31" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00031"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00064" OrderNumber="64" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00064"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00032" OrderNumber="32" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00032"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00065" OrderNumber="65" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00065"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00033" OrderNumber="33" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00033"/>
         </ItemRef>
-        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00066" OrderNumber="66" Mandatory="No" Role="Qualifier">
-          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00066"/>
+        <ItemRef ItemOID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00034" OrderNumber="34" Mandatory="No" Role="Qualifier">
+          <def:WhereClauseRef WhereClauseOID="WC.TU.TUSTRESC.00034"/>
         </ItemRef>
       </def:ValueListDef>
       <def:WhereClauseDef OID="WC.RS.RSORRES.00001">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
+          <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
+        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 1</CheckValue>
           <CheckValue>RADIOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 3</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>ANATRESP</CheckValue>
+          <CheckValue>BESTRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
       <def:WhereClauseDef OID="WC.RS.RSORRES.00002">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
+          <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 1</CheckValue>
           <CheckValue>RADIOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 3</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>BMIVLIND</CheckValue>
+          <CheckValue>NEWLPROG</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
       <def:WhereClauseDef OID="WC.RS.RSORRES.00003">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
+          <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 1</CheckValue>
           <CheckValue>RADIOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 3</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>METBRESP</CheckValue>
+          <CheckValue>NTRGRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
       <def:WhereClauseDef OID="WC.RS.RSORRES.00004">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
+          <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 1</CheckValue>
           <CheckValue>RADIOLOGIST 2</CheckValue>
           <CheckValue>RADIOLOGIST 3</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NEWLIND</CheckValue>
+          <CheckValue>OVRLRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
       <def:WhereClauseDef OID="WC.RS.RSORRES.00005">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00006">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>OVRLRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00007">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>SPLNRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00008">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>TRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00009">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>CPRFSTAT</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00010">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NEWLIND</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00011">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTERESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00012">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTNERESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00013">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>STRUSTAT</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00014">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
+          <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
@@ -516,43 +218,7 @@
           <CheckValue>TRGRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00015">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>ONCOLOGIST</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>OVRLRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00016">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>ONCOLOGIST</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>RDIORESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00017">
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00006">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
           <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
@@ -568,7 +234,7 @@
           <CheckValue>BESTRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00018">
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00007">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
           <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
@@ -585,7 +251,7 @@
           <CheckValue>NEWLPROG</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00019">
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00008">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
           <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
@@ -602,7 +268,7 @@
           <CheckValue>NTRGRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00020">
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00009">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
           <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
@@ -619,7 +285,7 @@
           <CheckValue>OVRLRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSORRES.00021">
+      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00010">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
           <CheckValue>RECIST 1.1</CheckValue>
         </RangeCheck>
@@ -636,413 +302,7 @@
           <CheckValue>TRGRESP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00022">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>ANATRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00023">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>BMIVLIND</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00024">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>METBRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00025">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NEWLIND</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00026">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00027">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>OVRLRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00028">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>SPLNRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00029">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>LUGANO CLASSIFICATION</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>HEMATOLOGIST 1</CheckValue>
-          <CheckValue>HEMATOLOGIST 2</CheckValue>
-          <CheckValue>ONCOLOGIST 1</CheckValue>
-          <CheckValue>ONCOLOGIST 2</CheckValue>
-          <CheckValue>PATHOLOGIST 1</CheckValue>
-          <CheckValue>PATHOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>TRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00030">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>CPRFSTAT</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00031">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NEWLIND</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00032">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTERESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00033">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTNERESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00034">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>STRUSTAT</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00035">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>TRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00036">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>ONCOLOGIST</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>OVRLRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00037">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RANO</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>ONCOLOGIST</CheckValue>
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>RDIORESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00038">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RECIST 1.1</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>BESTRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00039">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RECIST 1.1</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NEWLPROG</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00040">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RECIST 1.1</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>NTRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00041">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RECIST 1.1</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>OVRLRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.RS.RSSTRESC.00042">
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSCAT">
-          <CheckValue>RECIST 1.1</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVAL">
-          <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
-          <CheckValue>INVESTIGATOR</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.RS.RSEVALID">
-          <CheckValue>RADIOLOGIST 1</CheckValue>
-          <CheckValue>RADIOLOGIST 2</CheckValue>
-          <CheckValue>RADIOLOGIST 3</CheckValue>
-        </RangeCheck>
-        <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.RS.RSTESTCD">
-          <CheckValue>TRGRESP</CheckValue>
-        </RangeCheck>
-      </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRES.00043">
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00011">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1073,7 +333,7 @@
           <CheckValue>LDIAM</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRES.00044">
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00012">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1104,7 +364,7 @@
           <CheckValue>LNSTATE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRES.00045">
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00013">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1135,7 +395,7 @@
           <CheckValue>LPERP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRES.00046">
+      <def:WhereClauseDef OID="WC.TR.TRORRES.00014">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1166,7 +426,7 @@
           <CheckValue>TUMSTATE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRESU.00047">
+      <def:WhereClauseDef OID="WC.TR.TRORRESU.00015">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1197,7 +457,7 @@
           <CheckValue>LDIAM</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRORRESU.00048">
+      <def:WhereClauseDef OID="WC.TR.TRORRESU.00016">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1228,7 +488,7 @@
           <CheckValue>LPERP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00049">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00017">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1259,7 +519,7 @@
           <CheckValue>LDIAM</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00050">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00018">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1290,7 +550,7 @@
           <CheckValue>LNSTATE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00051">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00019">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1321,7 +581,7 @@
           <CheckValue>LPERP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00052">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESC.00020">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1352,7 +612,7 @@
           <CheckValue>TUMSTATE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00053">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00021">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1383,7 +643,7 @@
           <CheckValue>LDIAM</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00054">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESN.00022">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1414,7 +674,7 @@
           <CheckValue>LPERP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00055">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00023">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1445,7 +705,7 @@
           <CheckValue>LDIAM</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00056">
+      <def:WhereClauseDef OID="WC.TR.TRSTRESU.00024">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TR.TREVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1476,7 +736,7 @@
           <CheckValue>LPERP</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUORRES.00057">
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00025">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
@@ -1489,7 +749,7 @@
           <CheckValue>NTIND</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUORRES.00058">
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00026">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
@@ -1502,7 +762,7 @@
           <CheckValue>TIND</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUORRES.00059">
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00027">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1533,7 +793,7 @@
           <CheckValue>TUMERGE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUORRES.00060">
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00028">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1564,7 +824,7 @@
           <CheckValue>TUMIDENT</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUORRES.00061">
+      <def:WhereClauseDef OID="WC.TU.TUORRES.00029">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1595,7 +855,7 @@
           <CheckValue>TUSPLIT</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00062">
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00030">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
@@ -1608,7 +868,7 @@
           <CheckValue>NTIND</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00063">
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00031">
         <RangeCheck Comparator="EQ" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INVESTIGATOR</CheckValue>
         </RangeCheck>
@@ -1621,7 +881,7 @@
           <CheckValue>TIND</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00064">
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00032">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1652,7 +912,7 @@
           <CheckValue>TUMERGE</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00065">
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00033">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -1683,7 +943,7 @@
           <CheckValue>TUMIDENT</CheckValue>
         </RangeCheck>
       </def:WhereClauseDef>
-      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00066">
+      <def:WhereClauseDef OID="WC.TU.TUSTRESC.00034">
         <RangeCheck Comparator="IN" SoftHard="Soft" def:ItemOID="IT.TU.TUEVAL">
           <CheckValue>INDEPENDENT ASSESSOR</CheckValue>
           <CheckValue>INVESTIGATOR</CheckValue>
@@ -2552,456 +1812,232 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00001" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Anatomic Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_ANATRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00002" Name="RSORRES" DataType="text" Length="2" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Bone Marrow Involvement Indicator (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_OR_BMIVLIND_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00003" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Metabolic Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_METBRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00004" Name="RSORRES" DataType="text" Length="2" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">New Lesion Indicator (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_OR_NEWLIND_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00005" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Non-target Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_NTRGRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00006" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Overall Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_OVRLRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00007" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Spleen Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_SPLNRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00008" Name="RSORRES" DataType="text" Length="4" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Target Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_TRGRESP_LUGANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00009" Name="RSORRES" DataType="text" Length="20" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Clinical Performance Status (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_CPRFSTAT_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00010" Name="RSORRES" DataType="text" Length="1" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">New Lesion Indicator (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_OR_NEWLIND_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00011" Name="RSORRES" DataType="text" Length="2" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Non-Target Enhancing Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_NTERESP_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00012" Name="RSORRES" DataType="text" Length="10" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Non-Target Non-Enhancing Response(Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_NTNERESP_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00013" Name="RSORRES" DataType="text" Length="40" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Steroid Use Status (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_STRUSTAT_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00014" Name="RSORRES" DataType="text" Length="2" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Target Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_TRGRESP_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00015" Name="RSORRES" DataType="text" Length="40" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Overall Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_OVRLRESP_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00016" Name="RSORRES" DataType="text" Length="40" SASFieldName="RSORRES">
-        <Description>
-          <TranslatedText xml:lang="en">Radiologic Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_OR_RDIORESP_RANO"/>
-        <def:Origin Type="Collected" Source="Vendor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00017" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00001" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Best Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_BESTRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00018" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00002" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">New Lesion Progression (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_NEWLPROG"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00019" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00003" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_NTRGRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00020" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00004" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_OVRLRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00021" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
+      <ItemDef OID="IT.RS.RSORRES.WC.RS.RSORRES.00005" Name="RSORRES" DataType="text" Length="200" SASFieldName="RSORRES">
         <Description>
           <TranslatedText xml:lang="en">Target Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_OR_TRGRESP"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00022" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Anatomic Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_ANATRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00023" Name="RSSTRESC" DataType="text" Length="2" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Bone Marrow Involvement Indicator (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_STC_BMIVLIND_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00024" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Metabolic Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_METBRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00025" Name="RSSTRESC" DataType="text" Length="2" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">New Lesion Indicator (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_STC_NEWLIND_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00026" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Non-target Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_NTRGRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00027" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Overall Response (Lugano Classfication)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_OVRLRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00028" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Spleen Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_SPLNRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00029" Name="RSSTRESC" DataType="text" Length="4" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Target Response (Lugano Classification)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_TRGRESP_LUGANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00030" Name="RSSTRESC" DataType="text" Length="20" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Clinical Performance Status (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_CPRFSTAT_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00031" Name="RSSTRESC" DataType="text" Length="1" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">New Lesion Indicator (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.NY_STC_NEWLIND_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00032" Name="RSSTRESC" DataType="text" Length="2" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Non-Target Enhancing Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_NTERESP_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00033" Name="RSSTRESC" DataType="text" Length="10" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Non-Target Non-Enhancing Response(Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_NTNERESP_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00034" Name="RSSTRESC" DataType="text" Length="40" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Steroid Use Status (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_STRUSTAT_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00035" Name="RSSTRESC" DataType="text" Length="2" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Target Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_TRGRESP_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00036" Name="RSSTRESC" DataType="text" Length="40" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Overall Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_OVRLRESP_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00037" Name="RSSTRESC" DataType="text" Length="40" SASFieldName="RSSTRESC">
-        <Description>
-          <TranslatedText xml:lang="en">Radiologic Response (Rano)</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.ONCRSR_STC_RDIORESP_RANO"/>
-        <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00038" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00006" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Best Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_BESTRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00039" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00007" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">New Lesion Progression (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_NEWLPROG"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00040" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00008" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_NTRGRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00041" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00009" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Overall Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_OVRLRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00042" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
+      <ItemDef OID="IT.RS.RSSTRESC.WC.RS.RSSTRESC.00010" Name="RSSTRESC" DataType="text" Length="200" SASFieldName="RSSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Target Response (RECIST 1.1)</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ONCRSR_STC_TRGRESP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00043" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00011" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00044" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00012" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_OR_LNSTATE"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00045" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00013" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00046" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
+      <ItemDef OID="IT.TR.TRORRES.WC.TR.TRORRES.00014" Name="TRORRES" DataType="text" Length="200" SASFieldName="TRORRES">
         <Description>
           <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_OR_TUMSTATE"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00047" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00015" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_ORU_LDIAM"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00048" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
+      <ItemDef OID="IT.TR.TRORRESU.WC.TR.TRORRESU.00016" Name="TRORRESU" DataType="text" Length="200" SASFieldName="TRORRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_ORU_LPERP"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00049" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00017" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00050" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00018" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Lymph Node State</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_STC_LNSTATE"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00051" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00019" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00052" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
+      <ItemDef OID="IT.TR.TRSTRESC.WC.TR.TRSTRESC.00020" Name="TRSTRESC" DataType="text" Length="200" SASFieldName="TRSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Tumor Status</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TRPROPRS_STC_TUMSTATE"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00053" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
+      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00021" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00054" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
+      <ItemDef OID="IT.TR.TRSTRESN.WC.TR.TRSTRESN.00022" Name="TRSTRESN" DataType="integer" SASFieldName="TRSTRESN">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00055" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00023" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Diameter</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_STU_LDIAM"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00056" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
+      <ItemDef OID="IT.TR.TRSTRESU.WC.TR.TRSTRESU.00024" Name="TRSTRESU" DataType="text" Length="200" SASFieldName="TRSTRESU">
         <Description>
           <TranslatedText xml:lang="en">Longest Perpendicular</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.UNIT_STU_LPERP"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00057" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00025" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Indicator</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.NY_OR_NTIND"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00058" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00026" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
         <Description>
           <TranslatedText xml:lang="en">Target Indicator</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.NY_OR_TIND"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00059" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00027" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
         <Description>
           <TranslatedText xml:lang="en">Tumor Merged</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS_OR_TUMERGE"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00060" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00028" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
         <Description>
           <TranslatedText xml:lang="en">Tumor Identification</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS_OR_TUMIDENT"/>
         <def:Origin Type="Collected" Source="Investigator"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00061" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
+      <ItemDef OID="IT.TU.TUORRES.WC.TU.TUORRES.00029" Name="TUORRES" DataType="text" Length="24" SASFieldName="TUORRES">
         <Description>
           <TranslatedText xml:lang="en">Tumor Split</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS_OR_TUSPLIT"/>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00062" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00030" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Non-Target Indicator</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.NY_STC_NTIND"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00063" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00031" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Target Indicator</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.NY_STC_TIND"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00064" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00032" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Tumor Merged</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS_STC_TUMERGE"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00065" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00033" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Tumor Identification</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.TUIDRS_STC_TUMIDENT"/>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00066" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
+      <ItemDef OID="IT.TU.TUSTRESC.WC.TU.TUSTRESC.00034" Name="TUSTRESC" DataType="text" Length="24" SASFieldName="TUSTRESC">
         <Description>
           <TranslatedText xml:lang="en">Tumor Split</TranslatedText>
         </Description>
@@ -7383,24 +6419,6 @@
         <Alias Context="nci:ExtCodeID" Name="C74456"/>
       </CodeList>
       <CodeList OID="CL.MEDEVAL" Name="Medical Evaluator Identifier, subset" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="HEMATOLOGIST 1">
-          <Alias Context="nci:ExtCodeID" Name="C187883"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="HEMATOLOGIST 2">
-          <Alias Context="nci:ExtCodeID" Name="C189595"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ONCOLOGIST 1">
-          <Alias Context="nci:ExtCodeID" Name="C96611"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="ONCOLOGIST 2">
-          <Alias Context="nci:ExtCodeID" Name="C96612"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PATHOLOGIST 1">
-          <Alias Context="nci:ExtCodeID" Name="C154836"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PATHOLOGIST 2">
-          <Alias Context="nci:ExtCodeID" Name="C154837"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="RADIOLOGIST 1">
           <Alias Context="nci:ExtCodeID" Name="C94530"/>
         </EnumeratedItem>
@@ -7481,63 +6499,6 @@
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C66742"/>
       </CodeList>
-      <CodeList OID="CL.NY_OR_BMIVLIND_LUGANO" Name="No Yes Response, subset for Bone Marrow Involvement Indicator (Lugano Classification) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="U">
-          <Decode>
-            <TranslatedText>Unknown</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C17998"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
-      <CodeList OID="CL.NY_OR_NEWLIND_LUGANO" Name="No Yes Response, subset for New Lesion Indicator (Lugano Classfication) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="U">
-          <Decode>
-            <TranslatedText>Unknown</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C17998"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
-      <CodeList OID="CL.NY_OR_NEWLIND_RANO" Name="No Yes Response, subset for New Lesion Indicator (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
       <CodeList OID="CL.NY_OR_NTIND" Name="No Yes Response, subset for Non-Target Indicator - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <CodeListItem CodedValue="N">
           <Decode>
@@ -7571,63 +6532,6 @@
             <TranslatedText>Unknown</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17998"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
-      <CodeList OID="CL.NY_STC_BMIVLIND_LUGANO" Name="No Yes Response, subset for Bone Marrow Involvement Indicator (Lugano Classification) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="U">
-          <Decode>
-            <TranslatedText>Unknown</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C17998"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
-      <CodeList OID="CL.NY_STC_NEWLIND_LUGANO" Name="No Yes Response, subset for New Lesion Indicator (Lugano Classfication) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="U">
-          <Decode>
-            <TranslatedText>Unknown</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C17998"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="Y">
-          <Decode>
-            <TranslatedText>Yes</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49488"/>
-        </CodeListItem>
-        <Alias Context="nci:ExtCodeID" Name="C66742"/>
-      </CodeList>
-      <CodeList OID="CL.NY_STC_NEWLIND_RANO" Name="No Yes Response, subset for New Lesion Indicator (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="N">
-          <Decode>
-            <TranslatedText>No</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C49487"/>
         </CodeListItem>
         <CodeListItem CodedValue="Y">
           <Decode>
@@ -7680,12 +6584,6 @@
         <Alias Context="nci:ExtCodeID" Name="C66742"/>
       </CodeList>
       <CodeList OID="CL.ONCRSCAT" Name="Category of Oncology Response Assessment, subset" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="LUGANO CLASSIFICATION">
-          <Alias Context="nci:ExtCodeID" Name="C126025"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="RANO">
-          <Alias Context="nci:ExtCodeID" Name="C114879"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="RECIST 1.1">
           <Alias Context="nci:ExtCodeID" Name="C124415"/>
         </EnumeratedItem>
@@ -7979,24 +6877,6 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_ANATRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Anatomic Response (Lugano Classification) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRSR_OR_BESTRESP" Name="Oncology Response Assessment Result, subset for Best Overall Response (RECIST 1.1) - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
@@ -8021,78 +6901,12 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_CPRFSTAT_RANO" Name="Oncology Response Assessment Result, subset for Clinical Performance Status (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="IMPROVED">
-          <Alias Context="nci:ExtCodeID" Name="C125459"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STABLE">
-          <Alias Context="nci:ExtCodeID" Name="C30103"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="WORSENED">
-          <Alias Context="nci:ExtCodeID" Name="C71686"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_METBRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Metabolic Response (Lugano Classfication) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CMR">
-          <Alias Context="nci:ExtCodeID" Name="C123407"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRSR_OR_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression (RECIST 1.1) - Original (Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="EQUIVOCAL">
           <Alias Context="nci:ExtCodeID" Name="C86071"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="UNEQUIVOCAL">
           <Alias Context="nci:ExtCodeID" Name="C123645"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_NTERESP_RANO" Name="Oncology Response Assessment Result, subset for Non-Target Enhancing Response (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_NTNERESP_RANO" Name="Oncology Response Assessment Result, subset for Non-Target Non-Enhancing Response(Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="DECREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25640"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="INCREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25533"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
@@ -8108,21 +6922,6 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="PD">
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_NTRGRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Non-target Response (Lugano Classfication) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
@@ -8150,163 +6949,7 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_OVRLRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Overall Response (Lugano Classfication) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_OVRLRESP_RANO" Name="Oncology Response Assessment Result, subset for Overall Response (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDOPROGRESSION">
-          <Alias Context="nci:ExtCodeID" Name="C98298"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDORESPONSE">
-          <Alias Context="nci:ExtCodeID" Name="C131142"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_RDIORESP_RANO" Name="Oncology Response Assessment Result, subset for Radiologic Response (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NED">
-          <Alias Context="nci:ExtCodeID" Name="C40413"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDOPROGRESSION">
-          <Alias Context="nci:ExtCodeID" Name="C98298"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDORESPONSE">
-          <Alias Context="nci:ExtCodeID" Name="C131142"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_SPLNRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Spleen Response (Lugano Classification) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_STRUSTAT_RANO" Name="Oncology Response Assessment Result, subset for Steroid Use Status (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="DECREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25640"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="INCREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25533"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NONE BEYOND PHYSIOLOGIC REPLACEMENT DOSE">
-          <Alias Context="nci:ExtCodeID" Name="C161412"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STABLE">
-          <Alias Context="nci:ExtCodeID" Name="C30103"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRSR_OR_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response (RECIST 1.1) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_TRGRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Target Response (Lugano Classification) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_OR_TRGRESP_RANO" Name="Oncology Response Assessment Result, subset for Target Response (Rano) - Original (Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_ANATRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Anatomic Response (Lugano Classification) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
         </EnumeratedItem>
@@ -8348,78 +6991,12 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_CPRFSTAT_RANO" Name="Oncology Response Assessment Result, subset for Clinical Performance Status (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="IMPROVED">
-          <Alias Context="nci:ExtCodeID" Name="C125459"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STABLE">
-          <Alias Context="nci:ExtCodeID" Name="C30103"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="WORSENED">
-          <Alias Context="nci:ExtCodeID" Name="C71686"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_METBRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Metabolic Response (Lugano Classfication) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CMR">
-          <Alias Context="nci:ExtCodeID" Name="C123407"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRSR_STC_NEWLPROG" Name="Oncology Response Assessment Result, subset for New Lesion Progression (RECIST 1.1) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="EQUIVOCAL">
           <Alias Context="nci:ExtCodeID" Name="C86071"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="UNEQUIVOCAL">
           <Alias Context="nci:ExtCodeID" Name="C123645"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_NTERESP_RANO" Name="Oncology Response Assessment Result, subset for Non-Target Enhancing Response (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_NTNERESP_RANO" Name="Oncology Response Assessment Result, subset for Non-Target Non-Enhancing Response(Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="DECREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25640"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="INCREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25533"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
@@ -8435,21 +7012,6 @@
         </EnumeratedItem>
         <EnumeratedItem CodedValue="PD">
           <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_NTRGRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Non-target Response (Lugano Classfication) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
@@ -8477,108 +7039,6 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_OVRLRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Overall Response (Lugano Classfication) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_OVRLRESP_RANO" Name="Oncology Response Assessment Result, subset for Overall Response (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDOPROGRESSION">
-          <Alias Context="nci:ExtCodeID" Name="C98298"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDORESPONSE">
-          <Alias Context="nci:ExtCodeID" Name="C131142"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_RDIORESP_RANO" Name="Oncology Response Assessment Result, subset for Radiologic Response (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NED">
-          <Alias Context="nci:ExtCodeID" Name="C40413"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDOPROGRESSION">
-          <Alias Context="nci:ExtCodeID" Name="C98298"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PSEUDORESPONSE">
-          <Alias Context="nci:ExtCodeID" Name="C131142"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_SPLNRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Spleen Response (Lugano Classification) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_STRUSTAT_RANO" Name="Oncology Response Assessment Result, subset for Steroid Use Status (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="DECREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25640"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="INCREASED">
-          <Alias Context="nci:ExtCodeID" Name="C25533"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NONE BEYOND PHYSIOLOGIC REPLACEMENT DOSE">
-          <Alias Context="nci:ExtCodeID" Name="C161412"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="STABLE">
-          <Alias Context="nci:ExtCodeID" Name="C30103"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRSR_STC_TRGRESP" Name="Oncology Response Assessment Result, subset for Target Response (RECIST 1.1) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
         <EnumeratedItem CodedValue="CR">
           <Alias Context="nci:ExtCodeID" Name="C4870"/>
@@ -8597,69 +7057,12 @@
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96785"/>
       </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_TRGRESP_LUGANO" Name="Oncology Response Assessment Result, subset for Target Response (Lugano Classification) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
-      <CodeList OID="CL.ONCRSR_STC_TRGRESP_RANO" Name="Oncology Response Assessment Result, subset for Target Response (Rano) - Standardized (Char Res)" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="CR">
-          <Alias Context="nci:ExtCodeID" Name="C4870"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="NE">
-          <Alias Context="nci:ExtCodeID" Name="C62222"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PD">
-          <Alias Context="nci:ExtCodeID" Name="C35571"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="PR">
-          <Alias Context="nci:ExtCodeID" Name="C18058"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="SD">
-          <Alias Context="nci:ExtCodeID" Name="C18213"/>
-        </EnumeratedItem>
-        <Alias Context="nci:ExtCodeID" Name="C96785"/>
-      </CodeList>
       <CodeList OID="CL.ONCRTS" Name="Oncology Response Assessment Test Name, subset" DataType="text" def:StandardOID="STD.2">
-        <EnumeratedItem CodedValue="Anatomic Response">
-          <Alias Context="nci:ExtCodeID" Name="C156564"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="Best Overall Response">
           <Alias Context="nci:ExtCodeID" Name="C94536"/>
         </EnumeratedItem>
-        <EnumeratedItem CodedValue="Bone Marrow Involvement Indicator">
-          <Alias Context="nci:ExtCodeID" Name="C135477"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Clinical Performance Status">
-          <Alias Context="nci:ExtCodeID" Name="C135478"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Metabolic Response">
-          <Alias Context="nci:ExtCodeID" Name="C123623"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="New Lesion Indicator">
-          <Alias Context="nci:ExtCodeID" Name="C142362"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="New Lesion Progression">
           <Alias Context="nci:ExtCodeID" Name="C103420"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Non-Target Enhancing Response">
-          <Alias Context="nci:ExtCodeID" Name="C135480"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Non-Target Non-Enhancing Response">
-          <Alias Context="nci:ExtCodeID" Name="C135481"/>
         </EnumeratedItem>
         <EnumeratedItem CodedValue="Non-target Response">
           <Alias Context="nci:ExtCodeID" Name="C94535"/>
@@ -8667,74 +7070,23 @@
         <EnumeratedItem CodedValue="Overall Response">
           <Alias Context="nci:ExtCodeID" Name="C96613"/>
         </EnumeratedItem>
-        <EnumeratedItem CodedValue="Radiologic Response">
-          <Alias Context="nci:ExtCodeID" Name="C123627"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Spleen Response">
-          <Alias Context="nci:ExtCodeID" Name="C135482"/>
-        </EnumeratedItem>
-        <EnumeratedItem CodedValue="Steroid Use Status">
-          <Alias Context="nci:ExtCodeID" Name="C135483"/>
-        </EnumeratedItem>
         <EnumeratedItem CodedValue="Target Response">
           <Alias Context="nci:ExtCodeID" Name="C94534"/>
         </EnumeratedItem>
         <Alias Context="nci:ExtCodeID" Name="C96781"/>
       </CodeList>
       <CodeList OID="CL.ONCRTSCD" Name="Oncology Response Assessment Test Code, subset" DataType="text" def:StandardOID="STD.2">
-        <CodeListItem CodedValue="ANATRESP">
-          <Decode>
-            <TranslatedText>Anatomic Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C156564"/>
-        </CodeListItem>
         <CodeListItem CodedValue="BESTRESP">
           <Decode>
             <TranslatedText>Best Overall Response</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C94536"/>
         </CodeListItem>
-        <CodeListItem CodedValue="BMIVLIND">
-          <Decode>
-            <TranslatedText>Bone Marrow Involvement Indicator</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135477"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="CPRFSTAT">
-          <Decode>
-            <TranslatedText>Clinical Performance Status</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135478"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="METBRESP">
-          <Decode>
-            <TranslatedText>Metabolic Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C123623"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="NEWLIND">
-          <Decode>
-            <TranslatedText>New Lesion Indicator</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C142362"/>
-        </CodeListItem>
         <CodeListItem CodedValue="NEWLPROG">
           <Decode>
             <TranslatedText>New Lesion Progression</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C103420"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="NTERESP">
-          <Decode>
-            <TranslatedText>Non-Target Enhancing Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135480"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="NTNERESP">
-          <Decode>
-            <TranslatedText>Non-Target Non-Enhancing Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135481"/>
         </CodeListItem>
         <CodeListItem CodedValue="NTRGRESP">
           <Decode>
@@ -8747,24 +7099,6 @@
             <TranslatedText>Overall Response</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C96613"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="RDIORESP">
-          <Decode>
-            <TranslatedText>Radiologic Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C123627"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="SPLNRESP">
-          <Decode>
-            <TranslatedText>Spleen Response</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135482"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="STRUSTAT">
-          <Decode>
-            <TranslatedText>Steroid Use Status</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C135483"/>
         </CodeListItem>
         <CodeListItem CodedValue="TRGRESP">
           <Decode>

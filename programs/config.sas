@@ -5,22 +5,11 @@
 
 options sasautos = ("&project_folder/macros", "/library/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 
-%* This file contains the credentials;
-%*let credentials_file=&project_folder/programs/credentials.cfg;
 
-%*read_config_file(
-  config_file=&credentials_file, 
-  sections=%str("cdisclibrary")
-);
+%* Get credentials from environment variables;
+%let api_key_prod=%sysget(CDISC_LIBRARY_API_KEY);
+%let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
-%read_config_file(
-  config_file=%sysget(CREDENTIALS_FILE), 
-  sections=%str("cdisclibrary")
-);
-
-%let env=prod;  
-%let env=dev;  
-%let api_key=&&cdisc_api_&env._key;
 %let base_url=https://library.cdisc.org/api;
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
 %let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;

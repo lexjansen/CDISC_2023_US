@@ -5,7 +5,7 @@
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-%macro get_sdtm_specs_by_domain(domain);
+%macro get_sdtm_specs_by_domain(domain=, where=);
   
   filename jsonfile "&project_folder/&subfolder/datasetspecialization_latest_%lowcase(&domain).json";
 
@@ -19,7 +19,7 @@
   libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata ordinalcount=none;
 
   data _null_;
-    set jsonfile._links_datasetspecializations;
+    set jsonfile._links_datasetspecializations(&where);
     length code $4096 response_file $1024 datasetSpecializationId $64;
     baseurl="&base_url_cosmos";
     datasetSpecializationId = scan(href, -1, "\/");
@@ -35,9 +35,9 @@
 
 %mend get_sdtm_specs_by_domain;
 
-%get_sdtm_specs_by_domain(RS);
-%get_sdtm_specs_by_domain(TR);
-%get_sdtm_specs_by_domain(TU);
+%get_sdtm_specs_by_domain(domain=RS, where=%str(where=(index(title, "RECIST 1.1"))));
+%get_sdtm_specs_by_domain(domain=TR);
+%get_sdtm_specs_by_domain(domain=TU);
 
 %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
 libname jsontmp "%sysfunc(pathname(work))/jsontmp";

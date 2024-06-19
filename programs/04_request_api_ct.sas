@@ -2,7 +2,6 @@
 %let project_folder=/_CDISC/COSMoS/CDISC_2023_US;
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
-%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
 
 *******************************************************************************;
 * Get CDISC LIbrary SDTM CT package                                           *;
@@ -22,6 +21,7 @@ filename jsonf "&project_folder/json/clib/sdtmct-&_cstCDISCStandardVersion..json
 %if not %sysfunc(fileexist(%sysfunc(pathname(jsonf)))) %then %do;
   %get_api_response(
     baseurl=&base_url,
+    apikey=&api_key_prod,
     endpoint=/mdr/ct/packages/sdtmct-&_cstCDISCStandardVersion,
     response_fileref=jsonf
   );
