@@ -88,18 +88,23 @@ run;
                       else mandatory="No";
  run;
 
+%macro generate_whereclauses(n);
+  %local i;
+  %do i = 1 %to %eval(&n-1);
+    wc._whereclause&i.,
+  %end;  
+  wc._whereclause&n
+%mend generate_whereclauses;
+
 proc sql;
   create table source_values as
   select
     sdtm.*,
     col.xmldatatype as parent_xmldatatype,
     col.length as parent_length,
-    wc._whereclause1,
-    wc._whereclause2,
-    wc._whereclause3,
-    wc._whereclause4
+    %generate_whereclauses(&max_whereclauses)
   from sdtm_specializations sdtm
-    left join whereclause wc
+    left join whereclause(keep=domain datasetSpecializationId _whereclause:) wc
   on (sdtm.table = wc.domain and sdtm.datasetSpecializationId = wc.datasetSpecializationId)
     left join metadata.source_columns col
   on (sdtm.table = col.table and sdtm.column = col.column)

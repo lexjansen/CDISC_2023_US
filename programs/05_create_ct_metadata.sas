@@ -3,8 +3,6 @@
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
 
-%let domains="RS" "TR" "TU";
-
 *******************************************************************************;
 * Create CT metadata                                                          *;
 *******************************************************************************;
@@ -13,8 +11,7 @@ data sdtm_specializations_ct(drop=i countwords);
   length term $100;
   set data.sdtm_specializations(
     keep=datasetSpecializationId shortname vlmTarget domain name codelist codelist_submission_value subsetcodelist value_list assigned_term assigned_value
-    where=((domain in (&domains)) and (not missing(codelist)))
-    );
+    where=(not missing(codelist)));
   if not missing(value_list) then do;
     countwords=countw(value_list, ";");
     do i=1 to countwords;
@@ -129,7 +126,7 @@ data work.source_codelists_sdtm(drop=datasetSpecializationId column shortname su
   if index(codelist, '_STC_') or index(column, "STRESC") then codelistname = catx(' ', cats(codelistname, ","),  "subset for", shortname, "-", "Standardized (Char Res)");
 
   decodetext="";
-  if index(codelist, "TESTCD") or index(codelist, "ONCRTSCD") or index(codelist, "NY") or index(codelist, "ONCRSR")
+  if index(codelist, "TESTCD") or index(codelist, "ONCRTSCD") or index(codelist, "NY") /* or index(codelist, "ONCRSR") */
      then do;
       if not missing(code_synonym) then do;
         if index(code_synonym, ";")=0 then decodetext = code_synonym;

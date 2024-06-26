@@ -5,6 +5,7 @@
   %if not %sysfunc(fileexist(%sysfunc(pathname(jsonf)))) %then %do;
     %get_api_response(
       baseurl=&base_url,
+      apikey=&api_key_prod,
       endpoint=/mdr/sdtmig/&version/datasets/%upcase(&domain),
       response_fileref=jsonf
     );
@@ -57,6 +58,7 @@ run;
 
 %* Generic configuration;
 %include "&project_folder/programs/config.sas";
+
 options dlcreatedir;
 
 %let _cstStandard=CDISC-DEFINE-XML;

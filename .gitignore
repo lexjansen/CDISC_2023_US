@@ -9,3 +9,4 @@ __pycache__/
 *validate*.html
 *.json
 *.sas7bdat
+scripts/
